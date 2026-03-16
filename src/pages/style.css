@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background-color: #f0ccd0;
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 120px);
+  margin: auto;
+  border: 1px solid #f0ccd0;
+  border-radius: 48px;
+  overflow: hidden;
+  background: linear-gradient(to top right, #ffff, #f0ccd0, #c0c9d8);
+  box-shadow: 0 10px 30px #8f4a47;
+}
+
+/* LEFT SIDE */
+
+.left {
+  width: 50%;
+  background-image: url("Intersect.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.logo {
+  margin: 0.5rem;
+  padding: 1rem;
+  background-color: #a15958;
+}
+
+/* RIGHT SIDE */
+
+.right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.back-image {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  cursor: pointer;
+}
+
+/* login box */
+
+.login-box {
+  width: 500px;
+}
+
+/* user icon */
+
+.user-icon {
+  width: 100px;
+  height: 100px;
+  background: #8f4a47;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 15px;
+  color: white;
+  font-size: 32px;
+}
+
+h2 {
+  color: #7c3f3c;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+/* labels */
+
+label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  color: #7c3f3c;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* inputs */
+
+.input-box {
+  display: flex;
+  align-items: center;
+  background: #eee;
+  padding: 20px 40px;
+  border-radius: 30px;
+  margin-bottom: 25px;
+}
+
+.input-box i {
+  margin-right: 8px;
+  color: #7c3f3c;
+}
+
+.input-box input {
+  border: none;
+  outline: none;
+  background: none;
+  width: 100%;
+}
+
+/* forgot */
+
+.forgot {
+  font-size: 12px;
+  text-align: left;
+  color: #7c3f3c;
+  margin-top: 5px;
+}
+
+/* create account */
+
+.create {
+  margin: 10px 0;
+  font-size: 13px;
+  color: #7c3f3c;
+}
+
+.create a {
+  color: #7c3f3c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* login button */
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: #8f4a47;
+  color: white;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* OR line */
+
+.or {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.or hr {
+  flex: 1;
+  border: none;
+  height: 1px;
+  background: #aaa;
+}
+
+.or span {
+  margin: 0 10px;
+  color: #7c3f3c;
+}
+
+/* social icons */
+
+.social {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  color: #7c3f3c;
+}
+
+.social i {
+  cursor: pointer;
+}
