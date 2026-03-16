@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Diagnosis Master Login</title>
 
-    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="common.css" />
     <link rel="stylesheet" href="style.css" />
 
     <link
@@ -17,13 +17,13 @@
     <div class="container">
       <!-- LEFT SIDE (الصورة) -->
       <div class="left">
-        <img class="logo" src="Logo.png" alt="" />
+        <img class="logo" src="..\assets\Logo.png" alt="" />
       </div>
 
       <!-- RIGHT SIDE -->
       <div class="right">
         <a href="/">
-          <img class="back-image" src="back.png" alt="" />
+          <img class="back-image" src="..\assets\back.png" alt="" />
         </a>
 
         <div class="login-box">

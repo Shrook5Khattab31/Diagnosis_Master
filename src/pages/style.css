@@ -26,7 +26,7 @@ body {
 
 .left {
   width: 50%;
-  background-image: url("Intersect.png");
+  background-image: url("../assets/Intersect.png");
   background-size: cover;
   background-position: center;
 }
@@ -34,7 +34,7 @@ body {
 .logo {
   margin: 0.5rem;
   padding: 1rem;
-  background-color: #a15958;
+  background-color: transparent;
 }
 
 /* RIGHT SIDE */
