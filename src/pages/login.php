@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -33,28 +34,33 @@
 
           <h2>Log in</h2>
 
-          <label
-            ><i class="fa-regular fa-user"></i>&nbsp;<b>Username:</b></label
-          >
+          <form id="loginForm">
+            <label
+              ><i class="fa-regular fa-user"></i>&nbsp;<b>Username:</b></label
+            >
 
-          <div class="input-box">
-            <input type="text" placeholder="Username" />
-          </div>
+            <div class="input-box">
+              <input type="text" id="username" placeholder="Username" />
+            </div>
 
-          <label><i class="fa-solid fa-lock"></i>&nbsp;<b>Password:</b></label>
+            <label
+              ><i class="fa-solid fa-lock"></i>&nbsp;<b>Password:</b></label
+            >
 
-          <div class="input-box">
-            <input type="password" placeholder="Password" />
-          </div>
+            <div class="input-box">
+              <input type="password" id="password" placeholder="Password" />
+            </div>
 
-          <p class="forgot">Forgot password ?</p>
+            <p id="error" style="color: red"></p>
+            <p class="forgot">Forgot password ?</p>
 
-          <p class="create">
-            Don't have an account ?
-            <a href="register.html">Create new Account</a>
-          </p>
+            <p class="create">
+              Don't have an account ?
+              <a href="sign_up.php">Create new Account</a>
+            </p>
 
-          <button class="login-btn">Log in</button>
+            <button class="login-btn" type="submit">Log in</button>
+          </form>
 
           <div class="or">
             <hr />
@@ -71,5 +77,6 @@
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
