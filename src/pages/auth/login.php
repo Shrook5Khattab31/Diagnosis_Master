@@ -18,13 +18,13 @@
     <div class="container">
       <!-- LEFT SIDE (الصورة) -->
       <div class="left">
-        <img class="logo" src="..\assets\Logo.png" alt="" />
+        <img class="logo" src="..\..\assets\Logo.png" alt="" />
       </div>
 
       <!-- RIGHT SIDE -->
       <div class="right">
-        <a href="/">
-          <img class="back-image" src="..\assets\back.png" alt="" />
+        <a href="..\landing\Landing.php">
+          <img class="back-image" src="..\..\assets\back.png" alt="" />
         </a>
 
         <div class="login-box">
