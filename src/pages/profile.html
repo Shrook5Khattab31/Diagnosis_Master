@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physio Learning Hub - Dashboard</title>
+    <meta name="description" content="3D Glassmorphism Dashboard Template by TemplateMo">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="profile_style.css">
+
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo"><img src="..\assets\DashLogo.png" alt=""></div>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-section">
+                    <span class="nav-section-title">Main Menu</span>
+                    <ul>
+                        <li class="nav-item">
+                            <a href="profile.html" class="nav-link active">
+                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="7" height="7" rx="1"/>
+                                    <rect x="14" y="3" width="7" height="7" rx="1"/>
+                                    <rect x="3" y="14" width="7" height="7" rx="1"/>
+                                    <rect x="14" y="14" width="7" height="7" rx="1"/>
+                                </svg>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <img src="..\assets\course_icon.png" alt="" srcset="">
+                                Courses
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <img src="..\assets\quizes_icon.png" alt="">
+                                Quizes
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="achievement.html" class="nav-link">
+                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="8" r="6"/><path d="M8 14l-4 7h16l-4-7"/>
+                                </svg>
+                                Achievements
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="settings.html" class="nav-link">
+                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                                </svg>
+                                Settings
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-section">
+                    <span class="nav-section-title">Account</span>
+                    <ul>
+                        <li class="nav-item">
+                            <a href="login.html" class="nav-link">
+                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                                    <polyline points="16 17 21 12 16 7"/>
+                                    <line x1="21" y1="12" x2="9" y2="12"/>
+                                </svg>
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navbar -->
+            <nav class="navbar">
+                <h1 class="page-title">Physio Learning Hub</h1>
+                <div class="navbar-right">
+                    <div class="search-box">
+                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        </svg>
+                        <input type="text" class="search-input" placeholder="Search anything...">
+                    </div>
+                    <button class="nav-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                        </svg>
+                        <span class="notification-dot"></span>
+                    </button>
+                    <button class="nav-btn" id="theme-toggle" title="Toggle Light/Dark Mode">
+                        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="4"/>
+                            <path d="M12 2v2"/><path d="M12 20v2"/>
+                            <path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/>
+                            <path d="M2 12h2"/><path d="M20 12h2"/>
+                            <path d="M6.34 17.66l-1.41 1.41"/><path d="M19.07 4.93l-1.41 1.41"/>
+                        </svg>
+                        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Stats Cards -->
+            <section class="stats-grid">
+                <div class="glass-card glass-card-3d stat-card">
+                    <div class="stat-card-inner">
+                        <div class="stat-info">
+                            <h3>Level &amp; XP</h3>
+                            <div class="stat-value">LVL 7</div>
+                            <span class="stat-change positive">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+                                4,200 / 5,000 XP
+                            </span>
+                        </div>
+                        <div class="stat-icon cyan">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="var(--emerald-light)" stroke-width="2">
+                                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><line x1="17" y1="6" x2="23" y2="6"/><line x1="23" y1="6" x2="23" y2="12"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card glass-card-3d stat-card">
+                    <div class="stat-card-inner">
+                        <div class="stat-info">
+                            <h3>Module Points</h3>
+                            <div class="stat-value">620</div>
+                            <span class="stat-change positive">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+                                62% of 1,000 target
+                            </span>
+                        </div>
+                        <div class="stat-icon magenta">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2">
+                                <circle cx="12" cy="8" r="6"/><path d="M8 14l-4 7h16l-4-7"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card glass-card-3d stat-card">
+                    <div class="stat-card-inner">
+                        <div class="stat-info">
+                            <h3>Daily Streak</h3>
+                            <div class="stat-value">5 days</div>
+                            <span class="stat-change positive">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+                                Don't break the chain!
+                            </span>
+                        </div>
+                        <div class="stat-icon purple">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="var(--coral)" stroke-width="2">
+                                <path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card glass-card-3d stat-card">
+                    <div class="stat-card-inner">
+                        <div class="stat-info">
+                            <h3>Physio Coins</h3>
+                            <div class="stat-value">320</div>
+                            <span class="stat-change positive">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+                                +90 earned this week
+                            </span>
+                        </div>
+                        <div class="stat-icon success">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Content Grid -->
+            <section class="content-grid">
+                <!-- XP Progress Chart -->
+                <div class="glass-card chart-card">
+                    <div class="card-header">
+                        <div>
+                            <h2 class="card-title">XP Progress</h2>
+                            <p class="card-subtitle">Weekly XP earned per module</p>
+                        </div>
+                        <div class="card-actions">
+                            <button class="card-btn active">This Week</button>
+                            <button class="card-btn">Last Week</button>
+                            <button class="card-btn">Month</button>
+                        </div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <div class="chart-container">
+                            <div class="chart-y-axis">
+                                <span class="y-value">500</span>
+                                <span class="y-value">400</span>
+                                <span class="y-value">300</span>
+                                <span class="y-value">200</span>
+                                <span class="y-value">100</span>
+                                <span class="y-value">0</span>
+                            </div>
+                            <div class="chart-placeholder">
+                                <div class="chart-bar-group"><div class="chart-bar bar-emerald" style="height: 80px;"></div><span class="chart-label">Knee</span></div>
+                                <div class="chart-bar-group"><div class="chart-bar bar-gold" style="height: 140px;"></div><span class="chart-label">Ankle</span></div>
+                                <div class="chart-bar-group"><div class="chart-bar bar-teal" style="height: 60px;"></div><span class="chart-label">Hip</span></div>
+                                <div class="chart-bar-group"><div class="chart-bar bar-coral" style="height: 100px;"></div><span class="chart-label">Gait</span></div>
+                                <div class="chart-bar-group"><div class="chart-bar bar-amber" style="height: 180px;"></div><span class="chart-label">Neuro</span></div>
+                                <div class="chart-bar-group"><div class="chart-bar bar-emerald" style="height: 120px;"></div><span class="chart-label">Cardio</span></div>
+                                <div class="chart-bar-group"><div class="chart-bar bar-gold" style="height: 90px;"></div><span class="chart-label">Lumbar</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Active Quests -->
+                <div class="glass-card activity-card">
+                    <div class="card-header">
+                        <div>
+                            <h2 class="card-title">Active Quests</h2>
+                            <p class="card-subtitle">Your current quest board</p>
+                        </div>
+                        <button class="gami-btn primary">New quest</button>
+                    </div>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-avatar" style="background: linear-gradient(135deg, var(--emerald-light), var(--emerald));">🧩</div>
+                            <div class="activity-content">
+                                <p class="activity-text"><strong>Solve 3 Low Back Pain cases</strong> — 2 / 3 done</p>
+                                <div class="gami-bar-track" style="margin-top:6px;"><div class="gami-bar-fill" style="width:66%;"></div></div>
+                                <span class="activity-time">+180 pts reward</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-avatar" style="background: linear-gradient(135deg, var(--gold), var(--amber));">🎯</div>
+                            <div class="activity-content">
+                                <p class="activity-text"><strong>Finish 2 Gait Analysis quizzes</strong> — 1 / 2 done</p>
+                                <div class="gami-bar-track" style="margin-top:6px;"><div class="gami-bar-fill" style="width:50%;"></div></div>
+                                <span class="activity-time">+120 pts reward</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-avatar" style="background: linear-gradient(135deg, var(--coral), var(--gold));">🔒</div>
+                            <div class="activity-content">
+                                <p class="activity-text"><strong>Unlock Neurorehab mini-pathway</strong></p>
+                                <span class="activity-time">Requires Level 8 to unlock</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-avatar" style="background: linear-gradient(135deg, var(--success), var(--emerald));">⭐</div>
+                            <div class="activity-content">
+                                <p class="activity-text"><strong>Complete 5 consecutive study days</strong> — 5 / 5 done</p>
+                                <div class="gami-bar-track" style="margin-top:6px;"><div class="gami-bar-fill" style="width:100%;"></div></div>
+                                <span class="activity-time" style="color:var(--success);">✓ Quest complete! Claim +200 pts</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leaderboard Table -->
+                <div class="glass-card table-card">
+                    <div class="card-header">
+                        <div>
+                            <h2 class="card-title">Leaderboard</h2>
+                            <p class="card-subtitle">Weekly cohort rankings</p>
+                        </div>
+                        <div class="card-actions">
+                            <button class="card-btn active">Weekly</button>
+                            <button class="card-btn">All Time</button>
+                        </div>
+                    </div>
+                    <div class="table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Student</th>
+                                    <th>Cases Solved</th>
+                                    <th>Level</th>
+                                    <th>XP</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="table-amount">🥇 1</span></td>
+                                    <td><div class="table-user"><div class="table-avatar" style="background: linear-gradient(135deg, var(--gold), var(--amber));">SA</div><div class="table-user-info"><span class="table-user-name">Student A</span><span class="table-user-email">Top of cohort</span></div></div></td>
+                                    <td>48 cases</td>
+                                    <td><span class="status-badge completed">LVL 8</span></td>
+                                    <td><span class="table-amount">5,200 XP</span></td>
+                                </tr>
+                                <tr style="background: rgba(34,211,238,0.06);">
+                                    <td><span class="table-amount">🥈 2</span></td>
+                                    <td><div class="table-user"><div class="table-avatar" style="background: linear-gradient(135deg, var(--emerald-light), var(--emerald));">ME</div><div class="table-user-info"><span class="table-user-name">You</span><span class="table-user-email">Physio Student</span></div></div></td>
+                                    <td>42 cases</td>
+                                    <td><span class="status-badge processing">LVL 7</span></td>
+                                    <td><span class="table-amount">4,200 XP</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="table-amount">🥉 3</span></td>
+                                    <td><div class="table-user"><div class="table-avatar" style="background: linear-gradient(135deg, var(--coral), var(--gold));">SB</div><div class="table-user-info"><span class="table-user-name">Student B</span><span class="table-user-email">Catching up</span></div></div></td>
+                                    <td>30 cases</td>
+                                    <td><span class="status-badge pending">LVL 6</span></td>
+                                    <td><span class="table-amount">3,100 XP</span></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><div class="table-user"><div class="table-avatar" style="background: linear-gradient(135deg, var(--emerald), var(--gold));">SC</div><div class="table-user-info"><span class="table-user-name">Student C</span><span class="table-user-email">Steady progress</span></div></div></td>
+                                    <td>25 cases</td>
+                                    <td><span class="status-badge pending">LVL 5</span></td>
+                                    <td><span class="table-amount">2,800 XP</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bottom Grid -->
+            <section class="bottom-grid">
+                <!-- Daily Check-in / Streak Heatmap -->
+                <div class="glass-card">
+                    <div class="card-header">
+                        <div>
+                            <h2 class="card-title">📅 Daily Check-in</h2>
+                            <p class="card-subtitle">Log in and study every day</p>
+                        </div>
+                        <span class="gami-pill">🔥 5 day streak</span>
+                    </div>
+                    <div class="gami-heatmap" id="gamiHeatmap"></div>
+                    <div style="display:flex;justify-content:space-between;margin-top:8px;font-size:0.78rem;">
+                        <span style="color:var(--text-muted);">Last 7 days</span>
+                        <span style="color:var(--success);font-weight:600;">Don't break the chain!</span>
+                    </div>
+                    <div class="gami-heat-legend">
+                        <span><span class="gami-heat-dot"></span> Off</span>
+                        <span><span class="gami-heat-dot on"></span> Study day</span>
+                    </div>
+                </div>
+
+                <!-- Chapter Map -->
+                <div class="glass-card">
+                    <div class="card-header">
+                        <div>
+                            <h2 class="card-title">🗺️ Chapter Map</h2>
+                            <p class="card-subtitle">Lower Limb anatomy &amp; module progress</p>
+                        </div>
+                    </div>
+                    <div class="gami-map-grid">
+                        <div class="gami-map-node completed">Knee<div class="gami-muted" style="font-size:0.65rem;margin-top:2px;">6 / 6 topics</div></div>
+                        <div class="gami-map-node current">Ankle &amp; Foot<div class="gami-muted" style="font-size:0.65rem;margin-top:2px;">3 / 5 topics</div></div>
+                        <div class="gami-map-node">Hip<div class="gami-muted" style="font-size:0.65rem;margin-top:2px;">1 / 4 topics</div></div>
+                        <div class="gami-map-node locked">Lumbar Spine<div class="gami-muted" style="font-size:0.65rem;margin-top:2px;">Locked</div></div>
+                        <div class="gami-map-node locked">Pelvis / SIJ<div class="gami-muted" style="font-size:0.65rem;margin-top:2px;">Locked</div></div>
+                        <div class="gami-map-node locked">Neuro Pathways<div class="gami-muted" style="font-size:0.65rem;margin-top:2px;">Locked</div></div>
+                    </div>
+                    <p class="gami-tiny" style="margin-top:10px;">Finish Ankle &amp; Foot to unlock Lumbar Spine content.</p>
+                </div>
+
+                <!-- Level Progress -->
+                <div class="glass-card progress-card">
+                    <div class="card-header">
+                        <div>
+                            <h2 class="card-title">📈 Level Progress</h2>
+                            <p class="card-subtitle">XP breakdown by module</p>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-header"><span class="progress-label">Knee Rehab</span><span class="progress-value">100%</span></div>
+                        <div class="progress-bar"><div class="progress-fill cyan" style="width: 100%;"></div></div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-header"><span class="progress-label">Ankle &amp; Foot</span><span class="progress-value">62%</span></div>
+                        <div class="progress-bar"><div class="progress-fill magenta" style="width: 62%;"></div></div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-header"><span class="progress-label">Gait Analysis</span><span class="progress-value">45%</span></div>
+                        <div class="progress-bar"><div class="progress-fill purple" style="width: 45%;"></div></div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-header"><span class="progress-label">Neurorehab</span><span class="progress-value">🔒</span></div>
+                        <div class="progress-bar"><div class="progress-fill cyan" style="width: 0%;"></div></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>Copyright &copy; 2026 Physio Learning Hub. Designed by <a href="https://templatemo.com" target="_blank" rel="nofollow">TemplateMo</a></p>
+    </footer>
+
+    <script>
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+            const html = document.documentElement;
+            const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', next);
+            const sun = themeToggle.querySelector('.icon-sun');
+            const moon = themeToggle.querySelector('.icon-moon');
+            if (sun) sun.style.display = next === 'light' ? 'none' : '';
+            if (moon) moon.style.display = next === 'light' ? '' : 'none';
+        });
+    }
+    // Mobile sidebar
+    const mobileToggle = document.getElementById('mobile-menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+    if (mobileToggle && sidebar) {
+        mobileToggle.addEventListener('click', function() { sidebar.classList.toggle('open'); });
+        document.addEventListener('click', function(e) {
+            if (!sidebar.contains(e.target) && !mobileToggle.contains(e.target)) sidebar.classList.remove('open');
+        });
+    }
+    // Card btn tabs
+    document.querySelectorAll('.card-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            this.parentElement.querySelectorAll('.card-btn').forEach(function(s) { s.classList.remove('active'); });
+            this.classList.add('active');
+        });
+    });
+    // Streak heatmap
+    (function() {
+        var c = document.getElementById('gamiHeatmap');
+        if (!c) return;
+        for (var i = 0; i < 7; i++) {
+            var cell = document.createElement('div');
+            cell.className = 'gami-heat-cell' + (i >= 2 ? ' on' : '');
+            c.appendChild(cell);
+        }
+    })();
+    </script>
+</body>
+</html>
