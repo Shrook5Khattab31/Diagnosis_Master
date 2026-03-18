@@ -52,7 +52,7 @@
             </div>
 
             <p id="error" style="color: red"></p>
-            <p class="forgot">Forgot password ?</p>
+            <p class="forgot"><a href="forget.php">Forgot password ?</a></p>
 
             <p class="create">
               Don't have an account ?

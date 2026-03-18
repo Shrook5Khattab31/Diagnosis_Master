@@ -74,6 +74,14 @@ nav {
   display: flex;
   gap: 12px;
   align-items: center;
+  text-decoration: none;
+}
+.nav-btns a {
+  text-decoration: none;
+  color: #a15958;
+}
+.nav-btns .btn-solid a {
+  color: #ffff;
 }
 
 .btn-outline {

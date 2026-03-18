@@ -123,6 +123,10 @@ label {
   color: #7c3f3c;
   margin-top: 5px;
 }
+.forgot a {
+  color: #7c3f3c;
+  text-decoration: none;
+}
 
 /* create account */
 
