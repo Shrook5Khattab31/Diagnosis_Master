@@ -152,7 +152,7 @@
                 inputs.forEach(input => {
                     if (!input.value.trim()) {
                         isValid = false;
-                        input.style.borderColor = '#ff6b6b';
+                        input.style.borderColor = '#4555b2';
                     } else {
                         input.style.borderColor = '';
                     }
@@ -164,7 +164,7 @@
                     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                     if (!emailRegex.test(emailInput.value)) {
                         isValid = false;
-                        emailInput.style.borderColor = '#ff6b6b';
+                        emailInput.style.borderColor = '#4555b2';
                     }
                 }
 
