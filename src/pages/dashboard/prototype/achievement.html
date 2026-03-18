@@ -4,18 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physio Learning Hub - Profile & Progress</title>
-    <meta name="description" content="3D Glassmorphism Dashboard Template by TemplateMo">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="profile_style.css">
-    <!--
+    <link rel="stylesheet" href="dash_style.css">
 
-TemplateMo 607 Glass Admin
-
-https://templatemo.com/tm-607-glass-admin
-
--->
 </head>
 <body>
     <!-- Animated Background -->
@@ -28,7 +21,7 @@ https://templatemo.com/tm-607-glass-admin
         <!-- Sidebar -->
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
-                <div class="logo"><img src="..\assets\DashLogo.png" alt=""></div>
+                <div class="logo"><img src="..\..\..\assets\DashLogo.png" alt=""></div>
             </div>
 
             <ul class="nav-menu">
@@ -36,7 +29,7 @@ https://templatemo.com/tm-607-glass-admin
                     <span class="nav-section-title">Main Menu</span>
                     <ul>
                         <li class="nav-item">
-                            <a href="profile.html" class="nav-link">
+                            <a href="dash.html" class="nav-link">
                                 <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <rect x="3" y="3" width="7" height="7" rx="1"/>
                                     <rect x="14" y="3" width="7" height="7" rx="1"/>
@@ -48,28 +41,25 @@ https://templatemo.com/tm-607-glass-admin
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <img src="..\assets\course_icon.png" alt="" srcset="">
+                                <img src="..\..\..\assets\course_icon.png" alt="" srcset="">
                                 Courses
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
-                                <img src="..\assets\quizes_icon.png" alt="">
+                                <img src="..\..\..\assets\quizes_icon.png" alt="">
                                 Quizes
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="achievement.html" class="nav-link active">
-                                <!--add icon-->
+                                <img src="../../../assets/trophy_icon.png" alt="">
                                 Achievements
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="settings.html" class="nav-link">
-                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="3"/>
-                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-                                </svg>
+                                <img src="../../../assets/settings_icon.png" alt="">
                                 Settings
                             </a>
                         </li>
@@ -134,7 +124,7 @@ https://templatemo.com/tm-607-glass-admin
 
                     <!-- Badges -->
                     <div class="settings-section">
-                        <h3 class="settings-section-title">🏅 Badges <span style="font-size:0.8rem;font-weight:400;color:var(--text-muted);margin-left:8px;">6 / 18 unlocked</span></h3>
+                        <h3 class="settings-section-title"><svg style="width:16px;height:16px;display:inline;vertical-align:-2px;margin-right:4px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M8 14l-4 7h16l-4-7"/></svg> Badges <span style="font-size:0.8rem;font-weight:400;color:var(--text-muted);margin-left:8px;">6 / 18 unlocked</span></h3>
                         <div class="gami-badge-grid" style="margin-top:12px;">
                             <div class="gami-badge-cell earned">ROM Master<div class="gami-muted" style="font-size:0.65rem;margin-top:3px;">&gt;90% in ROM quiz</div></div>
                             <div class="gami-badge-cell earned">Neuro Detective<div class="gami-muted" style="font-size:0.65rem;margin-top:3px;">5 neuro lesions solved</div></div>
@@ -151,7 +141,7 @@ https://templatemo.com/tm-607-glass-admin
 
                     <!-- Certificates -->
                     <div class="settings-section">
-                        <h3 class="settings-section-title">📜 Certificates</h3>
+                        <h3 class="settings-section-title"><svg style="width:16px;height:16px;display:inline;vertical-align:-2px;margin-right:4px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Certificates</h3>
                         <div class="gami-collection-list">
                             <div class="gami-collection-row">
                                 <div class="gami-list-main">
@@ -172,21 +162,21 @@ https://templatemo.com/tm-607-glass-admin
                                     <span class="gami-list-title">Intro to Neurorehab</span>
                                     <span class="gami-list-sub">Locked · Reach Level 8 to unlock</span>
                                 </div>
-                                <span class="gami-badge">🔒</span>
+                                <span class="gami-badge"><svg style="width:12px;height:12px;display:inline;vertical-align:-1px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
                             </div>
                             <div class="gami-collection-row">
                                 <div class="gami-list-main">
                                     <span class="gami-list-title">Gait Analysis Specialist</span>
                                     <span class="gami-list-sub">Locked · Complete Gait Analysis module</span>
                                 </div>
-                                <span class="gami-badge">🔒</span>
+                                <span class="gami-badge"><svg style="width:12px;height:12px;display:inline;vertical-align:-1px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Collectibles -->
                     <div class="settings-section">
-                        <h3 class="settings-section-title">🎁 Collectibles</h3>
+                        <h3 class="settings-section-title"><svg style="width:16px;height:16px;display:inline;vertical-align:-2px;margin-right:4px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg> Collectibles</h3>
                         <div class="gami-collection-list">
                             <div class="gami-collection-row">
                                 <div class="gami-list-main">
@@ -207,7 +197,7 @@ https://templatemo.com/tm-607-glass-admin
                                     <span class="gami-list-title">Legendary Case: Complex Poly-trauma</span>
                                     <span class="gami-list-sub">Locked · Requires 10 completed certificates</span>
                                 </div>
-                                <span class="gami-badge">🔒</span>
+                                <span class="gami-badge"><svg style="width:12px;height:12px;display:inline;vertical-align:-1px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
                             </div>
                         </div>
                         <p class="gami-tiny" style="margin-top:12px;">Collect rare cases and tools to show your mastery.</p>
@@ -215,11 +205,11 @@ https://templatemo.com/tm-607-glass-admin
 
                     <!-- Virtual Environments & Coins -->
                     <div class="settings-section">
-                        <h3 class="settings-section-title">🌐 Virtual Environments &amp; Coins</h3>
+                        <h3 class="settings-section-title"><svg style="width:16px;height:16px;display:inline;vertical-align:-2px;margin-right:4px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Virtual Environments &amp; Coins</h3>
                         <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:var(--glass-bg);border-radius:14px;border:1px solid var(--glass-border);margin-bottom:12px;">
                             <div>
                                 <span style="font-weight:600;">Physio Coins Balance</span>
-                                <div style="font-size:1.5rem;font-weight:700;color:#22d3ee;margin-top:4px;">320 coins</div>
+                                <div style="font-size:1.5rem;font-weight:700;color:#b06070;margin-top:4px;">320 coins</div>
                             </div>
                             <div class="gami-chips">
                                 <span class="gami-chip highlight">+90 earned this week</span>
@@ -238,7 +228,7 @@ https://templatemo.com/tm-607-glass-admin
                                     <span class="gami-list-title">Neuro Ward</span>
                                     <span class="gami-list-sub">Unlock with Intro to Neurorehab certificate</span>
                                 </div>
-                                <span class="gami-badge">🔒</span>
+                                <span class="gami-badge"><svg style="width:12px;height:12px;display:inline;vertical-align:-1px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
                             </div>
                             <div class="gami-collection-row">
                                 <div class="gami-list-main">
@@ -252,7 +242,7 @@ https://templatemo.com/tm-607-glass-admin
                                     <span class="gami-list-title">Outpatient Clinic Environment</span>
                                     <span class="gami-list-sub">Cost 200 coins · Requires Level 9</span>
                                 </div>
-                                <span class="gami-badge">🔒</span>
+                                <span class="gami-badge"><svg style="width:12px;height:12px;display:inline;vertical-align:-1px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
                             </div>
                         </div>
                     </div>
