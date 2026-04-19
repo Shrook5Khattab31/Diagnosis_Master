@@ -3,6 +3,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Diagnosis Master Login</title>
 
     <link rel="stylesheet" href="common.css" />
@@ -16,8 +18,8 @@
 
   <body>
     <div class="container">
-      <!-- LEFT SIDE (الصورة) -->
       <div class="left">
+
         <img class="logo" src="..\..\assets\Logo.png" alt="" />
       </div>
 
@@ -32,11 +34,11 @@
             <i class="fa-regular fa-user"></i>
           </div>
 
-          <h2>Log in</h2>
+          <h2 style="font-size: 30px;">Log in</h2>
 
           <form id="loginForm">
             <label
-              ><i class="fa-regular fa-user"></i>&nbsp;<b>Username:</b></label
+              ><i class="fa-regular fa-user"></i>&nbsp;Username:</label
             >
 
             <div class="input-box">
@@ -44,7 +46,7 @@
             </div>
 
             <label
-              ><i class="fa-solid fa-lock"></i>&nbsp;<b>Password:</b></label
+              ><i class="fa-solid fa-lock"></i>&nbsp;Password:</label
             >
 
             <div class="input-box">
@@ -56,7 +58,7 @@
 
             <p class="create">
               Don't have an account ?
-              <a href="sign_up.php">Create new Account</a>
+              <a style="text-decoration: underline;" href="sign_up.php">Create new Account</a>
             </p>
 
             <button class="login-btn" type="submit">Log in</button>

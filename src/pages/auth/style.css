@@ -12,13 +12,21 @@ body {
 }
 
 .container {
+  
   display: flex;
-  height: calc(100vh - 120px);
+  height: 600px;
+  width: 850px;
   margin: auto;
   border: 1px solid #f0ccd0;
   border-radius: 48px;
   overflow: hidden;
-  background: linear-gradient(to top right, #ffff, #f0ccd0, #c0c9d8);
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #ffffff 25%,
+    #f6d6da 60%,
+    #c8c2d2 100%
+  );
   box-shadow: 0 10px 30px #8f4a47;
 }
 
@@ -32,6 +40,7 @@ body {
 }
 
 .logo {
+  width: 150px;
   margin: 0.5rem;
   padding: 1rem;
   background-color: transparent;
@@ -51,12 +60,15 @@ body {
   top: 40px;
   right: 40px;
   cursor: pointer;
+  width: 25px;
 }
 
 /* login box */
 
 .login-box {
   width: 500px;
+  padding: 40px;
+  padding-top: 0;
 }
 
 /* user icon */
@@ -69,27 +81,32 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto;
-  margin-bottom: 15px;
+  margin-top: 60px;
+  margin-left: 100px;
   color: white;
   font-size: 32px;
+  margin-bottom: 10px;
 }
 
 h2 {
-  color: #7c3f3c;
-  margin-bottom: 60px;
+  color: #9b514d;
+  margin-bottom: 0;
   text-align: center;
+  margin-right: 60px;
+  margin-bottom: 10px;
+  -webkit-text-stroke: 1px #8e4a46;
 }
 
 /* labels */
 
 label {
   display: block;
-  text-align: left;
-  margin: 10px 0 5px;
+    text-align: left;
   color: #7c3f3c;
   font-size: 20px;
   margin-bottom: 10px;
+  margin-top: 0;
+    padding: 0;
 }
 
 /* inputs */
@@ -98,23 +115,20 @@ label {
   display: flex;
   align-items: center;
   background: #eee;
-  padding: 20px 40px;
+  padding: 10px 20px;
   border-radius: 30px;
   margin-bottom: 25px;
-}
-
+  }
 .input-box i {
   margin-right: 8px;
   color: #7c3f3c;
-}
-
+  }
 .input-box input {
   border: none;
   outline: none;
   background: none;
   width: 100%;
-}
-
+  }
 /* forgot */
 
 .forgot {
@@ -153,7 +167,7 @@ label {
   color: white;
   font-size: 16px;
   margin-top: 10px;
-  margin-left: 140px;
+  margin-left: 90px;
   cursor: pointer;
 }
 
@@ -189,38 +203,26 @@ label {
 .social i {
   cursor: pointer;
 }
-.signup-box {
+/*.signup-box {
   width: 500px;
 }
-/* user icon */
-.user-icon {
-  width: 100px;
-  height: 100px;
-  background: #8f4a47;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  margin-bottom: 15px;
-  color: white;
-  font-size: 32px;
-}
+
 h2 {
   color: #7c3f3c;
   margin-bottom: 60px;
   text-align: center;
 }
 /* labels */
-label {
+/*label-signup {
   display: block;
   text-align: left;
   margin: 10px 0 5px;
   color: #7c3f3c;
   font-size: 20px;
   margin-bottom: 10px;
-} /* inputs */
-.input-box {
+}
+/* inputs */
+/*.input-box {
   display: flex;
   align-items: center;
   background: #eee;
@@ -256,7 +258,7 @@ select {
 }
 
 /* login button */
-.signup-btn {
+/*.signup-btn {
   width: 100%;
   padding: 12px;
   border: none;
