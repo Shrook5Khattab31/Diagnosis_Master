@@ -38,7 +38,7 @@
 
           <form id="loginForm">
             <label
-              ><i class="fa-regular fa-user"></i>&nbsp;Username:</label
+              ><i style="font-size: 17px;" class="fa-regular fa-user"></i>&nbsp;Username:</label
             >
 
             <div class="input-box">
@@ -46,7 +46,7 @@
             </div>
 
             <label
-              ><i class="fa-solid fa-lock"></i>&nbsp;Password:</label
+              ><i style="font-size: 17px;" class="fa-solid fa-lock"></i>&nbsp;Password:</label
             >
 
             <div class="input-box">
