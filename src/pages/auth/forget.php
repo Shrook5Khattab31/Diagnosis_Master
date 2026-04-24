@@ -1,67 +1,91 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Diagnosis Master</title>
+  <title>Diagnosis Master</title>
 
-    <link rel="stylesheet" href="style1.css" />
+  <link rel="stylesheet" href="style1.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-  </head>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <body>
-    <div class="container">
-      <img src="../../assets/bg2.png" class="wave" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+</head>
 
-      <div class="forget-box">
-        <div class="top-icons">
-          <a href="..\landing\Landing.php">
-          <img class="back-image" src="..\..\assets\back.png" alt="" />
-          </a>
-        </div>
+<body>
 
-        <div class="icon">
-          <img src="../../assets/Account.png" />
-        </div>
+<div class="container">
 
-        <h1>Forget Password</h1>
+  <!-- LEFT -->
+  <div class="left"></div>
 
-        <label> <i class="fa-solid fa-lock"></i> New Password </label>
+  <!-- RIGHT -->
+  <div class="right">
 
-        <div class="input-box">
-          <input type="password" id="password" />
-          <i
-            class="fa-solid fa-eye-slash"
-            onclick="togglePass('password', this)"
-          ></i>
-        </div>
+    <!-- back -->
+    <a href="..\landing\Landing.php">
+      <img class="back-image" src="..\..\assets\back.png" />
+    </a>
 
-        <label> <i class="fa-solid fa-lock"></i> Re-enter Password </label>
+    <div class="box">
 
-        <div class="input-box">
-          <input type="password" id="confirmPassword" />
-          <i
-            class="fa-solid fa-eye-slash"
-            onclick="togglePass('confirmPassword', this)"
-          ></i>
-        </div>
-
-        <button onclick="updatePassword()">Update</button>
-
-        <p id="message"></p>
+      <!-- icon -->
+      <div class="user-icon">
+        <i class="fa-solid fa-lock"></i>
       </div>
+
+      <h2>Forget Password</h2>
+
+      <!-- password -->
+      <label><i class="fa-solid fa-lock"></i> New Password</label>
+      <div class="input-box">
+        <input type="password" id="password">
+        <i class="fa-solid fa-eye-slash"
+          onclick="togglePass('password', this)"></i>
+      </div>
+
+      <!-- confirm -->
+      <label><i class="fa-solid fa-lock"></i> Re-enter Password</label>
+      <div class="input-box">
+        <input type="password" id="confirmPassword">
+        <i class="fa-solid fa-eye-slash"
+          onclick="togglePass('confirmPassword', this)"></i>
+      </div>
+
+      <button onclick="updatePassword()">Update</button>
+
+      <p id="message"></p>
+
     </div>
 
-    <script src="script.js"></script>
+  </div>
 
-    <!-- صورة الرسالة -->
-    <div id="successPopup" class="popup">
-      <img src="../../assets/Pass Changed.png" class="popup-img" />
+</div>
+
+<script src="script.js"></script>
+<div id="successPopup" class="overlay">
+  <div class="popup-card">
+
+    <div class="popup-circle">
+      <i class="fa-solid fa-bell"></i>
     </div>
-  </body>
+
+    <h2>Password Changed</h2>
+
+    <p>
+      Your Password has been changed successfully<br>
+      Please login with the new Password
+    </p>
+
+    <button onclick="goToLogin()">Log in</button>
+
+  </div>
+</div>
+</div>
+
+
+
+</body>
 </html>
