@@ -120,6 +120,7 @@ label {
   padding: 10px 20px;
   border-radius: 30px;
   margin-bottom: 25px;
+   border: 1px solid #7c3f3c;
   }
 .input-box i {
   margin-right: 8px;
@@ -173,7 +174,7 @@ label {
   font-size: 16px;
   margin-top: 10px;
   margin-left: 90px;
-  cursor: pointer;
+  
   font-family: Inria Serif;
 }
 

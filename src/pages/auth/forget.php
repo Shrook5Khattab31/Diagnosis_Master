@@ -19,7 +19,10 @@
 <div class="container">
 
   <!-- LEFT -->
-  <div class="left"></div>
+  <div class="left">
+
+        <img class="logo" src="..\..\assets\Logo.png" alt="" />
+      </div>
 
   <!-- RIGHT -->
   <div class="right">
@@ -42,16 +45,14 @@
       <label><i class="fa-solid fa-lock"></i> New Password</label>
       <div class="input-box">
         <input type="password" id="password">
-        <i class="fa-solid fa-eye-slash"
-          onclick="togglePass('password', this)"></i>
+        
       </div>
 
       <!-- confirm -->
       <label><i class="fa-solid fa-lock"></i> Re-enter Password</label>
       <div class="input-box">
         <input type="password" id="confirmPassword">
-        <i class="fa-solid fa-eye-slash"
-          onclick="togglePass('confirmPassword', this)"></i>
+    
       </div>
 
       <button onclick="updatePassword()">Update</button>

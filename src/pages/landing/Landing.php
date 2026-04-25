@@ -38,8 +38,8 @@
             Clinics
           </h1>
           <p>
-            A complete learning ecosystem for medical students. Interactive
-            visualization meet evidence-based case studies to turn theory into
+            A complete learning ecosystem for medical students.<br> Interactive
+            visualization meet evidence-based case <br>studies to turn theory into
             practice.
           </p>
           <button class="btn-show-more">Show More</button>
@@ -63,9 +63,6 @@
             evidence-based case studies, and adaptive quizzes to create a
             complete learning ecosystem for medical students at every stage of
             their education.
-          </p>
-          <br />
-          <p>
             Our mission is to empower the next generation of healthcare
             professionals with tools that make complex diagnostic reasoning
             intuitive, engaging, and effective.
