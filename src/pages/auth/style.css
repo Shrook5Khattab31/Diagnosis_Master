@@ -165,16 +165,17 @@ label {
 /* login button */
 
 .login-btn {
+  display: inline-block; 
   width: 50%;
   padding: 12px;
-  border: none;
   border-radius: 25px;
   background: #8f4a47;
   color: white;
   font-size: 16px;
   margin-top: 10px;
   margin-left: 90px;
-  
+  text-align: center; 
+  text-decoration: none;
   font-family: Inria Serif;
 }
 

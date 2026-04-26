@@ -61,7 +61,7 @@
               <a style="text-decoration: underline;" href="sign_up.php">Create new Account</a>
             </p>
 
-            <button class="login-btn" type="submit">Log in</button>
+            <a href="dashboard.php" class="login-btn">Log in</a>
           </form>
 
           <div class="or">
