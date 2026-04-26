@@ -25,7 +25,7 @@
 /* LEFT SIDE */
 .left {
   width: 50%;
-  background-image: url("Intersect.png");
+  background-image: url("../../assets/Intersect.png");
   background-size: cover;
   background-position: center;
 }

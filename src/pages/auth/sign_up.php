@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <title>Diagnosis Master Login</title>
 
-    <link rel="stylesheet" href="common.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="style_sign_up.css" />
 
     <link
       rel="stylesheet"
@@ -14,20 +14,20 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="page-container">
       <!-- LEFT SIDE (الصورة) -->
       <div class="left">
-        <img class="logo" src="..\..\assets\Logo.png" alt="" />
+        <img class="logo" src="../../assets/Logo.png" alt="" />
       </div>
 
       <!-- RIGHT SIDE -->
       <div class="right">
-        <a href="..\landing\Landing.php">
-          <img class="back-image" src="..\..\assets\back.png" alt="" />
+        <a href="/">
+          <img class="back-image" src="../../assets/back.png" alt="" />
         </a>
 
-        <div class="signup-box">
-          <div class="user-icon">
+        <div class="signup-card">
+          <div class="signup-icon">
             <i class="fa-regular fa-user"></i>
           </div>
 
@@ -47,42 +47,40 @@
             <input type="email" placeholder="Email" />
           </div>
 
-          <label><i class="fa-solid fa-lock"></i>&nbsp;<b>Password:</b></label>
+           <label><i class="fa-solid fa-lock"></i>&nbsp;<b>Password:</b></label>
 
           <div class="input-box">
             <input type="password" placeholder="Password" />
           </div>
 
-          <label
-            ><i class="fa-solid fa-lock"></i>&nbsp;<b
-              >Confirm Password:</b
-            ></label
-          >
+           <label><i class="fa-solid fa-lock"></i>&nbsp;<b>Confirm Password:</b></label>
 
           <div class="input-box">
             <input type="password" placeholder="Confirm Password" />
           </div>
 
-          <div class="row">
-            <select>
-              <option>Major</option>
-              <option>physical therapy</option>
-              <option>Dentistry</option>
-              <option>Pharmacy</option>
-            </select>
+          <div class="select-group">
+        <select>
+            <option>Major</option>
+            <option>physical therapy</option>
+            <option>Dentistry</option>
+            <option>Pharmacy</option>
+        </select>
 
-            <select>
-              <option>Level</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-          <br />
+        <select>
+            <option>Level</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+<br>
 
-          <button class="signup-btn">Sign Up</button>
+          <button class="btn-signup">Sign Up</button>
+
+
         </div>
       </div>
     </div>
