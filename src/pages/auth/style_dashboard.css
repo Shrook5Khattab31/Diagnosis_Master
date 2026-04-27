@@ -38,7 +38,7 @@ body {
 .search-button {
   height: 65px;
   margin-left: 10px;
-
+  cursor: pointer;
   background: transparent;
 }
 .score {
@@ -59,4 +59,5 @@ body {
   margin-left: 100px;
   background: transparent;
   border: none;
+  cursor: pointer;
 }
