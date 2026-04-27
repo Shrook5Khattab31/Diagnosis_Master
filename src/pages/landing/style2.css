@@ -263,17 +263,12 @@ nav {
 }
 /* ───── CONTACT ───── */
 .contact {
-  background: linear-gradient(#ddc1d4, #e0e2f1, #ffffff);
   color: rgba(38, 50, 56, 100);
   padding: 70px 80px;
   display: flex;
   justify-content: space-between;
   gap: 70px;
   align-items: flex-start;
-}
-
-.contact-form {
-  flex: 1;
 }
 
 .contact-form h2 {
