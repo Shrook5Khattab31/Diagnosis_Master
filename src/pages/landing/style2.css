@@ -201,29 +201,23 @@ nav {
 /* ───── FEATURES ───── */
 .features {
   font-family: "Inter";
-  background: var(--bg-feat);
+  background: rgba(178, 116, 116, 0.75);
   padding: 60px 60px 70px;
+  text-align: center;
+  color: white;
+}
+.features h1 {
+  font-size: 64px;
+  -webkit-text-stroke: 2px rgba(178, 116, 116, 0.75);
 }
 .features h2 {
   font-family: "Inter";
-  font-size: 40px;
+  font-size: 34px;
   font-weight: 700;
   color: white !important;
   text-align: center;
   margin-bottom: 40px;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
-}
-.features {
-  padding: 60px 10%;
-  background: rgba(178, 116, 116, 75);
-  text-align: center;
-  color: white;
-}
-
-.features h2 {
-  font-size: 34px;
-  margin-bottom: 40px;
-  font-weight: 600;
 }
 
 .feat-grid {
@@ -234,16 +228,20 @@ nav {
 
 .feat-card {
   border: 2px dashed rgba(255, 255, 255, 0.55);
-  border-radius: 58px;
-  background: rgba(178, 116, 116, 75);
-  padding: 53px 46px;
-  min-height: 140px;
+  border-radius: 40px;
+  background: rgba(178, 116, 116, 0.75);
+  padding: 40px;
+  min-height: 180px;
+
+  /* أهم تعديل */
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  transition:
-    background 0.2s,
-    transform 0.18s;
+  flex-direction: column; /* يخلي h2 فوق و p تحت */
+  justify-content: center; /* توسيط رأسي */
+  align-items: center; /* توسيط أفقي */
+
+  text-align: center;
+
+  transition: 0.3s;
 }
 
 .feat-card:hover {
@@ -251,30 +249,17 @@ nav {
   transform: translateY(-3px);
 }
 
-.feat-icon-label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 15px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: px;
-}
-
-.feat-icon-label span.icon {
-  font-size: 17px;
-  color: rgba(255, 25, 255, 0.9);
-}
-
 .feat-card p {
   font-family: "Inter", sans-serief;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.8);
   font-weight: 400;
   margin-top: 18px;
-  max-width: 220px;
-  text-align: left;
+  max-width: 2200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* ───── CONTACT ───── */
 .contact {

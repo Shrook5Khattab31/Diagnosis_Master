@@ -71,14 +71,14 @@
       </section>
       <!-- features -->
       <section class="features">
-        <h2>Features</h2>
+        <h1 >Features</h1>
 
         <div class="feat-grid">
           <div class="feat-card has-content">
-            <div class="feat-icon-label">
-              <span class="icon">🔎</span>
-              Powerful Search
-            </div>
+            
+             
+              <h2>🔎Powerful Search</h2>
+          
             <p>
               Quickly search for diseases, symptoms, and diagnoses in a
               well-organized medical database.
@@ -86,10 +86,10 @@
           </div>
 
           <div class="feat-card has-content">
-            <div class="feat-icon-label">
-              <span class="icon">🧠</span>
-              Interactive Quizzes
-            </div>
+           
+             
+              <h2>🧠Interactive Quizzes</h2>
+           
             <p>
               Test your medical knowledge with quizzes and review important
               concepts easily.
@@ -97,20 +97,17 @@
           </div>
 
           <div class="feat-card has-content">
-            <div class="feat-icon-label">
-              <span class="icon">📚</span>
-              Organized Medical Database
-            </div>
+           
+             
+             <h2> 📚Organized Medical Database</h2>
+           
             <p>
               Access reliable medical information presented in a structured and
               easy-to-understand way.
             </p>
           </div>
           <div class="feat-card has-content">
-            <div class="feat-icon-label">
-              <span class="icon">🩺</span>
-              Symptom Checker
-            </div>
+             <h2> 📚Symptom Checker </h2>
             <p>
               Enter symptoms and receive possible disease suggestions to help
               practice diagnostic thinking.
@@ -118,10 +115,10 @@
           </div>
 
           <div class="feat-card has-content">
-            <div class="feat-icon-label">
-              <span class="icon">📋</span>
-              Medical Case Studies
-            </div>
+         
+             
+            <h2> 📋 Medical Case Studies</h2>
+           
             <p>
               Analyze real-like medical cases and try to determine the correct
               diagnosis to improve clinical reasoning.
@@ -129,10 +126,10 @@
           </div>
 
           <div class="feat-card has-content">
-            <div class="feat-icon-label">
-              <span class="icon">💻</span>
-              User-Friendly Interface
-            </div>
+         
+              
+              <h2>💻User-Friendly Interface</h2>
+          
             <p>
               Simple and clean design that helps students from Pharmacy,
               Dentistry, and Physical Therapy navigate easily.
