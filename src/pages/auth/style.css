@@ -112,14 +112,15 @@ label {
 }
 
 /* inputs */
-
+.field {
+  margin-bottom: 25px;
+}
 .input-box {
   display: flex;
   align-items: center;
   background: #ffffff;
   padding: 10px 20px;
   border-radius: 30px;
-  margin-bottom: 25px;
    border: 1px solid #7c3f3c;
   }
 .input-box i {
