@@ -1,0 +1,155 @@
+* {
+   margin: 0; 
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial, sans-serif; 
+  }
+  body {
+  height: 100vh; 
+  display: flex; 
+  background-color: #f0ccd0; 
+} 
+.page-container {
+  display: flex;
+  height: 600px;
+  width: 850px;
+  margin: auto;
+  border: 1px solid #f0ccd0;
+  border-radius: 48px;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #ffffff 25%,
+    #f6d6da 60%,
+    #c8c2d2 100%
+  );
+  box-shadow: 0 10px 30px #8f4a47;
+}
+
+/* LEFT SIDE */
+.left {
+  width: 50%;
+  background-image: url("Intersect.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.logo {
+  width: 150px;
+  margin: 0.5rem;
+  padding: 1rem;
+  background-color: transparent;
+}
+
+/* RIGHT SIDE */
+.right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow-y: auto;
+}
+
+.back-image {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  cursor: pointer;
+   width: 25px;
+}
+
+/* signup box */
+.login-box {
+  width: 500px;
+   padding: 40px;
+  padding-top: 0;
+}
+
+/* user icon */
+.signup-icon {
+  width: 70px;
+  height: 70px;
+  background: #8f4a47;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 26px;
+}
+
+h2 {
+  color: #7c3f3c;
+  margin-bottom: 20px;
+  text-align: center;
+   font-size: 20px;
+}
+
+/* labels */
+label {
+  display: block;
+  text-align: left;
+  margin: 6px 0 4px;
+  color: #7c3f3c;
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* inputs */
+.input-box {
+  display: flex;
+  align-items: center;
+  background: #eee;
+  padding: 8px 14px;
+  border-radius: 30px;
+  margin-bottom: 15px;
+}
+
+.input-box i {
+  margin-right: 8px;
+  color: #7c3f3c;
+}
+
+.input-box input {
+  border: none;
+  outline: none;
+  background: none;
+  width: 100%;
+}
+
+.select-group {
+  display: flex;
+  gap: 15px;
+}
+
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  background: #f3e6e6;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.2),
+  -4px -4px 8px rgba(255,255,255,0.8);
+  font-size: 13px;          
+}
+
+/* signup button */
+.btn-signup {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  background: #8f4a47;
+  color: white;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
