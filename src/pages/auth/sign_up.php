@@ -102,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
     <div class="right">
-      <a href="/"><img class="back-image" src="../../assets/back.png" alt="" /></a>
+      <a href="login.php"><img class="back-image" src="../../assets/back.png" alt="" /></a>
 
       <div class="signup-card">
         <div class="signup-icon">

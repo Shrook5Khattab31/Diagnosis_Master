@@ -1,12 +1,14 @@
 body {
-  width: 1550px;
-  height: 2460px;
+  margin: 0;
+  overflow-x: hidden;
   background: linear-gradient(135deg, #b27474 0%, #c0c9d8 60%, #c0c9d8 100%);
 }
-
+.dashboard {
+  display: flex;
+}
 .card {
-  width: 100%;
-  height: 99%;
+  width: 80%;
+  height: 1600px;
   margin-left: 25px;
   margin-top: 30px;
 
@@ -29,7 +31,7 @@ body {
   height: 60px;
   border-radius: 50px;
   border: 1px solid #a15958;
-  margin-left: 300px;
+  margin-left: 250px;
 }
 .search-bar::placeholder {
   padding-left: 20px;
@@ -42,7 +44,7 @@ body {
   background: transparent;
 }
 .score {
-  width: 200px;
+  width: 220px;
   height: 60px;
   border-radius: 50px;
   background-color: white;
@@ -52,12 +54,98 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  margin-left: 100px;
+  margin-left: 90px;
 }
 .theme_btn {
   height: 65px;
-  margin-left: 100px;
+  margin-left: 90px;
   background: transparent;
   border: none;
   cursor: pointer;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  width: 100%;
+  margin-top: 40px;
+  margin-left: 50px;
+}
+.profile img {
+  width: 61px;
+  height: 61px;
+}
+
+.profile p {
+  margin: 0;
+  font-size: 32px;
+  color: #a15958;
+  flex-shrink: 0;
+  font-family: Inter;
+}
+.Menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 24px;
+  margin-left: 80px;
+  margin-top: 0px;
+  font-family: Inter;
+}
+.MM {
+  color: #7a89aa;
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+.RA {
+  color: #7a89aa;
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-bottom: 0%;
+}
+.menu-items {
+  margin-left: 30px;
+  font-size: 28px;
+}
+.menu-items p {
+  margin-bottom: 70px;
+}
+.menu-items img {
+  margin-right: 7px;
+}
+.discover {
+  color: #7a89aa;
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-bottom: 0%;
+}
+.full-body {
+  font-size: 25px;
+  margin-left: 30px;
+  display: flex;
+  gap: 10px;
+}
+.full-body img {
+  width: 25px;
+  height: 25px;
+}
+.Account {
+  color: #7a89aa;
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-bottom: 0%;
+}
+.Log-Out {
+  font-size: 25px;
+  margin-left: 30px;
+  display: flex;
+  gap: 10px;
+}
+.Log-Out img {
+  width: 25px;
+  height: 25px;
 }
