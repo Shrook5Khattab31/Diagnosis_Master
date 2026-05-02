@@ -47,3 +47,9 @@ function updatePassword() {
 // ربط الزرار بالدالة
 const updateBtn = document.getElementById("updateBtn");
 updateBtn.addEventListener("click", updatePassword);
+
+
+
+
+
+//salma
