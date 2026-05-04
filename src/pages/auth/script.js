@@ -40,10 +40,16 @@ function updatePassword() {
     // إغلاق popup عند الضغط عليها وتحويل المستخدم لصفحة تسجيل الدخول
     popup.onclick = function () {
         this.style.display = "none";
-        window.location.href = "login.html"; // عدلي حسب صفحة تسجيل الدخول عندك
+        window.location.href = "login.php"; // عدلي حسب صفحة تسجيل الدخول عندك
     };
 }
 
 // ربط الزرار بالدالة
 const updateBtn = document.getElementById("updateBtn");
 updateBtn.addEventListener("click", updatePassword);
+
+
+
+
+
+//salma
