@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Anatomy UI</title>
+    <link rel="stylesheet" href="chapterselect.css" />
+  </head>
+  <body>
+    <div class="top-box">
+      <div class="left">
+        <span
+          ><svg
+            width="45"
+            height="35"
+            viewBox="0 0 45 35"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0.266064 2.16067C0.530989 1.52105 0.979654 0.974364 1.55531 0.589763C2.13097 0.205162 2.80775 -7.85691e-05 3.50006 2.25626e-08H26.8334C31.4747 2.25626e-08 35.9259 1.84374 39.2078 5.12563C42.4897 8.40752 44.3334 12.8587 44.3334 17.5C44.3334 22.1413 42.4897 26.5925 39.2078 29.8744C35.9259 33.1563 31.4747 35 26.8334 35H5.8334C4.90514 35 4.0149 34.6312 3.35852 33.9749C2.70215 33.3185 2.3334 32.4283 2.3334 31.5C2.3334 30.5717 2.70215 29.6815 3.35852 29.0251C4.0149 28.3687 4.90514 28 5.8334 28H26.8334C29.6182 28 32.2889 26.8938 34.258 24.9246C36.2272 22.9555 37.3334 20.2848 37.3334 17.5C37.3334 14.7152 36.2272 12.0445 34.258 10.0754C32.2889 8.10625 29.6182 7 26.8334 7H11.9491L14.1424 9.19333C14.7796 9.85374 15.132 10.738 15.1236 11.6557C15.1152 12.5734 14.7467 13.4511 14.0975 14.0997C13.4482 14.7483 12.5702 15.116 11.6525 15.1235C10.7348 15.1311 9.85087 14.7779 9.19106 14.14L1.0244 5.97333C0.535295 5.48394 0.202217 4.86057 0.0672438 4.18196C-0.0677298 3.50335 0.00145753 2.79997 0.266064 2.16067Z"
+              fill="#A15958"
+            />
+          </svg>
+        </span>
+        <h1>Anatomy Basics</h1>
+      </div>
+      <div class="search-wrapper">
+        <div class="search-box">
+          <input type="text" placeholder="search here ..." />
+        </div>
+
+        <button class="search-btn">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 35 35"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M30.625 30.625L24.2812 24.2812M27.7083 16.0417C27.7083 22.485 22.485 27.7083 16.0417 27.7083C9.59834 27.7083 4.375 22.485 4.375 16.0417C4.375 9.59834 9.59834 4.375 16.0417 4.375C22.485 4.375 27.7083 9.59834 27.7083 16.0417Z"
+              stroke="white"
+              stroke-width="4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="filters">
+      <!-- Level -->
+      <div class="dropdown">
+        <div class="filter" onclick="toggleMenu('levelMenu', event)">
+          <span id="levelText">Level</span> ▾
+        </div>
+
+        <div id="levelMenu" class="menu">
+          <div onclick="selectItem('level', 'One')">One</div>
+          <div onclick="selectItem('level', 'Two')">Two</div>
+          <div onclick="selectItem('level', 'Three')">Three</div>
+          <div onclick="selectItem('level', 'Four')">Four</div>
+          <div onclick="selectItem('level', 'Five')">Five</div>
+        </div>
+      </div>
+
+      <!-- Status -->
+      <div class="dropdown">
+        <div class="filter" onclick="toggleMenu('statusMenu', event)">
+          <span id="statusText">Status</span> ▾
+        </div>
+
+        <div id="statusMenu" class="menu">
+          <div onclick="selectItem('status', 'In Progress')">In Progress</div>
+          <div onclick="selectItem('status', 'Completed')">Completed</div>
+          <div onclick="selectItem('status', 'Locked')">Locked</div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="../../assets/Body anatomy-pana(1).svg" />
+
+      <div class="text">
+        <h2>Chapter 1 : Introduction</h2>
+        <pre>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Et inventore nesciunt praesentium placeat sunt quae id voluptas reiciendis, accusantium cum debitis libero porro nulla! Quam laborum amet veniam 
+rem eos.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco</pre
+        >
+
+        <div class="bottom">
+          <div class="info">
+            <span class="label">Reward :</span>
+            <span class="reward"
+              >Earn 100 Points
+              <svg
+                width="20"
+                height="14"
+                viewBox="0 0 26 29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.5576 0L13.1151 10.1847C13.1941 11.6265 14.728 12.5121 16.016 11.8595L25.115 7.25L16.5735 12.8252C15.3644 13.6144 15.3644 15.3856 16.5735 16.1748L25.115 21.75L16.016 17.1405C14.728 16.4879 13.1941 17.3735 13.1151 18.8153L12.5576 29L12.0001 18.8153C11.9212 17.3735 10.3873 16.4879 9.09925 17.1405L0.000248909 21.75L8.54174 16.1748C9.75083 15.3856 9.75083 13.6144 8.54173 12.8252L0.000248909 7.25L9.09926 11.8595C10.3873 12.5121 11.9212 11.6265 12.0001 10.1847L12.5576 0Z"
+                  fill="#612221"
+                />
+              </svg>
+            </span>
+          </div>
+
+          <div class="info">
+            <span class="label">Status :</span>
+            <span class="status"> In Progress</span>
+          </div>
+        </div>
+      </div>
+      <div class="arrow">
+        <svg
+          width="62"
+          height="62"
+          viewBox="0 0 62 62"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g filter="url(#filter0_di_544_940)">
+            <circle cx="31" cy="27" r="27" fill="#A15958" />
+          </g>
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M38.6305 25.566C39.1278 26.064 39.4072 26.739 39.4072 27.4428C39.4072 28.1465 39.1278 28.8215 38.6305 29.3195L28.6166 39.3369C28.1184 39.8349 27.4427 40.1146 26.7383 40.1144C26.0339 40.1142 25.3585 39.8342 24.8605 39.336C24.3625 38.8378 24.0828 38.1622 24.083 37.4578C24.0832 36.7534 24.3632 36.0779 24.8614 35.5799L32.9985 27.4428L24.8614 19.3056C24.3774 18.8049 24.1094 18.1342 24.1151 17.4379C24.1208 16.7415 24.3998 16.0753 24.8919 15.5827C25.3841 15.0901 26.0501 14.8104 26.7464 14.8041C27.4427 14.7977 28.1137 15.0651 28.6148 15.5486L38.6323 25.5643L38.6305 25.566Z"
+            fill="white"
+          />
+          <defs>
+            <filter
+              id="filter0_di_544_940"
+              x="0"
+              y="0"
+              width="62"
+              height="62"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dy="4" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_544_940"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_544_940"
+                result="shape"
+              />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dy="4" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite
+                in2="hardAlpha"
+                operator="arithmetic"
+                k2="-1"
+                k3="1"
+              />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="shape"
+                result="effect2_innerShadow_544_940"
+              />
+            </filter>
+          </defs>
+        </svg>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../../assets/Body anatomy-amico(1).svg" />
+
+      <div class="text">
+        <h2>Chapter 2 : Introduction</h2>
+        <pre>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Et inventore nesciunt praesentium placeat sunt quae id voluptas reiciendis, accusantium cum debitis libero porro nulla! Quam laborum amet veniam 
+rem eos.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco</pre
+        >
+
+        <div class="bottom">
+          <div class="info">
+            <span class="label">Reward :</span>
+            <span class="reward"
+              >Earn 100 Points
+              <svg
+                width="20"
+                height="14"
+                viewBox="0 0 26 29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.5576 0L13.1151 10.1847C13.1941 11.6265 14.728 12.5121 16.016 11.8595L25.115 7.25L16.5735 12.8252C15.3644 13.6144 15.3644 15.3856 16.5735 16.1748L25.115 21.75L16.016 17.1405C14.728 16.4879 13.1941 17.3735 13.1151 18.8153L12.5576 29L12.0001 18.8153C11.9212 17.3735 10.3873 16.4879 9.09925 17.1405L0.000248909 21.75L8.54174 16.1748C9.75083 15.3856 9.75083 13.6144 8.54173 12.8252L0.000248909 7.25L9.09926 11.8595C10.3873 12.5121 11.9212 11.6265 12.0001 10.1847L12.5576 0Z"
+                  fill="#612221"
+                />
+              </svg>
+            </span>
+          </div>
+
+          <div class="info">
+            <span class="label">Status :</span>
+            <span class="status done"> Completed</span>
+          </div>
+        </div>
+      </div>
+      <div class="arrow">
+        <svg
+          width="62"
+          height="62"
+          viewBox="0 0 62 62"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g filter="url(#filter0_di_544_940)">
+            <circle cx="31" cy="27" r="27" fill="#A15958" />
+          </g>
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M38.6305 25.566C39.1278 26.064 39.4072 26.739 39.4072 27.4428C39.4072 28.1465 39.1278 28.8215 38.6305 29.3195L28.6166 39.3369C28.1184 39.8349 27.4427 40.1146 26.7383 40.1144C26.0339 40.1142 25.3585 39.8342 24.8605 39.336C24.3625 38.8378 24.0828 38.1622 24.083 37.4578C24.0832 36.7534 24.3632 36.0779 24.8614 35.5799L32.9985 27.4428L24.8614 19.3056C24.3774 18.8049 24.1094 18.1342 24.1151 17.4379C24.1208 16.7415 24.3998 16.0753 24.8919 15.5827C25.3841 15.0901 26.0501 14.8104 26.7464 14.8041C27.4427 14.7977 28.1137 15.0651 28.6148 15.5486L38.6323 25.5643L38.6305 25.566Z"
+            fill="white"
+          />
+          <defs>
+            <filter
+              id="filter0_di_544_940"
+              x="0"
+              y="0"
+              width="62"
+              height="62"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dy="4" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_544_940"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_544_940"
+                result="shape"
+              />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dy="4" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite
+                in2="hardAlpha"
+                operator="arithmetic"
+                k2="-1"
+                k3="1"
+              />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="shape"
+                result="effect2_innerShadow_544_940"
+              />
+            </filter>
+          </defs>
+        </svg>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../../assets/Body anatomy-bro.svg" />
+
+      <div class="text">
+        <h2>Chapter 3 : Introduction</h2>
+        <pre>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Et inventore nesciunt praesentium placeat sunt quae id voluptas reiciendis, accusantium cum debitis libero porro nulla! Quam laborum amet veniam 
+rem eos.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco</pre
+        >
+
+        <div class="bottom">
+          <div class="info">
+            <span class="label">Reward :</span>
+            <span class="reward"
+              >Earn 100 Points
+              <svg
+                width="20"
+                height="14"
+                viewBox="0 0 26 29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.5576 0L13.1151 10.1847C13.1941 11.6265 14.728 12.5121 16.016 11.8595L25.115 7.25L16.5735 12.8252C15.3644 13.6144 15.3644 15.3856 16.5735 16.1748L25.115 21.75L16.016 17.1405C14.728 16.4879 13.1941 17.3735 13.1151 18.8153L12.5576 29L12.0001 18.8153C11.9212 17.3735 10.3873 16.4879 9.09925 17.1405L0.000248909 21.75L8.54174 16.1748C9.75083 15.3856 9.75083 13.6144 8.54173 12.8252L0.000248909 7.25L9.09926 11.8595C10.3873 12.5121 11.9212 11.6265 12.0001 10.1847L12.5576 0Z"
+                  fill="#612221"
+                />
+              </svg>
+            </span>
+          </div>
+
+          <div class="info">
+            <span class="label">Status :</span>
+            <span class="status locked"> Locked</span>
+          </div>
+        </div>
+      </div>
+      <div class="arrow">
+        <svg
+          width="62"
+          height="62"
+          viewBox="0 0 62 62"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g filter="url(#filter0_di_544_940)">
+            <circle cx="31" cy="27" r="27" fill="#A15958" />
+          </g>
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M38.6305 25.566C39.1278 26.064 39.4072 26.739 39.4072 27.4428C39.4072 28.1465 39.1278 28.8215 38.6305 29.3195L28.6166 39.3369C28.1184 39.8349 27.4427 40.1146 26.7383 40.1144C26.0339 40.1142 25.3585 39.8342 24.8605 39.336C24.3625 38.8378 24.0828 38.1622 24.083 37.4578C24.0832 36.7534 24.3632 36.0779 24.8614 35.5799L32.9985 27.4428L24.8614 19.3056C24.3774 18.8049 24.1094 18.1342 24.1151 17.4379C24.1208 16.7415 24.3998 16.0753 24.8919 15.5827C25.3841 15.0901 26.0501 14.8104 26.7464 14.8041C27.4427 14.7977 28.1137 15.0651 28.6148 15.5486L38.6323 25.5643L38.6305 25.566Z"
+            fill="white"
+          />
+          <defs>
+            <filter
+              id="filter0_di_544_940"
+              x="0"
+              y="0"
+              width="62"
+              height="62"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dy="4" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_544_940"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_544_940"
+                result="shape"
+              />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dy="4" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite
+                in2="hardAlpha"
+                operator="arithmetic"
+                k2="-1"
+                k3="1"
+              />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="shape"
+                result="effect2_innerShadow_544_940"
+              />
+            </filter>
+          </defs>
+        </svg>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="../../assets/Body anatomy-rafiki.svg" />
+
+      <div class="text">
+        <h2>Chapter 4 : Introduction</h2>
+        <pre>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Et inventore nesciunt praesentium placeat sunt quae id voluptas reiciendis, accusantium cum debitis libero porro nulla! Quam laborum amet veniam 
+rem eos.sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco</pre
+        >
+
+        <div class="bottom">
+          <div class="info">
+            <span class="label">Reward :</span>
+            <span class="reward"
+              >Earn 100 Points
+              <svg
+                width="20"
+                height="14"
+                viewBox="0 0 26 29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.5576 0L13.1151 10.1847C13.1941 11.6265 14.728 12.5121 16.016 11.8595L25.115 7.25L16.5735 12.8252C15.3644 13.6144 15.3644 15.3856 16.5735 16.1748L25.115 21.75L16.016 17.1405C14.728 16.4879 13.1941 17.3735 13.1151 18.8153L12.5576 29L12.0001 18.8153C11.9212 17.3735 10.3873 16.4879 9.09925 17.1405L0.000248909 21.75L8.54174 16.1748C9.75083 15.3856 9.75083 13.6144 8.54173 12.8252L0.000248909 7.25L9.09926 11.8595C10.3873 12.5121 11.9212 11.6265 12.0001 10.1847L12.5576 0Z"
+                  fill="#612221"
+                />
+              </svg>
+            </span>
+          </div>
+
+          <div class="info">
+            <span class="label">Status :</span>
+            <span class="status locked"> Locked</span>
+          </div>
+        </div>
+      </div>
+      <div class="arrow">
+        <svg
+          width="62"
+          height="62"
+          viewBox="0 0 62 62"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g filter="url(#filter0_di_544_940)">
+            <circle cx="31" cy="27" r="27" fill="#A15958" />
+          </g>
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M38.6305 25.566C39.1278 26.064 39.4072 26.739 39.4072 27.4428C39.4072 28.1465 39.1278 28.8215 38.6305 29.3195L28.6166 39.3369C28.1184 39.8349 27.4427 40.1146 26.7383 40.1144C26.0339 40.1142 25.3585 39.8342 24.8605 39.336C24.3625 38.8378 24.0828 38.1622 24.083 37.4578C24.0832 36.7534 24.3632 36.0779 24.8614 35.5799L32.9985 27.4428L24.8614 19.3056C24.3774 18.8049 24.1094 18.1342 24.1151 17.4379C24.1208 16.7415 24.3998 16.0753 24.8919 15.5827C25.3841 15.0901 26.0501 14.8104 26.7464 14.8041C27.4427 14.7977 28.1137 15.0651 28.6148 15.5486L38.6323 25.5643L38.6305 25.566Z"
+            fill="white"
+          />
+          <defs>
+            <filter
+              id="filter0_di_544_940"
+              x="0"
+              y="0"
+              width="62"
+              height="62"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dy="4" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite in2="hardAlpha" operator="out" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_544_940"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_544_940"
+                result="shape"
+              />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              />
+              <feOffset dy="4" />
+              <feGaussianBlur stdDeviation="2" />
+              <feComposite
+                in2="hardAlpha"
+                operator="arithmetic"
+                k2="-1"
+                k3="1"
+              />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="shape"
+                result="effect2_innerShadow_544_940"
+              />
+            </filter>
+          </defs>
+        </svg>
+      </div>
+    </div>
+
+    <script src="chapterselect.js"></script>
+  </body>
+</html>

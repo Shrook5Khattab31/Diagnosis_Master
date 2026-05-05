@@ -29,22 +29,22 @@ function updatePassword() {
         return;
     }
 
-    // الباسورد صحيح
+   
     message.innerText = "Password Updated Successfully";
     message.style.color = "green";
 
-    // عرض Popup الصورة
+   
     const popup = document.getElementById("successPopup");
     popup.style.display = "flex";
 
-    // إغلاق popup عند الضغط عليها وتحويل المستخدم لصفحة تسجيل الدخول
+   
     popup.onclick = function () {
         this.style.display = "none";
-        window.location.href = "login.php"; // عدلي حسب صفحة تسجيل الدخول عندك
+        window.location.href = "login.php"; 
     };
 }
 
-// ربط الزرار بالدالة
+
 const updateBtn = document.getElementById("updateBtn");
 updateBtn.addEventListener("click", updatePassword);
 
@@ -52,4 +52,3 @@ updateBtn.addEventListener("click", updatePassword);
 
 
 
-//salma

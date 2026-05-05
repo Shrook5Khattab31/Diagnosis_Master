@@ -76,34 +76,36 @@
 
                     </div>
 
-                </div>
 
 
-                <div class="calendar-container">
-                    <div class="calendar-header">
-                        <button class="nav-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                        <div class="date-selectors">
-                            <div class="selector">April <i class="fa-solid fa-caret-down"></i></div>
-                            <div class="selector">2021 <i class="fa-solid fa-caret-down"></i></div>
+
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <button class="nav-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                            <div class="date-selectors">
+                                <div class="selector">April <i class="fa-solid fa-caret-down"></i></div>
+                                <div class="selector">2021 <i class="fa-solid fa-caret-down"></i></div>
+                            </div>
+                            <button class="nav-btn"><i class="fa-solid fa-chevron-right"></i></button>
                         </div>
-                        <button class="nav-btn"><i class="fa-solid fa-chevron-right"></i></button>
-                    </div>
 
-                    <div class="weekdays">
-                        <span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
-                    </div>
+                        <div class="weekdays">
+                            <span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
+                        </div>
 
-                    <div class="days-grid">
-                        <span class="prev-month">29</span>
-                        <span class="prev-month">30</span>
-                        <span class="prev-month">31</span>
-                        <span>1</span><span>2</span><span>3</span><span>4</span>
-                        <span>5</span><span>6</span><span class="active">7</span><span>8</span><span>9</span><span>10</span><span>11</span>
-                        <span>12</span><span>13</span><span>14</span><span>15</span><span>0</span><span>17</span><span>18</span>
-                        <span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span>
-                        <span>26</span><span>27</span><span>28</span><span>29</span><span>30</span>
-                        <span class="next-month">1</span>
-                        <span class="next-month">2</span>
+
+                        <div class="days-grid">
+                            <span class="prev-month">29</span>
+                            <span class="prev-month">30</span>
+                            <span class="prev-month">31</span>
+                            <span>1</span><span>2</span><span>3</span><span>4</span>
+                            <span>5</span><span>6</span><span class="active">7</span><span>8</span><span>9</span><span>10</span><span>11</span>
+                            <span>12</span><span>13</span><span>14</span><span>15</span><span>0</span><span>17</span><span>18</span>
+                            <span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span>
+                            <span>26</span><span>27</span><span>28</span><span>29</span><span>30</span>
+                            <span class="next-month">1</span>
+                            <span class="next-month">2</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -115,7 +117,7 @@
                 <div class="carousel-layout">
                     <div class="cards-list">
                         <div class="paper-wrapper">
-                            <img src="Diagnosis_Master/src/assets/paper.png" alt="paper background" class="paper-bg">
+                            <img src="../../assets/cards.svg" alt="paper background" class="paper-bg">
                             <div class="card-content">
                                 <i class="fa-solid fa-bookmark bookmark-icon"></i>
                                 <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
@@ -147,8 +149,10 @@
         </div>
         <div class="sidebar">
             <div class="profile">
-                <img src="../../assets/profile.png" alt="Profile">
-                <p><b>Profile Name</b></p>
+                <button onclick="location.href='../profile_tab/profile.html'">
+                    <img src="../../assets/profile.png" alt="Profile">
+                    <p><b>Profile Name</b></p>
+                </button>
             </div>
 
             <div class="Menu">
@@ -170,13 +174,12 @@
                     <img src="../../assets/arrow_drop_down.png" alt="icon">
                 </p>
                 <p class="Account">ACCOUNT </p>
-                <p class="full-body"><img src="../../assets/Log Out.png" alt="icon">Log Out</p>
+                <button class="full-body" onclick="location.href = '../landing/landing.php'">
+                    <p class="full-body"><img src="../../assets/Log Out.png" alt="icon">Log Out</p>
+                </button>
             </div>
         </div>
     </div>
-
-
-
 
 
 </body>

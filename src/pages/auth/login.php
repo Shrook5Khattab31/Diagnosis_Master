@@ -1,5 +1,5 @@
 <?php
-require_once 'db.php'; // include the connection
+// require_once 'db.php'; // include the connection
 
 $errors = [];
 $username = $password = "";
