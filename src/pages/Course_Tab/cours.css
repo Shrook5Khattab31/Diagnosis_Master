@@ -104,6 +104,7 @@ body {
     background-size: cover;
     background-position: center;
     position: relative; /* ضروري لتموضع النص بالداخل */
+    cursor: pointer;
 }
 
 .card-image h3 {
@@ -129,11 +130,11 @@ body {
 }
 
 /* ألوان خلفية تجريبية */
-.bg-anatomy { background-image: url('https://via.placeholder.com/300x180/eef/000?text=Anatomy'); }
-.bg-test { background-image: url('https://via.placeholder.com/300x180/efe/000?text=Test'); }
-.bg-therapeutic { background-image: url('https://via.placeholder.com/300x180/fee/000?text=Therapeutic'); }
-.bg-hydro { background-image: url('https://via.placeholder.com/300x180/eff/000?text=Hydro'); }
-.bg-manual { background-image: url('https://via.placeholder.com/300x180/fef/000?text=Manual'); }
+.bg-anatomy { background-image: url('../../assets/Intersect.svg'); }
+.bg-test { background-image: url('../../assets/test.svg'); }
+.bg-therapeutic { background-image: url('../../assets/ex.svg'); }
+.bg-hydro { background-image: url('../../assets/hydro.svg'); }
+.bg-manual { background-image: url('../../assets/Image.svg'); }
 
 .card-content {
     padding: 15px;
@@ -221,3 +222,87 @@ body {
     font-size: 18px;
     color: #2c3e50;
 }
+
+
+
+.profile p {
+  margin: 0;
+  font-size: 32px;
+  color: #a15958;
+  flex-shrink: 0;
+  font-family: Inter;
+}
+.Menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 24px;
+  margin-left: 80px;
+  margin-top: 0px;
+  font-family: Inter;
+}
+.MM {
+  color: #7a89aa;
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+.RA {
+  color: #7a89aa;
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-bottom: 0%;
+}
+.menu-items {
+  margin-left: 30px;
+  font-size: 28px;
+}
+.menu-items p {
+  margin-bottom: 70px;
+}
+.menu-items img {
+  margin-right: 7px;
+}
+.discover {
+  color: #7a89aa;
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-bottom: 0%;
+}
+.full-body {
+  font-size: 25px;
+  margin-left: 30px;
+  display: flex;
+  gap: 10px;
+}
+.full-body img {
+  width: 25px;
+  height: 25px;
+}
+.Account {
+  color: #7a89aa;
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-bottom: 0%;
+}
+.Log-Out {
+  font-size: 25px;
+  margin-left: 30px;
+  display: flex;
+  gap: 10px;
+}
+.Log-Out img {
+  width: 25px;
+  height: 25px;
+}
+
+.profile button {
+  background-color: transparent;
+  border-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
