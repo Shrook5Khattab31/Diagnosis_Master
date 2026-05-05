@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD
 $connection = new mysqli("localhost", "root", "", "diagnosis");
-=======
-require_once 'db.php';
->>>>>>> origin/Feature/profile
 
 $error = "";
 
@@ -26,7 +22,6 @@ if (isset($_POST['username'])) {
     } else {
         $hashed = password_hash($password, PASSWORD_BCRYPT);
 
-<<<<<<< HEAD
         // id is AUTO_INCREMENT so we do NOT insert it
         $add = $connection->prepare("INSERT INTO users (username, email, password, major, level, created_at) VALUES (?, ?, ?, ?, ?, ?)");
         $add->bind_param("ssssss", $username, $email, $hashed, $major, $level, $created_at);
@@ -34,21 +29,6 @@ if (isset($_POST['username'])) {
 
         header("Location: login.php?registered=1");
         exit;
-=======
-  // --- Valiste Username ---
-  if (empty($username)) {
-    $errors["username"] = "Username is required.";
-  } elseif (strlen($username) < 3) {
-    $errors["username"] = "Username must be at least 3 characters.";
-  } elseif (!preg_match('/^[a-zA-Z0-9_]+$/', $username)) {
-    $errors["username"] = "Username can only contain letters, numbers, and underscores.";
-  } else {
-    // Check if username already taken
-    $stmt = $pdo->prepare("SELECT id FROM users WHERE username = ?");
-    $stmt->execute([$username]);
-    if ($stmt->fetch()) {
-      $errors["username"] = "Username is already taken.";
->>>>>>> origin/Feature/profile
     }
 }
 ?>
@@ -79,10 +59,6 @@ if (isset($_POST['username'])) {
         </div>
 
         <h2>Sign Up</h2>
-
-        <?php if ($error): ?>
-          <p style="color:red; text-align:center; margin-bottom:10px;"><?= $error ?></p>
-        <?php endif; ?>
 
         <form method="post" action="" id="signupForm">
 
@@ -142,6 +118,9 @@ if (isset($_POST['username'])) {
           </div>
 
           <br>
+          <?php if ($error){ ?>
+            <p style="color:red; text-align:center; margin-bottom:10px;"><?= $error ?></p>
+          <?php } ?>
           <button class="btn-signup" type="button" onclick="validateForm()">Sign Up</button>
 
         </form>
