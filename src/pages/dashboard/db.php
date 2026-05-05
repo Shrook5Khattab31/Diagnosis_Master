@@ -3,7 +3,7 @@ $host = '127.0.0.1';
 $port = 3306;
 $dbname = 'diagnosis';
 $user = 'root';
-$pass = ''; // XAMPP's default MySQL password is empty
+$pass = '';
 
 try {
     $pdo = new PDO(
