@@ -1,5 +1,5 @@
 <?php
-// require_once 'db.php'; // include the connection
+require_once 'db.php'; // include the connection
 
 $errors = [];
 $username = $password = "";
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       session_start();
       $_SESSION["user_id"] = $user["id"];
       $_SESSION["username"] = $user["username"];
-      header("Location: dashboard.php");
+      header("Location: ../dashboard/dashboard.php");
       exit;
     } else {
       $errors["general"] = "Invalid username or password.";

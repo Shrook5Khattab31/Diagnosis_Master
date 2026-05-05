@@ -31,7 +31,7 @@
   </nav>
   <div class="bg">
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="home">
       <div class="details">
         <h1>
           Diagnosis Master:<br />Bridge the gap between<br />Lectures &amp;

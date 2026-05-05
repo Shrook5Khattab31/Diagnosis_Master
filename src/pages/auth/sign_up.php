@@ -1,5 +1,5 @@
 <?php
-// require_once 'db.php';
+require_once 'db.php';
 
 $errors = [];
 $success = "";
@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $major           = $_POST["major"] ?? "";
   $level           = $_POST["level"] ?? "";
 
-  // --- Validate Username ---
+  // --- Valiste Username ---
   if (empty($username)) {
     $errors["username"] = "Username is required.";
   } elseif (strlen($username) < 3) {

@@ -76,9 +76,6 @@
 
                     </div>
 
-
-
-
                     <div class="calendar-container">
                         <div class="calendar-header">
                             <button class="nav-btn"><i class="fa-solid fa-chevron-left"></i></button>
@@ -180,7 +177,9 @@
             </div>
         </div>
     </div>
-
+    <script src="../auth/script.js">
+        document.getElementById
+    </script>
 
 </body>
 
