@@ -1,6 +1,6 @@
 body {
   margin: 0;
-
+  width: 100%;
   background: linear-gradient(135deg, #b27474 0%, #c0c9d8 60%, #c0c9d8 100%);
 }
 .dashboard {
@@ -318,14 +318,6 @@ ul {
   border-color: #a29bfe;
 }
 
-.container2 {
-  background: white;
-  width: 380px;
-  padding: 30px;
-  border-radius: 25px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
 .calendar-card {
   width: 350px;
 }
@@ -512,7 +504,7 @@ h1 {
   align-items: center;
   justify-content: flex-start;
   gap: 8px;
-  width: 100%;
+  width: 50%;
   margin-top: 40px;
   margin-left: 50px;
 }
