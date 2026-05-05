@@ -154,11 +154,9 @@ ul {
 }
 
 .container {
-  background: white;
   width: 380px;
   padding: 30px;
   border-radius: 25px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
 .todo-app h1 {
@@ -214,14 +212,6 @@ ul {
   --light-gray: #f8fafc;
   --border-color: #e2e8f0;
   --trash-color: #b5838d; /* لون السلة اللي في الصورة */
-}
-
-.container {
-  background: white;
-  width: 380px;
-  padding: 30px;
-  border-radius: 25px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 /* ستايل القائمة والمهام */
