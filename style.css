@@ -31,7 +31,7 @@ body{
 
 .left{
   padding:30px;
-  overflow:auto;
+  overflow:visible;
   flex:4;
    min-width:320px;
 }
@@ -82,6 +82,10 @@ body{
   font-size:13px;
   text-align:center;
 }
+.ach img{
+  width: 110px;
+  height: 110px;
+}
 
 .score{
   margin-top:20px;
@@ -106,6 +110,10 @@ body{
   font-size:14px;
 
   box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+.score img{
+  width: 25px;
+  height: 14px;
 }
 
 .progress{
@@ -280,15 +288,13 @@ color: #A15958;}
   position:relative; /* 👈 مهم جدًا */
   overflow: visible;
 }
-.edit-icon{
+.edit-icon img{
     position:absolute;
     right:5px;
     bottom:5px;
 
     width:27px;
     height:27px;
-
-    border-radius:12px;
 
     display:flex;
     justify-content:center;
@@ -404,7 +410,7 @@ color: #A15958;}
   );
 }
 
-.back{
+.back {
   position:absolute;
   top:15px;
   right:15px;
@@ -516,32 +522,6 @@ color: #A15958;}
 }
 
 
-
-/* Edit icon */
-.edit-icon1{
-    position:absolute;
-
-    right:8px;
-    bottom:8px;
-
-    width:40px;
-    height:40px;
-
-    border-radius:12px;
-
-    background:transparent;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    z-index:10;
-
-    cursor:pointer;
-
-    box-shadow:none;
-}
-
 /* Bottom Box */
 .avatars-box{
     margin-top:-25px;
@@ -607,9 +587,8 @@ color: #A15958;}
     line-height:1.2;
 }
 
-.upload-icon{
+.upload-icon {
     font-size:26px;
-
     margin-top:10px;
 }
 
