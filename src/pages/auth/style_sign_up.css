@@ -2,24 +2,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: Inter;
 }
 body {
   height: 100vh;
   display: flex;
   background-color: #f0ccd0;
 }
-.page-container {
+.container {  
   display: flex;
-  height: calc(120vh - 120px);
+  height: 600px;
+  width: 850px;
   margin: auto;
   border: 1px solid #f0ccd0;
   border-radius: 48px;
   overflow: hidden;
-  background: linear-gradient(to top right, #ffff, #f0ccd0, #c0c9d8);
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #ffffff 25%,
+    #f6d6da 60%,
+    #c8c2d2 100%
+  );
   box-shadow: 0 10px 30px #8f4a47;
-  height: 700px;
-  width: 1000px;
 }
 
 /* LEFT SIDE */
@@ -54,54 +59,56 @@ body {
   width: 25px;
 }
 
-/* signup box */
-.login-box {
-  width: 500px;
-  padding: 40px;
-  padding-top: 0;
-}
 
 /* user icon */
 .signup-icon {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   background: #8f4a47;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto;
-  margin-bottom: 15px;
+  margin-top: 60px;
+  margin-left: 100px;
   color: white;
   font-size: 32px;
+  margin-bottom: 10px;
 }
 
 h2 {
-  color: #7c3f3c;
-  margin-bottom: 40px;
+  font-family: Inria Serif;
+  color: #9b514d;
+  margin-bottom: 0px;
   text-align: center;
+  margin-right: 60px;
+  margin-bottom: 10px;
+  -webkit-text-stroke: 0.5px #0a0909;
 }
 
 /* labels */
 label {
+  font-family: Inter;
   display: block;
-  text-align: left;
-  margin: 10px 0 5px;
+    text-align: left;
   color: #7c3f3c;
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 16px;
+  margin-bottom: 2px;
   margin-top: 0;
-  padding: 0;
+    padding: 0;
 }
-
+.field {
+  margin-bottom: 25px;
+}
 /* inputs */
 .input-box {
   display: flex;
   align-items: center;
-  background: #eee;
+  background: #ffffff;
   padding: 10px 20px;
   border-radius: 30px;
-  margin-bottom: 25px;
+   border: 1px solid #7c3f3c;
+   margin-bottom: 10px;
 }
 
 .input-box i {
@@ -123,25 +130,30 @@ label {
 
 select {
   width: 100%;
-  padding: 12px 15px;
-  border: none;
-  outline: none;
+  padding: 10px 15px;
+  border: 1px solid #7c3f3c;
+  /* outline: none; */
   border-radius: 25px;
-  background: #f3e6e6;
-  box-shadow:
-    4px 4px 8px rgba(0, 0, 0, 0.2),
-    -4px -4px 8px rgba(255, 255, 255, 0.8);
-}
+  background: #ffffff;
+  }
 
 /* signup button */
 .btn-signup {
-  width: 100%;
+  display: inline-block; 
+  width: 50%;
   padding: 12px;
-  border: none;
   border-radius: 25px;
   background: #8f4a47;
   color: white;
   font-size: 16px;
-  margin-top: 10px;
-  cursor: pointer;
+  margin-left: 90px;
+  text-align: center; 
+  text-decoration: none;
+  font-family: Inria Serif;
+}
+
+.error-box {
+  color: red;
+  font-size: small;
+  
 }
