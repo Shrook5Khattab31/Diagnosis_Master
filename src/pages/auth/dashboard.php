@@ -147,8 +147,10 @@
         </div>
         <div class="sidebar">
             <div class="profile">
-                <img src="../../assets/profile.png" alt="Profile">
-                <p><b>Profile Name</b></p>
+                <button onclick="location.href='../profile_tab/profile.html'">
+                    <img src="../../assets/profile.png" alt="Profile">
+                    <p><b>Profile Name</b></p>
+                </button>
             </div>
 
             <div class="Menu">
@@ -174,9 +176,6 @@
             </div>
         </div>
     </div>
-
-
-
 
 
 </body>

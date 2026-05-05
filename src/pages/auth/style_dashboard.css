@@ -591,3 +591,13 @@ h1 {
   width: 25px;
   height: 25px;
 }
+
+.profile button {
+  background-color: transparent;
+  border-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}

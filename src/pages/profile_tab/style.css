@@ -394,11 +394,13 @@ select {
   );
 }
 
-.back {
+.back button {
   position: absolute;
   top: 15px;
   right: 15px;
   cursor: pointer;
+  border-style: none;
+  background-color: transparent;
 }
 .popup {
   position: fixed;
