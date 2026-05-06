@@ -7,12 +7,15 @@ body {
 
 /* الكارد */
 .card1 {
-    
-   padding: 20px;
-    margin: 30px;
+  width: 80%;
+  height: 1000px;
+  margin-left: 25px;
+  margin-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border: 1px solid #f0ccd0;
   border-radius: 48px;
   background: white;
-  border: 1px solid #f0ccd0;
 }
 /* النافبار */
 .navbar_dash {
@@ -66,164 +69,187 @@ body {
 }
 
 .tabs {
-    margin-bottom: 20px;
-    font-weight: bold;
-    color: #666;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #666;
 }
 
 .tabs span {
-    margin-right: 20px;
-    cursor: pointer;
+  margin-right: 20px;
+  cursor: pointer;
 }
 
 .tabs .active {
-    color: #333;
-    border-bottom: 2px solid #333;
+  color: #333;
+  border-bottom: 2px solid #333;
 }
 
 .courses-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
 }
 
 .card {
-    background: #fff;
-    border: 2px solid #333;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 /* --- تعديلات الصورة والعنوان --- */
 .card-image {
-    height: 180px;
-    background-color: #eee;
-    background-size: cover;
-    background-position: center;
-    position: relative; /* ضروري لتموضع النص بالداخل */
-    cursor: pointer;
+  height: 180px;
+  background-color: #eee;
+  background-size: cover;
+  background-position: center;
+  position: relative; /* ضروري لتموضع النص بالداخل */
+  cursor: pointer;
 }
 
 .card-image h3 {
-    position: absolute;
-    bottom: 10px; /* مكان النص من الأسفل */
-    left: 15px;   /* مكان النص من اليسار */
-    margin: 0;
-    font-size: 26px;
-    font-weight: 900;
-    color: #1a1a1a;
-    z-index: 1;
+  position: absolute;
+  bottom: 10px; /* مكان النص من الأسفل */
+  left: 15px; /* مكان النص من اليسار */
+  margin: 0;
+  font-size: 26px;
+  font-weight: 900;
+  color: #1a1a1a;
+  z-index: 1;
 
-    /* إضافة الـ Stroke (تحديد أبيض حول النص الأسود) */
-    text-shadow: 
-        2px 2px 0 #fff,
-       -2px -2px 0 #fff,
-        2px -2px 0 #fff,
-       -2px 2px 0 #fff,
-        0 2px 0 #fff,
-        0 -2px 0 #fff,
-        2px 0 0 #fff,
-       -2px 0 0 #fff;
+  /* إضافة الـ Stroke (تحديد أبيض حول النص الأسود) */
+  text-shadow:
+    2px 2px 0 #fff,
+    -2px -2px 0 #fff,
+    2px -2px 0 #fff,
+    -2px 2px 0 #fff,
+    0 2px 0 #fff,
+    0 -2px 0 #fff,
+    2px 0 0 #fff,
+    -2px 0 0 #fff;
 }
 
 /* ألوان خلفية تجريبية */
-.bg-anatomy { background-image: url('../../assets/Intersect.svg'); }
-.bg-test { background-image: url('../../assets/test.svg'); }
-.bg-therapeutic { background-image: url('../../assets/ex.svg'); }
-.bg-hydro { background-image: url('../../assets/hydro.svg'); }
-.bg-manual { background-image: url('../../assets/Image.svg'); }
+.bg-anatomy {
+  background-image: url("../../assets/Intersect.svg");
+}
+.bg-test {
+  background-image: url("../../assets/test.svg");
+}
+.bg-therapeutic {
+  background-image: url("../../assets/ex.svg");
+}
+.bg-hydro {
+  background-image: url("../../assets/hydro.svg");
+}
+.bg-manual {
+  background-image: url("../../assets/Image.svg");
+}
 
 .card-content {
-    padding: 15px;
-    background-color: #f0f2f5;
-    flex-grow: 1;
+  padding: 15px;
+  background-color: #f0f2f5;
+  flex-grow: 1;
 }
 
 .stats {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 10px;
-    font-weight: bold;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .stats span {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
 .description {
-    font-size: 14px;
-    color: #444;
-    line-height: 1.4;
-    margin-bottom: 15px;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.4;
+  margin-bottom: 15px;
 }
 
 .description a {
-    color: #a35b5b;
-    text-decoration: none;
-    font-weight: bold;
+  color: #a35b5b;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .progress-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .progress-bar {
-    flex-grow: 1;
-    height: 10px;
-    background: #fff;
-    border: 2px solid #333;
-    border-radius: 10px;
-    overflow: hidden;
+  flex-grow: 1;
+  height: 10px;
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .progress {
-    height: 100%;
-    background: #333;
+  height: 100%;
+  background: #333;
 }
 
 .progress.complete {
-    background: #2c3e50;
+  background: #2c3e50;
 }
 
 .percentage {
-    font-size: 14px;
-    font-weight: bold;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .locked .lock-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(180, 185, 210, 0.85);
-    z-index: 5;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 30px 30px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(180, 185, 210, 0.85);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 30px 30px 0;
 }
 
 .lock-overlay i {
-    font-size: 40px;
-    margin-bottom: 10px;
-    color: #333;
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #333;
 }
 
 .lock-overlay p {
-    font-weight: bold;
-    font-size: 18px;
-    color: #2c3e50;
+  font-weight: bold;
+  font-size: 18px;
+  color: #2c3e50;
 }
 
-
+profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  width: 50%;
+  margin-top: 40px;
+  margin-left: 50px;
+}
+.profile img {
+  width: 61px;
+  height: 61px;
+}
 
 .profile p {
   margin: 0;
@@ -263,6 +289,9 @@ body {
 .menu-items img {
   margin-right: 7px;
 }
+.course {
+  cursor: pointer;
+}
 .discover {
   color: #7a89aa;
   font-size: 20px;
@@ -287,9 +316,11 @@ body {
 }
 .Log-Out {
   font-size: 25px;
-  margin-left: 30px;
+  margin-left: 20px;
   display: flex;
   gap: 10px;
+  background-color: transparent;
+  border-style: none;
 }
 .Log-Out img {
   width: 25px;
@@ -305,4 +336,3 @@ body {
   gap: 10px;
   cursor: pointer;
 }
-

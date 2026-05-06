@@ -690,6 +690,9 @@ h1 {
 .menu-items img {
   margin-right: 7px;
 }
+.course {
+  cursor: pointer;
+}
 .discover {
   color: #7a89aa;
   font-size: 20px;
