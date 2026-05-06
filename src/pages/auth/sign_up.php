@@ -1,101 +1,59 @@
 <?php
-require_once 'db.php';
+$connection = new mysqli("localhost", "root", "", "diagnosis");
 
-$errors = [];
-$success = "";
+$error = "";
 
-$allowed_majors = ['physical therapy', 'Dentistry', 'Pharmacy'];
-$allowed_levels = ['1', '2', '3', '4', '5'];
+if (isset($_POST['username'])) {
+    $username   = $_POST['username'];
+    $email      = $_POST['email'];
+    $password   = $_POST['password'];
+    $major      = $_POST['major'];
+    $level      = $_POST['level'];
+    $created_at = $_POST['created_at'] ?? date("Y-m-d H:i:s");
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Check username
+    $check = $connection->prepare("SELECT id FROM users WHERE username = ?");
+    $check->bind_param("s", $username);
+    $check->execute();
+    $result = $check->get_result();
+    if ($result->fetch_assoc()) {
+        $error = "Username already exists.";
+    }
 
-  $username        = trim($_POST["username"] ?? "");
-  $email           = trim($_POST["email"] ?? "");
-  $password        = $_POST["password"] ?? "";
-  $confirm         = $_POST["confirm_password"] ?? "";
-  $major           = $_POST["major"] ?? "";
-  $level           = $_POST["level"] ?? "";
+    // Check email
+    if (!$error) {
+        $check2 = $connection->prepare("SELECT id FROM users WHERE email = ?");
+        $check2->bind_param("s", $email);
+        $check2->execute();
+        $result2 = $check2->get_result();
+        if ($result2->fetch_assoc()) {
+            $error = "Email already registered.";
+        }
+    }
 
-  // --- Valiste Username ---
-  if (empty($username)) {
-    $errors["username"] = "Username is required.";
-  } elseif (strlen($username) < 3) {
-    $errors["username"] = "Username must be at least 3 characters.";
-  } elseif (!preg_match('/^[a-zA-Z0-9_]+$/', $username)) {
-    $errors["username"] = "Username can only contain letters, numbers, and underscores.";
-  } else {
-    // Check if username already taken
-    $stmt = $pdo->prepare("SELECT id FROM users WHERE username = ?");
-    $stmt->execute([$username]);
-    if ($stmt->fetch()) {
-      $errors["username"] = "Username is already taken.";
+    if (!$error) {
+        $hashed = password_hash($password, PASSWORD_BCRYPT);
+        $add = $connection->prepare("INSERT INTO users (username, email, password, major, level, created_at) VALUES (?, ?, ?, ?, ?, ?)");
+        $add->bind_param("ssssss", $username, $email, $hashed, $major, $level, $created_at);
+        $add->execute();
+        header("Location: login.php?registered=1");
+        exit;
     }
   }
-
-  // --- Validate Email ---
-  if (empty($email)) {
-    $errors["email"] = "Email is required.";
-  } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $errors["email"] = "Invalid email format.";
-  } else {
-    $stmt = $pdo->prepare("SELECT id FROM users WHERE email = ?");
-    $stmt->execute([$email]);
-    if ($stmt->fetch()) {
-      $errors["email"] = "Email is already registered.";
-    }
-  }
-
-  // --- Validate Password ---
-  if (empty($password)) {
-    $errors["password"] = "Password is required.";
-  }
-
-  // --- Validate Confirm Password ---
-  if (empty($confirm)) {
-    $errors["confirm"] = "Please confirm your password.";
-  } elseif ($password !== $confirm) {
-    $errors["confirm"] = "Passwords do not match.";
-  }
-
-  // --- Validate Major ---
-  if (empty($major) || !in_array($major, $allowed_majors)) {
-    $errors["major"] = "Please select a valid major.";
-  }
-
-  // --- Validate Level ---
-  if (empty($level) || !in_array($level, $allowed_levels)) {
-    $errors["level"] = "Please select a valid level.";
-  }
-
-  // --- Save to DB if no errors ---
-  if (empty($errors)) {
-    $hashed = password_hash($password, PASSWORD_BCRYPT);
-
-    $stmt = $pdo->prepare("
-            INSERT INTO users (username, email, password, major, level)
-            VALUES (?, ?, ?, ?, ?)
-        ");
-    $stmt->execute([$username, $email, $hashed, $major, $level]);
-
-    header("Location: login.php?registered=1");
-    exit;
-  }
-}
 ?>
 
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <title>Diagnosis Master Sign Up</title>
-  <link rel="stylesheet" href="styles/common.css" />
   <link rel="stylesheet" href="style_sign_up.css" />
+  <link rel="stylesheet" href="styles/common.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
-  <div class="page-container">
+  <div class="container">
 
     <div class="left">
       <img class="logo" src="../../assets/Logo.png" alt="" />
@@ -111,80 +69,121 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <h2>Sign Up</h2>
 
-        <form method="post" action="">
+        <form method="post" action="" id="signupForm">
+
+          <input type="hidden" id="created_at" name="created_at" />
 
           <!-- Username -->
-          <label><i class="fa-regular fa-user"></i>&nbsp;<b>Username:</b></label>
+          <label><i class="fa-regular fa-user"></i>&nbsp;<b>Username</b></label>
           <div class="input-box">
-            <input type="text" name="username" placeholder="Username"
-              value="<?= htmlspecialchars($username ?? '') ?>" />
+            <input type="text" id="username" name="username" placeholder="Username"
+              value="<?= htmlspecialchars($_POST['username'] ?? '') ?>" />
           </div>
-          <?php if (!empty($errors["username"])): ?>
-            <span class="error"><?= $errors["username"] ?></span>
-          <?php endif; ?>
 
           <!-- Email -->
-          <label><i class="fa-solid fa-envelope"></i>&nbsp;<b>Email:</b></label>
+          <label><i class="fa-solid fa-envelope"></i>&nbsp;<b>Email</b></label>
           <div class="input-box">
-            <input type="email" name="email" placeholder="Email"
-              value="<?= htmlspecialchars($email ?? '') ?>" />
+            <input type="email" id="email" name="email" placeholder="Email"
+              value="<?= htmlspecialchars($_POST['email'] ?? '') ?>" />
           </div>
-          <?php if (!empty($errors["email"])): ?>
-            <span class="error"><?= $errors["email"] ?></span>
-          <?php endif; ?>
 
           <!-- Password -->
-          <label><i class="fa-solid fa-lock"></i>&nbsp;<b>Password:</b></label>
+          <label><i class="fa-solid fa-lock"></i>&nbsp;<b>Password</b></label>
           <div class="input-box">
-            <input type="password" name="password" placeholder="Password" />
+            <input type="password" id="password" name="password" placeholder="Password" />
           </div>
-          <?php if (!empty($errors["password"])): ?>
-            <span class="error"><?= $errors["password"] ?></span>
-          <?php endif; ?>
 
           <!-- Confirm Password -->
-          <label><i class="fa-solid fa-lock"></i>&nbsp;<b>Confirm Password:</b></label>
+          <label><i class="fa-solid fa-lock"></i>&nbsp;<b>Confirm Password</b></label>
           <div class="input-box">
-            <input type="password" name="confirm_password" placeholder="Confirm Password" />
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" />
           </div>
-          <?php if (!empty($errors["confirm"])): ?>
-            <span class="error"><?= $errors["confirm"] ?></span>
-          <?php endif; ?>
 
           <!-- Major & Level -->
           <div class="select-group">
             <div>
-              <select name="major">
+              <select id="major" name="major">
                 <option value="">Major</option>
-                <option value="physical therapy" <?= ($major ?? '') == 'physical therapy' ? 'selected' : '' ?>>Physical Therapy</option>
-                <option value="Dentistry" <?= ($major ?? '') == 'Dentistry'        ? 'selected' : '' ?>>Dentistry</option>
-                <option value="Pharmacy" <?= ($major ?? '') == 'Pharmacy'         ? 'selected' : '' ?>>Pharmacy</option>
+                <option value="physical therapy">Physical Therapy</option>
+                <option value="Dentistry">Dentistry</option>
+                <option value="Pharmacy">Pharmacy</option>
               </select>
-              <?php if (!empty($errors["major"])): ?>
-                <span class="error"><?= $errors["major"] ?></span>
-              <?php endif; ?>
             </div>
-
             <div>
-              <select name="level">
+              <select id="level" name="level">
                 <option value="">Level</option>
-                <?php foreach ($allowed_levels as $l): ?>
-                  <option value="<?= $l ?>" <?= ($level ?? '') == $l ? 'selected' : '' ?>><?= $l ?></option>
-                <?php endforeach; ?>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Expert">Expert</option>
               </select>
-              <?php if (!empty($errors["level"])): ?>
-                <span class="error"><?= $errors["level"] ?></span>
-              <?php endif; ?>
             </div>
           </div>
 
           <br>
-          <button class="btn-signup" type="submit">Sign Up</button>
+
+          <!-- error + button wrapper -->
+          <div class="error-wrapper">
+            <div id="error-box"></div>
+            <?php if ($error) { ?>
+              <div class="php-error"><?= $error ?></div>
+            <?php } ?>
+            <button class="btn-signup" type="button" onclick="validateForm()">Sign Up</button>
+          </div>
 
         </form>
       </div>
     </div>
   </div>
-</body>
 
+  <script>
+    window.onload = function() {
+      var now = new Date();
+      var formatted = now.getFullYear() + '-' +
+        String(now.getMonth() + 1).padStart(2, '0') + '-' +
+        String(now.getDate()).padStart(2, '0') + ' ' +
+        String(now.getHours()).padStart(2, '0') + ':' +
+        String(now.getMinutes()).padStart(2, '0') + ':' +
+        String(now.getSeconds()).padStart(2, '0');
+      document.getElementById('created_at').value = formatted;
+    };
+
+    function validateForm() {
+      var errors = [];
+
+      var username = document.getElementById('username').value.trim();
+      var email    = document.getElementById('email').value.trim();
+      var password = document.getElementById('password').value;
+      var confirm  = document.getElementById('confirm_password').value;
+      var major    = document.getElementById('major').value;
+      var level    = document.getElementById('level').value;
+
+      if (username === '')                                    errors.push('Username is required.');
+      else if (username.length < 3)                          errors.push('Username must be at least 3 characters.');
+      else if (!/^[a-zA-Z0-9_]+$/.test(username))           errors.push('Username: only letters, numbers, underscores.');
+
+      if (email === '')                                       errors.push('Email is required.');
+      else if (!email.includes('@') || !email.includes('.')) errors.push('Invalid email format.');
+
+      if (password === '')               errors.push('Password is required.');
+      else if (password.length < 8)     errors.push('Password must be at least 8 characters.');
+      else if (!/[0-9]/.test(password)) errors.push('Password must contain a number.');
+      else if (!/[A-Z]/.test(password)) errors.push('Password must contain an uppercase letter.');
+
+      if (confirm === '')            errors.push('Please confirm your password.');
+      else if (password !== confirm) errors.push('Passwords do not match.');
+
+      if (major === '') errors.push('Please select a major.');
+      if (level === '') errors.push('Please select a level.');
+
+      var box = document.getElementById('error-box');
+      if (errors.length > 0) {
+        box.innerText = errors.join('\n');
+      } else {
+        box.innerText = '';
+        document.getElementById('signupForm').submit();
+      }
+    }
+  </script>
+
+</body>
 </html>
