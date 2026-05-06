@@ -40,7 +40,8 @@
 
     <div class="courses-grid">
         <div class="card">
-            <div class="card-image bg-anatomy">
+            <div id="box" class="card-image bg-anatomy">
+
                 <h3>Anatomy</h3>
             </div>
             <div class="card-content">
@@ -128,8 +129,45 @@
             </div>
         </div>
     </div>
+    </div>
+
+    <div class="sidebar">
+            <div class="profile">
+                <button onclick="location.href='../profile_tab/profile.html'">
+                    <img src="../../assets/profile.png" alt="Profile">
+                    <p><b>Profile Name</b></p>
+                </button>
+            </div>
+        
+            <div class="Menu">
+                <p class="MM">MAIN MENU</p>
+                <div class="menu-items">
+                    <p><img src="../../assets/dashboard icon.png" alt="icon"> Dashboard</p>
+                    <p><img src="../../assets/courses icon.png" alt="icon"> Courses</p>
+                    <p><img src="../../assets/quizes icon.png" alt="icon"> Quizes</p>
+                    <span><img src="../../assets/setting icon.png" alt="icon"> Settings</span>
+                </div>
+
+        <p class="RA">RECENT ACHIEVEMENTS</p>
+                <div class="img-achievements">
+                    <img src="../../assets/Achievement.png" alt="Achievement 2">
+                    <img src="../../assets/Achievement (1).png" alt="Achievement 1">
+                </div>
+                <p class="discover"> DISCOVER MODE</p>
+                <p class="full-body"><img src="../../assets/full-body-icon.png" alt="icon">Full Body
+                    <img src="../../assets/arrow_drop_down.png" alt="icon">
+                </p>
+                <p class="Account">ACCOUNT </p>
+                <button class="full-body" onclick="location.href = '../landing/landing.php'">
+                    <p class="full-body"><img src="../../assets/Log Out.png" alt="icon">Log Out</p>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    
 
     
-    </div>
+    <script src="cours.js"></script>
   </body>
 </html>
