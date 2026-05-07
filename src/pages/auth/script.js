@@ -13,41 +13,31 @@ function togglePass(id, icon) {
     }
 }
 
-function updatePassword() {
-    let pass = document.getElementById("password").value;
-    let confirm = document.getElementById("confirmPassword").value;
-    let message = document.getElementById("message");
+function validateFormForgetPass() {
+    var errors = [];
 
-    if (pass === "" || confirm === "") {
-        message.innerText = "Please fill all fields";
-        message.style.color = "red";
-        return;
+    var username = document.getElementById('username').value.trim();
+    var password = document.getElementById('password').value;
+    var confirm  = document.getElementById('confirmPassword').value;
+
+    if (username === '')  errors.push('Username is required.');
+
+    if (password === '')  errors.push('Password is required.');
+    else if (password.length < 8) errors.push('Password must be at least 8 characters.');
+    else if (!/[0-9]/.test(password))  errors.push('Password must contain a number.');
+    else if (!/[A-Z]/.test(password))  errors.push('Password must contain an uppercase letter.');
+
+    if (confirm === '')   errors.push('Please confirm your password.');
+    else if (password !== confirm) errors.push('Passwords do not match.');
+
+    var box = document.getElementById('error-box');
+    if (errors.length > 0) {
+        box.innerText = errors.join(' | ');
+    } else {
+        box.innerText = '';
+        document.getElementById('forgetForm').submit();
     }
-
-    if (pass !== confirm) {
-        message.innerText = "Passwords do not match";
-        message.style.color = "red";
-        return;
-    }
-
-   
-    message.innerText = "Password Updated Successfully";
-    message.style.color = "green";
-
-   
-    const popup = document.getElementById("successPopup");
-    popup.style.display = "flex";
-
-   
-    popup.onclick = function () {
-        this.style.display = "none";
-        window.location.href = "login.php"; 
-    };
 }
-
-
-const updateBtn = document.getElementById("updateBtn");
-updateBtn.addEventListener("click", updatePassword);
 
 //====Sign-up validation====//
 window.onload = function() {

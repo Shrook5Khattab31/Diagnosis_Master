@@ -54,6 +54,7 @@ body {
   align-items: center;
   position: relative;
 }
+
 .back-image {
   position: absolute;
   top: 40px;
@@ -63,7 +64,7 @@ body {
 }
 .back-image:hover {
   transform: scale(1.07);
-  box-shadow: 0 0 20px rgba(161, 89, 88, 0.8);
+  /* box-shadow: 0 0 20px rgba(161, 89, 88, 0.8); */
 }
 
 /* login box */
