@@ -49,9 +49,8 @@ nav {
   color: rgba(56, 76, 101, 1);
 }
 .nav-links a:hover {
-  background-color: transparent;
+  color: rgba(161, 89, 88, 1);
   transform: scale(1.08);
-  box-shadow: 0 0 10px rgba(56, 76, 101, 1);
 }
 
 .nav-btns {
