@@ -9,7 +9,7 @@ body {
   display: flex;
   background-color: #f0ccd0;
 }
-.container {  
+.container {
   display: flex;
   height: 600px;
   width: 850px;
@@ -59,7 +59,6 @@ body {
   width: 25px;
 }
 
-
 /* user icon */
 .signup-icon {
   width: 100px;
@@ -69,7 +68,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 60px;
+  margin-top: 30px;
   margin-left: 100px;
   color: white;
   font-size: 32px;
@@ -81,8 +80,9 @@ h2 {
   color: #9b514d;
   margin-bottom: 0px;
   text-align: center;
-  margin-right: 60px;
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   -webkit-text-stroke: 0.5px #0a0909;
 }
 
@@ -90,12 +90,12 @@ h2 {
 label {
   font-family: Inter;
   display: block;
-    text-align: left;
+  text-align: left;
   color: #7c3f3c;
   font-size: 16px;
   margin-bottom: 2px;
   margin-top: 0;
-    padding: 0;
+  padding: 0;
 }
 .field {
   margin-bottom: 25px;
@@ -107,8 +107,8 @@ label {
   background: #ffffff;
   padding: 10px 20px;
   border-radius: 30px;
-   border: 1px solid #7c3f3c;
-   margin-bottom: 10px;
+  border: 1px solid #7c3f3c;
+  margin-bottom: 10px;
 }
 
 .input-box i {
@@ -125,35 +125,41 @@ label {
 
 .select-group {
   display: flex;
-  gap: 15px;
+  gap: 25px;
+  margin-bottom: 10px;
 }
 
 select {
   width: 100%;
   padding: 10px 15px;
+  text-align: start;
   border: 1px solid #7c3f3c;
-  /* outline: none; */
+  outline: none;
   border-radius: 25px;
   background: #ffffff;
-  }
-
+}
 /* signup button */
 .btn-signup {
-  display: inline-block; 
+  display: inline-block;
   width: 50%;
   padding: 12px;
+  margin-top: 10px;
   border-radius: 25px;
   background: #8f4a47;
   color: white;
   font-size: 16px;
   margin-left: 90px;
-  text-align: center; 
+  text-align: center;
   text-decoration: none;
   font-family: Inria Serif;
 }
+.btn-signup:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 20px rgba(161, 89, 88, 0.8);
+}
 
-.error-box {
+#error-box {
   color: red;
+  width: 300px;
   font-size: small;
-  
 }

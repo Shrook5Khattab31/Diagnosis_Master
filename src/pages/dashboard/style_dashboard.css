@@ -43,6 +43,9 @@ body {
   cursor: pointer;
   background: transparent;
 }
+.search-button:hover {
+  transform: scale(1.07);
+}
 .score {
   width: 220px;
   height: 60px;
@@ -63,15 +66,18 @@ body {
   border: none;
   cursor: pointer;
 }
+.theme_btn:hover {
+  transform: scale(1.07);
+}
 
 /* =========================
             MAIN BANNER
     ==========================*/
 
 .headline-banner img {
-  width: 1291px;
+  width: 1500px;
   height: 560px;
-  margin-left: 100px;
+  margin-left: px;
 }
 /* =========================
           RECENTLY VISITED
@@ -88,13 +94,13 @@ body {
   color: #1f1f1f;
   letter-spacing: 0.2px;
   margin-bottom: 20px;
-
+  margin-left: 20px;
   text-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
 }
+
 .cards-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-left: 35px;
   gap: 25px;
   margin-top: 10px;
 }
@@ -195,7 +201,7 @@ body {
 .arrow {
   width: 60px;
   height: 150px;
-
+  margin-top: 25px;
   border-radius: 25px;
 
   background: #cfd3df;
@@ -562,9 +568,10 @@ h1 {
 }
 
 .section-title {
-  font-size: 24px;
+  font-size: 34px;
   color: #1a202c;
   margin-bottom: 20px;
+  margin-left: 5px;
 }
 
 /* ===== Layout ===== */
