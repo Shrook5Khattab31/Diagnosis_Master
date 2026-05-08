@@ -62,10 +62,14 @@ body{
   border: none;
   background: #a36d6d;
   color: white;
-  width: 50px;
   height: 50px;
+  width: 50px;
   border-radius: 50%;
   cursor: pointer;
+}
+.search-btn img{
+  height: 30px;
+  width: 30px;
 }
 
 /* Filters */
@@ -101,11 +105,12 @@ body{
   display: none;
   position: absolute;
   top: 50px;
-  left: 0;
+   right: 0;   
+  left: auto;
   background: #e3c9c9;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  width: 150px;
+  width: 160px;
   z-index: 10; 
 }
 
@@ -140,6 +145,12 @@ body{
 .text {
   margin-left: 20px;
 }
+.text pre {
+  white-space: pre-wrap;   /* يخلي النص ينزل سطر */
+  word-wrap: break-word;   /* يمنع الخروج بره */
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
 h2{
 font-size: xx-large;
 }
@@ -170,6 +181,10 @@ font-size: xx-large;
   padding: 8px 15px;
   border-radius: 12px;
 }
+.reward img{
+  height: 17px;
+  width: 30px;
+}
 
 .status {
     border: 2px dotted #f5f3f3;
@@ -198,5 +213,16 @@ font-size: xx-large;
   cursor: pointer;
 
 }
-
+.arrow img{
+  height: 60px;
+  width: 60px;
+}
+.locked-item{
+  opacity: 0.6;
+  cursor: not-allowed;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 

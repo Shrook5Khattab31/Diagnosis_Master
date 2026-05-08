@@ -20,6 +20,8 @@ function selectItem(type, value) {
   if (type === "status") {
     document.getElementById("statusText").innerText = value;
     document.getElementById("statusMenu").style.display = "none";
+
+    filterByStatus(value);
   }
 }
 
@@ -28,3 +30,53 @@ document.addEventListener("click", function () {
     menu.style.display = "none";
   });
 });
+
+const searchInput = document.getElementById("searchInput");
+const notFound = document.getElementById("notFound");
+
+searchInput.addEventListener("input", function () {
+  const value = searchInput.value.toLowerCase().trim();
+
+  const cards = document.querySelectorAll(".card");
+
+  let hasResult = false;
+
+  cards.forEach(card => {
+   const text = card.innerText.toLowerCase();
+
+    if (text.includes(value)) {
+      card.style.display = "flex";
+      hasResult = true;
+    } else {
+      card.style.display = "none";
+    }
+  });
+
+
+  if (!hasResult) {
+    notFound.style.display = "block";
+  } else {
+    notFound.style.display = "none";
+  }
+});
+
+function filterByStatus(statusValue) {
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    const status = card.querySelector(".status");
+
+    if (statusValue === "Completed" && status.classList.contains("done")) {
+      card.style.display = "flex";
+
+    } else if (statusValue === "Locked" && status.classList.contains("locked")) {
+      card.style.display = "flex";
+
+    } else if (statusValue === "In Progress" && !status.classList.contains("done") && !status.classList.contains("locked")) {
+      card.style.display = "flex";
+
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
