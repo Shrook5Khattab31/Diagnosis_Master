@@ -11,7 +11,6 @@ body {
   background-color: #f0ccd0;
 }
 
-/* الكارد */
 .container {
   display: flex;
   height: 600px;
@@ -30,7 +29,6 @@ body {
   box-shadow: 0 10px 30px #8f4a47;
 }
 
-/* الشمال */
 .left {
   width: 50%;
   background-image: url("../../assets/Intersect.png");
@@ -44,7 +42,7 @@ body {
   padding: 1rem;
   background-color: transparent;
 }
-/* اليمين */
+
 .right {
   width: 50%;
   display: flex;
@@ -53,16 +51,18 @@ body {
   position: relative;
 }
 
-/* زر الرجوع */
 .back-image {
   position: absolute;
-  top: 25px;
-  right: 25px;
-  width: 25px;
+  top: 40px;
+  right: 40px;
   cursor: pointer;
+  width: 25px;
+}
+.back-image:hover {
+  transform: scale(1.07);
+  /* box-shadow: 0 0 20px rgba(161, 89, 88, 0.8); */
 }
 
-/* البوكس */
 .box {
   width: 75%;
   max-width: 320px;
@@ -73,7 +73,7 @@ body {
   gap: 12px;
 }
 
-/* أيقونة */
+/* icon */
 .user-icon {
   background: #8f4a47;
   border-radius: 50%;
@@ -87,7 +87,7 @@ body {
   margin: 10px auto 0;
 }
 
-/* العنوان */
+/* title */
 h2 {
   font-size: 30px;
   font-weight: 600;
@@ -125,6 +125,14 @@ label {
   font-family: Inter;
 }
 
+i .fa-eye,
+i .fa-eye-slash {
+  margin-left: 8px;
+  color: #7c3f3c;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
 .input-box input {
   border: none;
   outline: none;
@@ -133,37 +141,40 @@ label {
   background: transparent;
 }
 
-/* زر */
 button {
-  width: 65%;
+  display: inline-block;
+  width: 50%;
   padding: 12px;
-  border: none;
-  border-radius: 30px;
+  margin-top: 10px;
+  border-radius: 25px;
   background: #8f4a47;
   color: white;
-  cursor: pointer;
-
-  font-size: 14px;
-  margin: 15px auto 0;
+  font-size: 16px;
+  margin-left: 90px;
+  text-align: center;
+  text-decoration: none;
+  font-family: Inria Serif;
 }
-
 button:hover {
-  background: #6f3a38;
+  transform: scale(1.07);
+  box-shadow: 0 0 20px rgba(161, 89, 88, 0.8);
+}
+#error-box, .php-error {
+  color: red;
+  width: 300px;
+  font-size: small;
 }
 
-/* نصوص صغيرة */
 .small-text {
   font-size: 12px;
   color: #7c3f3c;
   margin-top: 5px;
 }
 
-/* رسالة */
 #message {
   margin-top: 12px;
 }
 
-/* الخلفية */
 .overlay {
   position: fixed;
   top: 0;
@@ -178,30 +189,25 @@ button:hover {
   justify-content: center;
 }
 
-/* الكارت */
 .popup-card {
   width: 420px;
   padding: 70px 30px 40px;
   text-align: center;
-
+  border: 2px dashed rgba(255, 255, 255, 0.6);
   background: #b97b7b;
   border-radius: 40px;
   position: relative;
 
-  border: 3px dashed rgba(255, 255, 255, 0.9);
 }
 
-/* dashed الداخلي */
 .popup-card::before {
   content: "";
   position: absolute;
   inset: 14px;
   border-radius: 32px;
-  border: 2px dashed rgba(255, 255, 255, 0.6);
   pointer-events: none;
 }
 
-/* الدائرة (مهمة جدًا) */
 .popup-circle {
   width: 100px;
   height: 100px;
@@ -216,7 +222,6 @@ button:hover {
   font-size: 42px;
   color: white;
 
-  /* السر هنا 👇 */
   position: absolute;
   top: 0;
   left: 50%;
@@ -225,7 +230,6 @@ button:hover {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* العنوان */
 .popup-card h2 {
   font-family: "Playfair Display", serif;
   font-size: 30px;
@@ -233,7 +237,7 @@ button:hover {
   margin-bottom: 12px;
 }
 
-/* النص */
+/* success */
 .popup-card p {
   font-size: 14px;
   color: #ffffff;
@@ -241,7 +245,6 @@ button:hover {
   margin-bottom: 30px;
 }
 
-/* الزر */
 .popup-card button {
   padding: 12px 50px;
   border: none;
