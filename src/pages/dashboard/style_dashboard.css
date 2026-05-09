@@ -111,6 +111,15 @@ body {
   width: max-content;
 }
 
+.carousel-item {
+  background: #b27474;
+  padding: 40px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+}
+
 .card {
   width: 300px;
   height: 190px;
