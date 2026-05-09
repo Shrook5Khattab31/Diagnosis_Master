@@ -7,6 +7,7 @@
 
 body{
     display: flex;
+    width: 100vh;
     background:linear-gradient(
     135deg,
     #ffffff 0%,
@@ -18,7 +19,9 @@ body{
     margin: 22px 30px;
     height: 100%;
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
     border-radius: 25px;
     background-color: rgba(69, 90, 100, 0.1);
 }
@@ -44,5 +47,9 @@ body{
 }
 
 .content{
+    display: flex;
+}
+
+.nav{
     display: flex;
 }
