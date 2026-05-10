@@ -61,7 +61,7 @@ body {
   margin-left: 90px;
 }
 .score h2 {
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .score img {
   width: 35px;
@@ -79,8 +79,8 @@ margin-bottom: 20px;
   gap: 25px;
   font-weight: 600;
   font-size: 18px;
-   margin-bottom: 30px;
-    padding-top: 10px;
+  margin-bottom: 30px;
+  padding-top: 10px;
 }
 
 .tabs span {
@@ -324,13 +324,17 @@ margin-bottom: 20px;
   margin-bottom: 0;
 }
 .RA {
+  margin-left: -40px;
   color: #7a89aa;
   font-size: 20px;
   flex-shrink: 0;
   margin-bottom: 0%;
 }
+.img-achievements {
+  margin-left: -40px;
+}
 .menu-items {
-  margin-left: 30px;
+  margin-left: -40px;
   font-size: 28px;
 }
 .menu-items p {
@@ -393,7 +397,7 @@ margin-bottom: 20px;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   justify-content: center;
   align-items: center;
   z-index: 999;
@@ -404,7 +408,7 @@ margin-bottom: 20px;
   height: 85vh;
   background: #fff;
   border-radius: 20px;
-padding: 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -414,7 +418,7 @@ padding: 20px;
   margin-top: 10px;
   border-radius: 10px;
   padding: 10px;
-    flex: 1;
+  flex: 1;
   width: 100%;
   resize: none;
 }
@@ -463,7 +467,7 @@ padding: 20px;
 .lock-message {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.45);
 
   display: flex;
   justify-content: center;
@@ -487,4 +491,25 @@ padding: 20px;
 .locked .see-more {
   pointer-events: none;
   opacity: 0.4;
+}
+.menu-items {
+  font-size: 28px;
+}
+.menu-items p {
+  margin-bottom: 70px;
+  border-radius: 0 70px 70px 0;
+  width: 250px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+
+  font-weight: bold;
+  font-family: sans-serif;
+  transition: 0.3s;
+}
+
+.menu-items p:hover {
+  background-color: #ffffff;
 }

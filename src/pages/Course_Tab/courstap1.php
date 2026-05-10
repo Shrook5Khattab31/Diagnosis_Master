@@ -219,7 +219,7 @@
                         onclick="location.href = '../dashboard/dashboard.php'"><img src="../../assets/dashboard icon.png" alt="icon"> Dashboard</p>
                     <p><img src="../../assets/courses icon.png" alt="icon"> Courses</p>
                     <p><img src="../../assets/quizes icon.png" alt="icon"> Quizes</p>
-                    <span><img src="../../assets/setting icon.png" alt="icon"> Settings</span>
+                    <p><img src="../../assets/setting icon.png" alt="icon"> Settings</p>
                 </div>
 
                 <p class="RA">RECENT ACHIEVEMENTS</p>
