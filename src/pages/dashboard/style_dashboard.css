@@ -101,14 +101,13 @@ body {
 .cards-wrapper {
   display: flex;
   margin-left: 35px;
-  gap: 25px;
+
   margin-top: 10px;
 }
-.cards {
-  display: flex;
-  gap: 22px;
+
+#cards {
   transition: transform 0.5s ease;
-  width: max-content;
+  width: 950px;
 }
 
 .carousel-item {
@@ -123,7 +122,7 @@ body {
 .card {
   width: 300px;
   height: 190px;
-
+  margin: 0 !important;
   border-radius: 22px;
 
   overflow: hidden;
@@ -816,7 +815,7 @@ h1 {
 .carousel-layout {
   display: flex;
   align-items: center;
-  gap: 5px;
+  margin-left: 60px;
 }
 
 .cards-list {
@@ -826,8 +825,7 @@ h1 {
 /* ===== Card Wrapper ===== */
 .paper-wrapper {
   position: relative;
-  width: 280px;
-  margin: auto;
+  width: 300px;
 }
 
 /* ===== Background Image ===== */

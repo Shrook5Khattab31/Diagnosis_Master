@@ -3,7 +3,7 @@
         $("#cards").owlCarousel({
           items: 3, // Number of items to display
           loop: false, // Disable infinite loop
-          margin: 10, // Space between items
+          margin: 0, // Space between items
           nav: true, // Show next/prev buttons
           dots: false, // Show pagination dots
           navText: ["‹", "›"], // Custom arrow text
