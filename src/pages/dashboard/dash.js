@@ -3,7 +3,7 @@
         $("#cards").owlCarousel({
           items: 3, // Number of items to display
           loop: false, // Disable infinite loop
-          margin: 10, // Space between items
+          margin: 0, // Space between items
           nav: true, // Show next/prev buttons
           dots: false, // Show pagination dots
           navText: ["‹", "›"], // Custom arrow text
@@ -398,3 +398,31 @@
           card.style.display = text.includes(value) ? "block" : "none";
         });
       });
+
+      
+
+const claimBtn = document.getElementById("claim-btn");
+const overlay = document.querySelector(".overlay");
+const scoreText = document.querySelector(".score h2");
+
+claimBtn.addEventListener("click", function () {
+
+  overlay.style.display = "none";
+
+  scoreText.textContent = "Score: 30";
+
+  claimBtn.disabled = true;
+  claimBtn.textContent = "Claimed";
+
+  localStorage.setItem("dailyClaimed", "true");
+  localStorage.setItem("score", "30");
+});
+
+window.addEventListener("DOMContentLoaded", function () {
+  if (localStorage.getItem("dailyClaimed") === "true") {
+    overlay.style.display = "none";
+    scoreText.textContent = "Score: " + localStorage.getItem("score");
+    claimBtn.disabled = true;
+    claimBtn.textContent = "Claimed";
+  }
+});

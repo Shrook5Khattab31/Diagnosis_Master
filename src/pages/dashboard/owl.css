@@ -1,5 +1,8 @@
 /* Custom Owl Carousel Styling */
-
+.owl-stage {
+  display: flex;
+  gap: 0 !important;
+}
 /* Navigation arrows styling */
 .owl-carousel .owl-nav button.owl-prev,
 .owl-carousel .owl-nav button.owl-next {
@@ -25,7 +28,7 @@
 }
 
 .owl-carousel .owl-nav button.owl-next {
-  right: -25px;
+  right: -60px;
 }
 
 .owl-carousel .owl-nav button.owl-prev:hover,
@@ -74,6 +77,9 @@
 /* Smooth transitions for carousel items */
 .owl-carousel .owl-item {
   transition: opacity 0.3s ease;
+  margin-right: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* Optional: Add hover effect to cards */
@@ -86,4 +92,56 @@
 .owl-carousel .carousel-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* SAVED CARDS CAROUSEL */
+
+.cards-list .owl-stage {
+  display: flex;
+  gap: 0 !important;
+}
+
+.cards-list .owl-item {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Navigation */
+
+.cards-list .owl-nav button.owl-prev,
+.cards-list .owl-nav button.owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(18, 21, 36, 0.8) !important;
+  color: white !important;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.3s;
+}
+
+.cards-list .owl-nav button.owl-prev {
+  left: -100px;
+}
+
+.cards-list .owl-nav button.owl-next {
+  right: -55px;
+}
+
+.cards-list .owl-nav button.owl-prev:hover,
+.cards-list .owl-nav button.owl-next:hover {
+  background: rgba(18, 21, 36, 1) !important;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* wrapper */
+
+.carousel-layout {
+  position: relative;
+  padding: 0 50px;
 }
