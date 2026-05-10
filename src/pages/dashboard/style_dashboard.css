@@ -206,35 +206,18 @@ body {
 
 /* ARROW */
 
-
-
-
 .main-dashboard {
-<<<<<<< HEAD
   display: flex;
 
-=======
- 
-  display: flex;
-  
->>>>>>> 247d8f6302e643d224ae12f9d81165b719bbfec3
   padding: 32px 16px;
   gap: 50px;
   align-items: flex-start;
 }
 
-<<<<<<< HEAD
 .todo-container {
   width: 600px;
   background: #f3f5f8;
   border-radius: 24px;
-=======
-.todo-container { 
-  width: 600px;
-  background: #f3f5f8;
-  border-radius: 24px;
-
->>>>>>> 247d8f6302e643d224ae12f9d81165b719bbfec3
 }
 
 .todo-title {
@@ -249,36 +232,25 @@ body {
   align-items: center;
   gap: 10px;
   margin-bottom: 16px;
-<<<<<<< HEAD
-=======
-  
->>>>>>> 247d8f6302e643d224ae12f9d81165b719bbfec3
 }
 
 .todo-task-input {
   flex: 1;
   height: 50px;
   border-radius: 999px;
-<<<<<<< HEAD
-
-=======
- 
->>>>>>> 247d8f6302e643d224ae12f9d81165b719bbfec3
   background: #fff;
   padding: 0 18px;
   font-size: 15px;
   color: #080808;
   outline: none;
-<<<<<<< HEAD
 }
 .todo-task-input::placeholder {
   color: #131111;
-=======
->>>>>>> 247d8f6302e643d224ae12f9d81165b719bbfec3
 }
-.todo-task-input::placeholder { color: #131111; }
+.todo-task-input::placeholder {
+  color: #131111;
+}
 
-<<<<<<< HEAD
 .todo-date-input {
   display: none;
 }
@@ -286,244 +258,6 @@ body {
 .todo-add-btn {
   width: 46px;
   height: 46px;
-=======
-.todo-date-input { display: none; }
-
-.todo-add-btn {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: #2c3460;
-  color: #fff;
-  border: none;
-  font-size: 28px;
-  font-weight: 300;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.todo-task-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 14px;
-
-}
-
-.todo-stats { display: none; 
-    
-}
-
-.todo-empty {
-  color: #000000;
-  font-size: 14px;
-  text-align: center;
-  padding: 1rem 0;
-}
-
-/* بتضيفهم بـ JS على كل task */
-.todo-item {
-  display: flex;
-  align-items: center;
-  background: #fff;
-  border-radius: 999px;
-  padding: 0 14px 0 16px;
-  height: 66px;
-  gap: 12px;
-}
-.todo-item.done { background: #e3e5f0; }
-
-.todo-check {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  border: 2px solid #c4c7db;
-  flex-shrink: 0;
-  cursor: pointer;
-  background: transparent;
-}
-.todo-check.checked {
-  background: #c4c7db;
-  border-color: #c4c7db;
-}
-
-.todo-info { flex: 1; min-width: 0; }
-
-.todo-name {
-  font-size: 15px;
-  font-weight: 600;
-  color: #1a1c2e;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.todo-item.done .todo-name {
-  text-decoration: line-through;
-  color: #9a9db8;
-}
-
-.todo-date { font-size: 12px; margin-top: 2px; color: #e41717; }
-.todo-source-auto { color: #9a1010; font-weight: 600; }
-.todo-source-manual { color: #c40e0e; }
-
-.todo-del-btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: #c5a3a3;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #000000;
-  font-size: 17px;
-  flex-shrink: 0;
-}
-
-.todo-toggle-btn {
-  width: 100%;
-  height: 54px;
-  background: #27305b;
-  border: none;
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  position: relative;
-}
-
-.todo-toggle-btn::before {
-  content: "⌄";
-  position: absolute;
-  top: -28px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 36px;
-  height: 36px;
-  background: #d0d4e8;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  color: #27305b;
-  line-height: 36px;
-  text-align: center;
-  margin-top: 40px;
-}
-
-.todo-arrow {
-  color: #fff !important;
-  font-size: 26px;
-  background: transparent !important;
-  width: auto !important;
-  height: auto !important;
-  margin: 0 !important;
-  border-radius: 0 !important;
-  display: inline !important;
-}
-
-.bottom-btn {
-  margin-top: 20px;
-
-  height: 50px;
-
-  background: #475569;
-
-  border-radius: 18px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  color: white;
-
-  cursor: pointer;
-
-  transition: 0.3s;
-}
-
-.bottom-btn:hover {
-  background: #106ff3;
-}
-
-.container {
-  width: 380px;
-  padding: 30px;
-  border-radius: 25px;
-}
-.app {
-  width: 100%;
-  max-width: 600px;
-}
-
-h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 2.2rem;
-  color: var(--text);
-  margin-bottom: 28px;
-  letter-spacing: -0.5px;
-}
-
-/* Input Row */
-.input-row {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 28px;
-  align-items: center;
-}
-
-.task-input {
-  flex: 1;
-  border: none;
-  border-radius: 50px;
-  padding: 14px 22px;
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.97rem;
-  color: var(--text);
-  background: var(--card);
-  box-shadow: var(--shadow);
-  outline: none;
-  transition: box-shadow 0.2s;
-}
-.task-input::placeholder {
-  color: #b0aea8;
-}
-.task-input:focus {
-  box-shadow:
-    0 0 0 2.5px var(--navy),
-    var(--shadow);
-}
-
-.date-input {
-  border: none;
-  border-radius: 50px;
-  padding: 10px 14px;
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.85rem;
-  color: var(--text);
-  background: var(--card);
-  box-shadow: var(--shadow);
-  outline: none;
-  cursor: pointer;
-  transition: box-shadow 0.2s;
-  width: 140px;
-}
-.date-input:focus {
-  box-shadow:
-    0 0 0 2.5px var(--navy),
-    var(--shadow);
-}
-
-.add-btn {
-  width: 48px;
-  height: 48px;
->>>>>>> 247d8f6302e643d224ae12f9d81165b719bbfec3
   border-radius: 50%;
   background: #2c3460;
   color: #fff;
@@ -1178,10 +912,7 @@ h1 {
   margin-bottom: 0%;
 }
 .menu-items {
-  
   font-size: 28px;
- 
- 
 }
 .menu-items p {
   margin-bottom: 70px;
@@ -1192,16 +923,15 @@ h1 {
   justify-content: center;
 
   align-items: center;
-   
-    font-weight:bold;
-    font-family: sans-serif;
-    transition:0.3s;
+
+  font-weight: bold;
+  font-family: sans-serif;
+  transition: 0.3s;
 }
 
-.menu-items p:hover{
-background-color: #ffffff;
+.menu-items p:hover {
+  background-color: #ffffff;
 }
-
 
 .menu-items img {
   margin-right: 7px;
