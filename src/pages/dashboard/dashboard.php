@@ -280,23 +280,32 @@
 
         <!-- TO DO + CALENDAR -->
         <div class="main-dashboard">
-          <div class="container">
-            <div class="app">
-              <h1>To Do List</h1>
-              <div class="input-row">
-                <input class="task-input" id="taskInput" type="text" placeholder="Add a new task..." maxlength="80" />
-                <input class="date-input" id="dateInput" type="date" />
-                <button class="add-btn" id="addBtn" title="Add task">+</button>
-              </div>
-              <div class="stats" id="stats"></div>
-              <div class="task-list" id="taskList">
-                <div class="empty" id="emptyMsg">No tasks yet. Add one above!</div>
-              </div>
-              <button class="toggle-btn" id="toggleBtn" style="display: none">
-                <span class="arrow">&#8964;</span>
-              </button>
-            </div>
-          </div>
+  <div class="todo-container">
+    <div class="todo-app">
+      <h1 class="todo-title">To Do List</h1>
+      <div class="todo-input-row">
+        <input class="todo-task-input" id="taskInput" type="text" placeholder="Add a Task ..." maxlength="80" />
+        <input class="todo-date-input" id="dateInput" type="date" />
+        <button class="todo-add-btn" id="addBtn" title="Add task">+</button>
+      </div>
+      <div class="todo-stats" id="stats"></div>
+      <div class="todo-task-list" id="taskList">
+        
+        <div class="todo-empty" id="emptyMsg">No tasks yet. Add one above!</div>
+
+      </div>
+
+      >
+      <div style="position: relative; margin-top: 24px;">
+       
+             <button class="todo-toggle-btn" id="toggleBtn" style="display: none">
+        <span class="todo-arrow">&#8964;</span>
+      </button>
+       </div>
+
+    </div>
+   
+  </div>
 
           <div class="calendar">
             <div class="cal-header">
@@ -331,7 +340,7 @@
               <img src="../../assets/courses icon.png" alt="icon" /> Courses
             </p>
             <p><img src="../../assets/quizes icon.png" alt="icon" /> Quizes</p>
-            <span><img src="../../assets/setting icon.png" alt="icon" /> Settings</span>
+            <p><img src="../../assets/setting icon.png" alt="icon" /> Settings</p>
           </div>
 
           <p class="RA">RECENT ACHIEVEMENTS</p>
