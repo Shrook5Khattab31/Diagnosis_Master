@@ -55,12 +55,7 @@ searchInput.addEventListener("input", function () {
 });
 
 
-function openChapter(chapterNumber) {
 
-  localStorage.setItem("currentChapter", chapterNumber);
-
-  window.location.href = "../chapter/chapter.html";
-}
 function applyFilters() {
   const cards = document.querySelectorAll(".card");
   let hasResult = false;

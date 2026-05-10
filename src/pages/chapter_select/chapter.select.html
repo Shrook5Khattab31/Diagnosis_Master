@@ -1,158 +1,155 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Anatomy UI</title>
-  <link rel="stylesheet" href="chapterselect.css">
-</head>
-<body>
-<div class="top-box">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Anatomy UI</title>
+    <link rel="stylesheet" href="chapterselect.css" />
+  </head>
+  <body>
+    <div class="top-box">
+      <div class="left">
+        <img src="../../assets/back.png" />
+        <h1>Anatomy Basics</h1>
+      </div>
+      <div class="search-wrapper">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="search here ..." />
+        </div>
 
-  <div class="left">
-      <img src="../../assets/back.png">
-    <h1>Anatomy Basics</h1>
-  </div>
-<div class="search-wrapper">
-
-  <div class="search-box">
-   <input type="text" id="searchInput" placeholder="search here ...">
-  </div>
-
-  <button class="search-btn">
-    <img src="../../assets/Search Button.png">
-
-  </button>
-
-</div>
- </div>
-  <div class="filters">
-
-  <!-- Level -->
-  <div class="dropdown">
-    <div class="filter" onclick="toggleMenu('levelMenu', event)">
-        <span id="levelText">Level</span> ▾
+        <button class="search-btn">
+          <img src="../../assets/Search Button.png" />
+        </button>
+      </div>
     </div>
+    <div class="filters">
+      <!-- Level -->
+      <div class="dropdown">
+        <div class="filter" onclick="toggleMenu('levelMenu', event)">
+          <span id="levelText">Level</span> ▾
+        </div>
 
-    <div id="levelMenu" class="menu">
-      <div onclick="selectItem('level', 'All')">All</div>
-      <div onclick="selectItem('level', 'Beginner')">
-    Beginner
-  </div>
+        <div id="levelMenu" class="menu">
+          <div onclick="selectItem('level', 'All')">All</div>
+          <div onclick="selectItem('level', 'Beginner')">Beginner</div>
 
-  <div class="locked-item">
-    Intermediate 🔒
-  </div>
+          <div class="locked-item">Intermediate 🔒</div>
 
-  <div class="locked-item">
-    Advanced 🔒
-  </div>
+          <div class="locked-item">Advanced 🔒</div>
+        </div>
+      </div>
+
+      <!-- Status -->
+      <div class="dropdown">
+        <div class="filter" onclick="toggleMenu('statusMenu', event)">
+          <span id="statusText">Status</span> ▾
+        </div>
+
+        <div id="statusMenu" class="menu">
+          <div onclick="selectItem('status', 'All')">All</div>
+          <div onclick="selectItem('status', 'In Progress')">In Progress</div>
+          <div onclick="selectItem('status', 'Completed')">Completed</div>
+          <div onclick="selectItem('status', 'Locked')">Locked</div>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <!-- Status -->
-  <div class="dropdown">
-    <div class="filter" onclick="toggleMenu('statusMenu', event)">
-       <span id="statusText">Status</span> ▾
-    </div>
-
-    <div id="statusMenu" class="menu">
-      <div onclick="selectItem('status', 'All')">All</div>
-      <div onclick="selectItem('status', 'In Progress')">In Progress</div>
-<div onclick="selectItem('status', 'Completed')">Completed</div>
-<div onclick="selectItem('status', 'Locked')">Locked</div>
-    </div>
-  </div>
-
-</div>
- <div class="card" data-level="beginner">
-     <img src="../../assets/Body anatomy-pana(1).svg">
+    <div class="card" data-level="beginner">
+      <img src="../../assets/Body anatomy-pana(1).svg" />
 
       <div class="text">
         <h2>Chapter 1 : Introduction to Human Anatomy</h2>
-      <pre>This chapter introduces the basic concepts of human anatomy, including body organization, anatomical terms, and the structural hierarchy from cells to organs.
-It provides a foundation for understanding how the human body is built and functions</pre>
+        <pre>
+This chapter introduces the basic concepts of human anatomy, including body organization, anatomical terms, and the structural hierarchy from cells to organs.
+It provides a foundation for understanding how the human body is built and functions</pre
+        >
 
-       <div class="bottom">
+        <div class="bottom">
+          <div class="info">
+            <span class="label">Reward :</span>
+            <span class="reward"
+              >Earn 100 Points <img src="../../assets/Star.svg" />
+            </span>
+          </div>
 
-  <div class="info">
-    <span class="label">Reward :</span>
-    <span class="reward">Earn 100 Points <img src="../../assets/Star.svg">
-
-</span>
-  </div>
-
-  <div class="info">
-    <span class="label">Status :</span>
-    <span class="status"> In Progress</span>
-  </div>
-</div>
-</div>
-      <div class="arrow" onclick="openChapter(1)">
-  <img src="../../assets/button.svg">
-</div>
+          <div class="info">
+            <span class="label">Status :</span>
+            <span class="status"> In Progress</span>
+          </div>
+        </div>
+      </div>
+      <div class="arrow">
+        <img src="../../assets/button.svg" />
+      </div>
     </div>
-   
-  <div class="card" data-level="beginner">
-     <img src="../../assets/Body anatomy-amico(1).svg">
+
+    <div class="card" data-level="beginner">
+      <img src="../../assets/Body anatomy-amico(1).svg" />
 
       <div class="text">
         <h2>Chapter 2 : Body Systems Overview</h2>
-       <pre>This chapter covers the major body systems such as the skeletal, muscular, circulatory, and nervous systems.
-It explains how each system works individually and how they interact to maintain body function.</pre>
+        <pre>
+This chapter covers the major body systems such as the skeletal, muscular, circulatory, and nervous systems.
+It explains how each system works individually and how they interact to maintain body function.</pre
+        >
 
-       <div class="bottom">
+        <div class="bottom">
+          <div class="info">
+            <span class="label">Reward :</span>
+            <span class="reward"
+              >Earn 100 Points <img src="../../assets/Star.svg" />
+            </span>
+          </div>
 
-  <div class="info">
-    <span class="label">Reward :</span>
-    <span class="reward">Earn 100 Points <img src="../../assets/Star.svg">
-
-</span>
-  </div>
-
-  <div class="info">
-    <span class="label">Status :</span>
-    <span class="status locked"> locked</span>
-  </div>
-</div>
-</div>
-     <div class="arrow" onclick="openChapter(2)">
-  <img src="../../assets/button.svg">
-</div>
+          <div class="info">
+            <span class="label">Status :</span>
+            <span class="status locked"> locked</span>
+          </div>
+        </div>
+      </div>
+      <div class="arrow" onclick="openChapter(2)">
+        <img src="../../assets/button.svg" />
+      </div>
     </div>
 
-<div class="card" data-level="beginner">
-     <img src="../../assets/Body anatomy-bro.svg">
+    <div class="card" data-level="beginner">
+      <img src="../../assets/Body anatomy-bro.svg" />
 
       <div class="text">
-        <h2>Chapter 3 :  Anatomical Position and Terminology</h2>
-        <pre>This chapter explains the standard anatomical position and directional terms used in medicine and anatomy.
-It helps students understand how to describe locations and movements within the human body accurately.</pre>
+        <h2>Chapter 3 : Anatomical Position and Terminology</h2>
+        <pre>
+This chapter explains the standard anatomical position and directional terms used in medicine and anatomy.
+It helps students understand how to describe locations and movements within the human body accurately.</pre
+        >
 
-       <div class="bottom">
+        <div class="bottom">
+          <div class="info">
+            <span class="label">Reward :</span>
+            <span class="reward"
+              >Earn 100 Points <img src="../../assets/Star.svg" />
+            </span>
+          </div>
 
-  <div class="info">
-    <span class="label">Reward :</span>
-    <span class="reward">Earn 100 Points <img src="../../assets/Star.svg">
-
-</span>
-  </div>
-
-  <div class="info">
-    <span class="label">Status :</span>
-    <span class="status locked"> Locked</span>
-  </div>
-</div>
-</div>
+          <div class="info">
+            <span class="label">Status :</span>
+            <span class="status locked"> Locked</span>
+          </div>
+        </div>
+      </div>
       <div class="arrow" onclick="openChapter(3)">
-  <img src="../../assets/button.svg">
-</div>
+        <img src="../../assets/button.svg" />
+      </div>
     </div>
-    <p id="notFound" style="display:none; text-align:center; font-size:20px; font-weight:bold;">
-  Not Found 
-</p>
-   
+    <p
+      id="notFound"
+      style="
+        display: none;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+      "
+    >
+      Not Found
+    </p>
 
-<script src="chapterselect.js"></script>
-</body>
+    <script src="chapterselect.js"></script>
+  </body>
 </html>
-

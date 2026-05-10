@@ -33,18 +33,18 @@
                 </button>
             </nav>
 
-           <div class="tabs">
-    <span id="allTab" class="active">
-        All (<span id="allCount">5</span>)
-    </span>
+            <div class="tabs">
+                <span id="allTab" class="active">
+                    All (<span id="allCount">5</span>)
+                </span>
 
-    <span id="completedTab">
-        Completed (<span id="completedCount">0</span>)
-    </span>
-</div>
-<p id="emptyMessage" style="display:none; text-align:center; margin-top:20px; font-weight:bold;">
-  No completed courses yet
-</p>
+                <span id="completedTab">
+                    Completed (<span id="completedCount">0</span>)
+                </span>
+            </div>
+            <p id="emptyMessage" style="display:none; text-align:center; margin-top:20px; font-weight:bold;">
+                No completed courses yet
+            </p>
 
             <div class="courses-grid">
                 <div class="card anatomy-card">
@@ -57,19 +57,19 @@
                             <span><i class="fa-solid fa-square-poll-vertical"></i> 3 Quizzes</span>
                             <span><i class="fa-solid fa-book-bookmark"></i> 32 Cases</span>
                         </div>
-                     <strong>Description:</strong>
+                        <strong>Description:</strong>
 
-<div class="desc-wrapper">
-  <div class="short-text">
-    Anatomy focuses on understanding the structure of the human body.
-  </div>
+                        <div class="desc-wrapper">
+                            <div class="short-text">
+                                Anatomy focuses on understanding the structure of the human body.
+                            </div>
 
-  <div class="more-text">
-    It covers bones, muscles, organs, and body systems. This course helps you understand how the body is built and how each part works together.
-  </div>
+                            <div class="more-text">
+                                It covers bones, muscles, organs, and body systems. This course helps you understand how the body is built and how each part works together.
+                            </div>
 
-  <a href="#" class="see-more" onclick="toggleDesc(event, this)">see more</a>
-</div>
+                            <a href="#" class="see-more" onclick="toggleDesc(event, this)">see more</a>
+                        </div>
                         <div class="progress-container">
                             <div class="progress-bar">
                                 <div class="progress" style="width: 0%;"></div>
@@ -91,19 +91,19 @@
                             <span><i class="fa-solid fa-square-poll-vertical"></i> 3 Quizzes</span>
                             <span><i class="fa-solid fa-book-bookmark"></i> 32 Cases</span>
                         </div>
-                         <strong>Description:</strong>
+                        <strong>Description:</strong>
 
-<div class="desc-wrapper">
-  <div class="short-text">
-   This course explains how to assess and measure human performance and health.
-  </div>
+                        <div class="desc-wrapper">
+                            <div class="short-text">
+                                This course explains how to assess and measure human performance and health.
+                            </div>
 
-  <div class="more-text">
-  It includes physical tests, clinical measurements, and evaluation techniques used in physiotherapy to track patient progress accurately.
-  </div>
+                            <div class="more-text">
+                                It includes physical tests, clinical measurements, and evaluation techniques used in physiotherapy to track patient progress accurately.
+                            </div>
 
-  <a href="#" class="see-more" onclick="toggleDesc(event, this)">see more</a>
-</div>
+                            <a href="#" class="see-more" onclick="toggleDesc(event, this)">see more</a>
+                        </div>
                         <div class="progress-container">
                             <div class="progress-bar">
                                 <div class="progress" style="width: 0%;"></div>
@@ -123,19 +123,19 @@
                             <span><i class="fa-solid fa-square-poll-vertical"></i> 3 Quizzes</span>
                             <span><i class="fa-solid fa-book-bookmark"></i> 32 Cases</span>
                         </div>
-         <strong>Description:</strong>
+                        <strong>Description:</strong>
 
-<div class="desc-wrapper">
-  <div class="short-text">
-    Therapeutic exercises are designed to improve strength, flexibility, and mobility.
-  </div>
+                        <div class="desc-wrapper">
+                            <div class="short-text">
+                                Therapeutic exercises are designed to improve strength, flexibility, and mobility.
+                            </div>
 
-  <div class="more-text">
-   They are used in rehabilitation programs to help patients recover from injuries and improve physical function safely and effectively.
-  </div>
+                            <div class="more-text">
+                                They are used in rehabilitation programs to help patients recover from injuries and improve physical function safely and effectively.
+                            </div>
 
-  <a href="#" class="see-more" onclick="toggleDesc(event, this)">see more</a>
-</div>
+                            <a href="#" class="see-more" onclick="toggleDesc(event, this)">see more</a>
+                        </div>
                         <div class="progress-container">
                             <div class="progress-bar">
                                 <div class="progress" style="width: 0%;"></div>
@@ -147,8 +147,8 @@
 
                 <div class="card hydro-card locked-card">
                     <div class="lock-message">
-   Complete previous course first
-</div>
+                        Complete previous course first
+                    </div>
                     <div class="card-image bg-hydro">
                         <h3>Hydro Therapy</h3>
                     </div>
@@ -157,19 +157,19 @@
                             <span><i class="fa-solid fa-square-poll-vertical"></i> 3 Quizzes</span>
                             <span><i class="fa-solid fa-book-bookmark"></i> 32 Cases</span>
                         </div>
-                          <strong>Description:</strong>
+                        <strong>Description:</strong>
 
-<div class="desc-wrapper">
-  <div class="short-text">
-    Hydrotherapy uses water-based treatments for healing and rehabilitation.
-  </div>
+                        <div class="desc-wrapper">
+                            <div class="short-text">
+                                Hydrotherapy uses water-based treatments for healing and rehabilitation.
+                            </div>
 
-  <div class="more-text">
-   It helps reduce pain, improve circulation, and relax muscles using warm or cold water techniques under controlled conditions.
-  </div>
+                            <div class="more-text">
+                                It helps reduce pain, improve circulation, and relax muscles using warm or cold water techniques under controlled conditions.
+                            </div>
 
-  <a href="#" class="see-more" onclick="toggleDesc(event, this)">see more</a>
-</div>
+                            <a href="#" class="see-more" onclick="toggleDesc(event, this)">see more</a>
+                        </div>
                         <div class="progress-container">
                             <div class="progress-bar">
                                 <div class="progress complete" style="width: 0%;"></div>
@@ -239,17 +239,17 @@
         </div>
     </div>
 
-<div id="codeModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
+    <div id="codeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
 
-    <iframe 
-      src="../chapter_select/chapter.select.html"
-      class="frame">
-    </iframe>
+            <iframe
+                src="../chapter_select/chapter.select.html"
+                class="frame">
+            </iframe>
 
-  </div>
-</div>
+        </div>
+    </div>
 
 
     <script src="cours.js"></script>

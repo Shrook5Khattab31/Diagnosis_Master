@@ -228,9 +228,9 @@
                 <div class="quiz-card-sub">10 Questions</div>
                 <div class="progress-row">
                   <div class="progress-bar-bg">
-                    <div class="progress-bar-fill" style="width: 100%"></div>
+                    <div class="progress-bar-fill" style="width: 0%"></div>
                   </div>
-                  <span class="progress-label">100%</span>
+                  <span class="progress-label">0%</span>
                 </div>
               </div>
               <div class="quiz-card">
@@ -238,9 +238,9 @@
                 <div class="quiz-card-sub">10 Questions</div>
                 <div class="progress-row">
                   <div class="progress-bar-bg">
-                    <div class="progress-bar-fill" style="width: 45%"></div>
+                    <div class="progress-bar-fill" style="width: 0%"></div>
                   </div>
-                  <span class="progress-label">45%</span>
+                  <span class="progress-label">0%</span>
                 </div>
               </div>
               <div class="quiz-card">
@@ -254,7 +254,6 @@
                 </div>
               </div>
             </div>
-            <button class="nav-btn" aria-label="Next">&#8250;</button>
           </div>
           <?php else: ?>
           <p style="color: #a15958; margin-left: 60px; font-size: 14px">
@@ -468,29 +467,28 @@
 
         <!-- TO DO + CALENDAR -->
         <div class="main-dashboard">
-          <div class="container">
-            <div class="app">
-              <h1>To Do List</h1>
-              <div class="input-row">
+          <div class="todo-container">
+            <div class="todo-app">
+              <h1 class="todo-title">To Do List</h1>
+              <div class="todo-input-row">
                 <input
-                  class="task-input"
+                  class="todo-task-input"
                   id="taskInput"
                   type="text"
-                  placeholder="Add a new task..."
+                  placeholder="Add a Task ..."
                   maxlength="80"
                 />
-                <input class="date-input" id="dateInput" type="date" />
-                <button class="add-btn" id="addBtn" title="Add task">+</button>
+                <input class="todo-date-input" id="dateInput" type="date" />
+                <button class="todo-add-btn" id="addBtn" title="Add task">
+                  +
+                </button>
               </div>
-              <div class="stats" id="stats"></div>
-              <div class="task-list" id="taskList">
-                <div class="empty" id="emptyMsg">
+              <div class="todo-stats" id="stats"></div>
+              <div class="todo-task-list" id="taskList">
+                <div class="todo-empty" id="emptyMsg">
                   No tasks yet. Add one above!
                 </div>
               </div>
-              <button class="toggle-btn" id="toggleBtn" style="display: none">
-                <span class="arrow">&#8964;</span>
-              </button>
             </div>
           </div>
 
@@ -536,10 +534,9 @@
               <img src="../../assets/courses icon.png" alt="icon" /> Courses
             </p>
             <p><img src="../../assets/quizes icon.png" alt="icon" /> Quizes</p>
-            <span
-              ><img src="../../assets/setting icon.png" alt="icon" />
-              Settings</span
-            >
+            <p>
+              <img src="../../assets/setting icon.png" alt="icon" /> Settings
+            </p>
           </div>
 
           <p class="RA">RECENT ACHIEVEMENTS</p>
@@ -555,7 +552,10 @@
           <?php endif; ?>
 
           <p class="discover">DISCOVER MODE</p>
-          <p class="full-body">
+          <p
+            class="full-body"
+            onclick="location.href = '../full_body/full_body.html'"
+          >
             <img src="../../assets/full-body-icon.png" alt="icon" />Full Body
             <img src="../../assets/arrow_drop_down.png" alt="icon" />
           </p>
