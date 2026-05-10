@@ -261,6 +261,7 @@ input, select{
   outline:none;
 }
 
+
 .buttons{
   margin-top:40px;
   display:flex;
@@ -651,3 +652,30 @@ display: none;
   filter: grayscale(100%);
   text-align: center;
 }
+.field select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+
+  border-radius: 16px;
+  padding: 10px 14px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+/* شكل الخيارات نفسها */
+.field select option {
+  background: #d5b6b6;   /* نفس التون بتاع الخلفية */
+  color: #fff;
+  padding: 10px;
+}
+

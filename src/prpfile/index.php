@@ -1,18 +1,9 @@
 <?php
-session_start();
+$userId = 1;
+$isLoggedIn = true;
 
 $conn = mysqli_connect("localhost", "root", "", "diagnosis");
 
-if (!$conn){
-    die("connection failed: " . mysqli_connect_error());
-}
-
-$isLoggedIn = isset($_SESSION['user_id']);
-if(!isset($_SESSION['user_id'])){
-    header("Location: login.php");
-    exit();
-}
-$userId = $_SESSION['user_id'];
 
 /* حفظ البيانات */
 if(isset($_POST['name'])){
@@ -22,32 +13,27 @@ if(isset($_POST['name'])){
     $phone = $_POST['phone'];
     $email = $_POST['email'];
 
-    $update = "
-    UPDATE users 
-    SET 
-    username='$name',
-    major='$major',
-    phone='$phone',
-    email='$email'
-    WHERE id='$userId'
-    ";
-
-    mysqli_query($conn, $update);
-
-    header("Location: ".$_SERVER['PHP_SELF']);
-    exit();
+    
+   mysqli_query($conn, "
+UPDATE users SET
+username='$name',
+major='$major',
+phone='$phone',
+email='$email'
+WHERE id=66
+");
 }
 
 /* جلب البيانات */
 $sql = "SELECT * FROM users WHERE id='$userId'";
 $result = mysqli_query($conn, $sql);
 $user = mysqli_fetch_assoc($result) ?? [
-    "username"=>"",
-    "major"=>"",
-    "phone"=>"",
-    "email"=>"",
-    "created_at"=>""
-];
+  "username"=>"",
+  "major"=>"",
+  "phone"=>"",
+  "email"=>"",
+  "created_at"=>""
+]; 
 
 
 ?>
@@ -147,8 +133,9 @@ $user = mysqli_fetch_assoc($result) ?? [
     <div class="field">
       <label>Major</label>
       <select name="major">
-        <option value="Physio" <?php if($user['major']=="Physio") echo "selected"; ?>>Physio</option>
-        <option value="CS" <?php if($user['major']=="CS") echo "selected"; ?>>CS</option>
+        <option value="Physical Therapy" <?php if($user['major']=="Physical Therapy") echo "selected"; ?>>Physical Therapy</option>
+        <option value="Dentistry" <?php if($user['major']=="Dentistry") echo "selected"; ?>>Dentistry</option>
+        <option value="Pharmacy" <?php if($user['major']=="Pharmacy") echo "selected"; ?>>Pharmacy</option>
       </select>
     </div>
 
