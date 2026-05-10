@@ -86,13 +86,18 @@ body {
   height: 100px;
   margin: 10px auto 0;
 }
+.user-icon img{
+  margin-left: 5px;
+  height: 50px;
+  width: 50px;
+}
 
 /* title */
 h2 {
   font-size: 30px;
   font-weight: 600;
   font-family: Inria Serif;
-  color: #7c3f3c;
+  color: #A15958;
   margin-bottom: 10px;
   -webkit-text-stroke: 0.5px #0a090974;
 }
@@ -101,7 +106,7 @@ h2 {
 label {
   display: block;
   text-align: left;
-  color: #7c3f3c;
+  color: #A15958;
   font-size: 14px;
 
   margin-top: 6px;
@@ -112,23 +117,29 @@ label {
 .input-box {
   display: flex;
   align-items: center;
-  background: #f4f4f4;
+  background: #ffffff;
   padding: 12px 18px;
   border-radius: 30px;
-  border: 1px solid #7c3f3c;
+  border: 1px solid #A15958;
   margin-bottom: 8px;
 }
 
 .input-box i {
-  color: #7c3f3c;
+  color: #A15958;
   margin-right: 10px;
-  font-family: Inter;
 }
 
-i .fa-eye,
-i .fa-eye-slash {
+input::placeholder{
+  color: #c8c2d2;
+  font-family: Inter;
+  font-size:small;
+  font-weight: 600;
+}
+
+i.fa-eye,
+i.fa-eye-slash {
   margin-left: 8px;
-  color: #7c3f3c;
+  color: #A15958;
   cursor: pointer;
   flex-shrink: 0;
 }
@@ -150,7 +161,7 @@ button {
   background: #8f4a47;
   color: white;
   font-size: 16px;
-
+  border: none;
   text-align: center;
   text-decoration: none;
   font-family: Inria Serif;
@@ -168,7 +179,7 @@ button:hover {
 
 .small-text {
   font-size: 12px;
-  color: #7c3f3c;
+  color: #A15958;
   margin-top: 5px;
 }
 

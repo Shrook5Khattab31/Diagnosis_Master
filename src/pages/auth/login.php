@@ -67,6 +67,7 @@ if (isset($_POST['username'])) {
             <label><i style="font-size:17px;" class="fa-solid fa-lock"></i>&nbsp;Password:</label>
             <div class="input-box">
               <input type="password" id="password" name="password" placeholder="Password" />
+              <i class="fa fa-eye-slash" onclick="togglePass('password', this)"></i>
             </div>
           </div>
 

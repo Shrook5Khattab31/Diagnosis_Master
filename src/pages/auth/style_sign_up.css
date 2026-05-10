@@ -91,7 +91,7 @@ label {
   font-family: Inter;
   display: block;
   text-align: left;
-  color: #7c3f3c;
+  color: #A15958;
   font-size: 16px;
   margin-bottom: 2px;
   margin-top: 0;
@@ -107,13 +107,13 @@ label {
   background: #ffffff;
   padding: 10px 20px;
   border-radius: 30px;
-  border: 1px solid #7c3f3c;
+  border: 1px solid #A15958;
   margin-bottom: 10px;
 }
 
 .input-box i {
   margin-right: 8px;
-  color: #7c3f3c;
+  color: #A15958;
 }
 
 .input-box input {
@@ -121,6 +121,13 @@ label {
   outline: none;
   background: none;
   width: 100%;
+}
+
+input::placeholder{
+  color: #c8c2d2;
+  font-family: Inter;
+  font-size:small;
+  font-weight: 600;
 }
 
 .select-group {
@@ -133,11 +140,27 @@ select {
   width: 100%;
   padding: 10px 15px;
   text-align: start;
-  border: 1px solid #7c3f3c;
+  border: 1px solid #A15958;
   outline: none;
+  color:#A15958;
+  font-weight: 600;
+  font-family: Inter;
   border-radius: 25px;
+  margin-right: 10px;
   background: #ffffff;
 }
+option {
+  color: #A15958;
+  font-family: Inter;
+  font-size: medium;
+}
+
+option[disabled] {
+  color:#c8c2d2;
+  font-family: Inter;
+  font-size: medium;
+}
+
 /* signup button */
 .btn-signup {
   display: inline-block;
@@ -146,6 +169,7 @@ select {
   margin-top: 10px;
   border-radius: 25px;
   background: #8f4a47;
+  border: none;
   color: white;
   font-size: 16px;
   margin-left: 90px;

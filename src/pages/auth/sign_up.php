@@ -50,8 +50,7 @@ if (isset($_POST['username'])) {
   <title>Diagnosis Master Sign Up</title>
   <link rel="stylesheet" href="style_sign_up.css" />
   <link rel="stylesheet" href="styles/common.css" />
-  <link
-    rel="stylesheet"
+  <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
@@ -77,61 +76,48 @@ if (isset($_POST['username'])) {
           <!-- Username -->
           <label><i class="fa-regular fa-user"></i>&nbsp;<b>Username</b></label>
           <div class="input-box">
-            <input
-              type="text"
-              id="username"
-              name="username"
-              placeholder="Username"
+            <input type="text" id="username" name="username" placeholder="Username"
               value="<?= htmlspecialchars($_POST['username'] ?? '') ?>" />
           </div>
 
           <!-- Email -->
           <label><i class="fa-solid fa-envelope"></i>&nbsp;<b>Email</b></label>
           <div class="input-box">
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email"
+            <input type="email" id="email" name="email" placeholder="Email"
               value="<?= htmlspecialchars($_POST['email'] ?? '') ?>" />
           </div>
 
           <!-- Password -->
           <label><i class="fa-solid fa-lock"></i>&nbsp;<b>Password</b></label>
           <div class="input-box">
-            <input
-              type="password"
-              id="password"
-              name="password"
+            <input type="password" id="password" name="password"
               placeholder="Password" />
+              <i class="fa fa-eye-slash" onclick="togglePass('password', this)"></i>
           </div>
 
           <!-- Confirm Password -->
           <label><i class="fa-solid fa-lock"></i>&nbsp;<b>Confirm Password</b></label>
           <div class="input-box">
-            <input
-              type="password"
-              id="confirm_password"
-              name="confirm_password"
-              placeholder="Confirm Password" />
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" />
+              <i class="fa fa-eye-slash" onclick="togglePass('confirm_password', this)"></i>
           </div>
 
           <!-- Major & Level -->
           <div class="select-group">
             <div>
               <select id="major" name="major">
-                <option value="">Major</option>
+                <option value="" disabled selected>Major</option>
                 <option value="physical therapy">Physical Therapy</option>
-                <option value="Dentistry">Dentistry</option>
-                <option value="Pharmacy">Pharmacy</option>
+                <option value="Dentistry" disabled>Dentistry</option>
+                <option value="Pharmacy" disabled>Pharmacy</option>
               </select>
             </div>
             <div>
               <select id="level" name="level">
-                <option value="">Level</option>
+                <option value="" disabled selected>Level</option>
                 <option value="Beginner">Beginner</option>
-                <option value="Intermediate">Intermediate</option>
-                <option value="Expert">Expert</option>
+                <option value="Intermediate" disabled>Intermediate</option>
+                <option value="Expert" disabled>Expert</option>
               </select>
             </div>
           </div>

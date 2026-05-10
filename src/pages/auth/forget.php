@@ -32,10 +32,10 @@ if (isset($_POST['username'])) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Diagnosis Master</title>
-  <link rel="stylesheet" href="style1.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_forget.css" />
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
@@ -45,14 +45,14 @@ if (isset($_POST['username'])) {
     </div>
 
     <div class="right">
-      <a href="..\landing\Landing.php">
+      <a href="login.php">
         <img class="back-image" src="..\..\assets\back.png" />
       </a>
 
       <div class="box">
 
         <div class="user-icon">
-          <i class="fa-solid fa-lock"></i>
+          <img src="../../assets/lock_icon.png" alt="">
         </div>
 
         <h2>Forget Password</h2>
@@ -70,14 +70,14 @@ if (isset($_POST['username'])) {
           <label><i class="fa-solid fa-lock"></i> New Password</label>
           <div class="input-box">
             <input type="password" id="password" name="password" placeholder="New Password" />
-            <i class="fa-solid fa-eye-slash" onclick="togglePass('password', this)"></i>
+            <i class="fa fa-eye-slash" onclick="togglePass('password', this)"></i>
           </div>
 
           <!-- Confirm Password -->
           <label><i class="fa-solid fa-lock"></i> Re-enter Password</label>
           <div class="input-box">
             <input type="password" id="confirmPassword" placeholder="Confirm Password" />
-            <i class="fa-solid fa-eye-slash" onclick="togglePass('confirmPassword', this)"></i>
+            <i class="fa fa-eye-slash" onclick="togglePass('confirmPassword', this)"></i>
           </div>
 
           <!-- Single error line -->
