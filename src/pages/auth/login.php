@@ -14,10 +14,8 @@ if (isset($_POST['username'])) {
     $user = $result->fetch_assoc();
 
     if ($user && password_verify($password, $user['password'])) {
-        session_start();
-        $_SESSION['user_id']  = $user['id'];
-        $_SESSION['username'] = $user['username'];
-        header("Location: ../dashboard/dashboard.php");
+        $is_new = isset($_GET['registered']) ? 1 : 0;
+        header("Location: ../dashboard/dashboard.php?is_new=" . $is_new);
         exit;
     } else {
         $error = "Invalid username or password.";
@@ -78,7 +76,6 @@ if (isset($_POST['username'])) {
             <a style="text-decoration:underline;" href="sign_up.php">Create new Account</a>
           </p>
 
-          <!-- Single error line -->
           <div class="error-wrapper">
             <div id="error-box"></div>
             <?php if ($error) { ?>

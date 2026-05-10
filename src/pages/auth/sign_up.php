@@ -1,45 +1,45 @@
 <?php
-$connection = new mysqli("localhost", "root", "", "diagnosis");
+  $connection = new mysqli("localhost", "root", "", "diagnosis");
 
-$error = "";
+  $error = "";
 
-if (isset($_POST['username'])) {
-  $username   = $_POST['username'];
-  $email      = $_POST['email'];
-  $password   = $_POST['password'];
-  $major      = $_POST['major'];
-  $level      = $_POST['level'];
-  $created_at = $_POST['created_at'] ?? date("Y-m-d H:i:s");
+  if (isset($_POST['username'])) {
+    $username   = $_POST['username'];
+    $email      = $_POST['email'];
+    $password   = $_POST['password'];
+    $major      = $_POST['major'];
+    $level      = $_POST['level'];
+    $created_at = $_POST['created_at'] ?? date("Y-m-d H:i:s");
 
-  // Check username
-  $check = $connection->prepare("SELECT id FROM users WHERE username = ?");
-  $check->bind_param("s", $username);
-  $check->execute();
-  $result = $check->get_result();
-  if ($result->fetch_assoc()) {
-    $error = "Username already exists.";
-  }
+    // Check username
+    $check = $connection->prepare("SELECT id FROM users WHERE username = ?");
+    $check->bind_param("s", $username);
+    $check->execute();
+    $result = $check->get_result();
+    if ($result->fetch_assoc()) {
+      $error = "Username already exists.";
+    }
 
-  // Check email
-  if (!$error) {
-    $check2 = $connection->prepare("SELECT id FROM users WHERE email = ?");
-    $check2->bind_param("s", $email);
-    $check2->execute();
-    $result2 = $check2->get_result();
-    if ($result2->fetch_assoc()) {
-      $error = "Email already registered.";
+    // Check email
+    if (!$error) {
+      $check2 = $connection->prepare("SELECT id FROM users WHERE email = ?");
+      $check2->bind_param("s", $email);
+      $check2->execute();
+      $result2 = $check2->get_result();
+      if ($result2->fetch_assoc()) {
+        $error = "Email already registered.";
+      }
+    }
+
+    if (!$error) {
+      $hashed = password_hash($password, PASSWORD_BCRYPT);
+      $add = $connection->prepare("INSERT INTO users (username, email, password, major, level, created_at) VALUES (?, ?, ?, ?, ?, ?)");
+      $add->bind_param("ssssss", $username, $email, $hashed, $major, $level, $created_at);
+      $add->execute();
+      header("Location: login.php?registered=1");
+      exit;
     }
   }
-
-  if (!$error) {
-    $hashed = password_hash($password, PASSWORD_BCRYPT);
-    $add = $connection->prepare("INSERT INTO users (username, email, password, major, level, created_at) VALUES (?, ?, ?, ?, ?, ?)");
-    $add->bind_param("ssssss", $username, $email, $hashed, $major, $level, $created_at);
-    $add->execute();
-    header("Location: login.php?registered=1");
-    exit;
-  }
-}
 ?>
 
 <!doctype html>
