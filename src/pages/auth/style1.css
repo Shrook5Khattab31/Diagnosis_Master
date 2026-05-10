@@ -150,7 +150,7 @@ button {
   background: #8f4a47;
   color: white;
   font-size: 16px;
-  margin-left: 90px;
+
   text-align: center;
   text-decoration: none;
   font-family: Inria Serif;
@@ -159,7 +159,8 @@ button:hover {
   transform: scale(1.07);
   box-shadow: 0 0 20px rgba(161, 89, 88, 0.8);
 }
-#error-box, .php-error {
+#error-box,
+.php-error {
   color: red;
   width: 300px;
   font-size: small;
@@ -197,7 +198,6 @@ button:hover {
   background: #b97b7b;
   border-radius: 40px;
   position: relative;
-
 }
 
 .popup-card::before {
