@@ -400,3 +400,28 @@
       });
 
       
+const claimBtn = document.getElementById("claim-btn");
+const overlay = document.querySelector(".overlay");
+const scoreText = document.querySelector(".score h2");
+
+claimBtn.addEventListener("click", function () {
+
+  overlay.style.display = "none";
+
+  scoreText.textContent = "Score: 30";
+
+  claimBtn.disabled = true;
+  claimBtn.textContent = "Claimed";
+
+  localStorage.setItem("dailyClaimed", "true");
+  localStorage.setItem("score", "30");
+});
+
+window.addEventListener("DOMContentLoaded", function () {
+  if (localStorage.getItem("dailyClaimed") === "true") {
+    overlay.style.display = "none";
+    scoreText.textContent = "Score: " + localStorage.getItem("score");
+    claimBtn.disabled = true;
+    claimBtn.textContent = "Claimed";
+  }
+});
