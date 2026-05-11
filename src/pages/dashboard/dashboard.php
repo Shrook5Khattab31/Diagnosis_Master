@@ -38,6 +38,80 @@ $username = $u['username'] ?? '';
   </head>
 
   <body>
+    <!--daily-->
+    <div class="overlay">
+      <div class="modal">
+
+        <!-- Header -->
+        <div class="header">
+          <h2>Daily Check in</h2>
+          <div class="streak">
+            <img src="../../assets/Vector.png" alt="streak" />
+            <span>Streak: 1 Day</span>
+          </div>
+        </div>
+
+        <!-- Days Grid -->
+        <div class="days-grid">
+
+          <!-- Day 1 - Unlocked -->
+          <div class="day-card unlocked">
+            <p class="day-label">Day 1</p>
+            <p class="day-points">30 ✦</p>
+            <img src="../../assets/Vector (1).png" alt="streak" />
+          </div>
+
+          <!-- Day 2 - Locked -->
+          <div class="day-card locked">
+            <p class="day-label">Day 2</p>
+            <p class="day-points">30 ✦</p>
+            <img src="../../assets/stash_circle-light.png" alt="streak" />
+
+          </div>
+
+          <!-- Day 3 - Locked -->
+          <div class="day-card locked">
+            <p class="day-label">Day 3</p>
+            <p class="day-points">30 ✦</p>
+            <img src="../../assets/stash_circle-light.png" alt="streak" />
+
+        </div>
+
+          <!-- Day 4 - Locked -->
+          <div class="day-card locked">
+            <p class="day-label">Day 4</p>
+            <p class="day-points">30 ✦</p>
+            <img src="../../assets/stash_circle-light.png" alt="streak" />
+
+        </div>
+
+          <!-- Day 5 - Locked -->
+          <div class="day-card locked">
+            <p class="day-label">Day 5</p>
+            <p class="day-points">30 ✦</p>
+            <img src="../../assets/stash_circle-light.png" alt="streak" />
+
+        </div>
+
+          <!-- Day 6 - Locked -->
+          <div class="day-card locked">
+            <p class="day-label">Day 6</p>
+            <p class="day-points">30 ✦</p>
+            <img src="../../assets/stash_circle-light.png" alt="streak" />
+
+        </div>
+
+        </div>
+
+        <!-- Claim Button -->
+        <div class="claim-wrapper">
+          <button id="claim-btn">
+            Claim
+          </button>
+        </div>
+
+      </div>
+    </div> 
     <div class="dashboard">
       <div class="big_card">
         <nav class="navbar_dash">
