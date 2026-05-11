@@ -5,13 +5,14 @@ $user_id = isset($_GET['user_id']) ? (int)$_GET['user_id'] : 0;
 $is_new  = isset($_GET['is_new']) && $_GET['is_new'] == 1;
 
 if (isset($_POST['name'])) {
-    $name  = $_POST['name'];
-    $major = $_POST['major'];
-    $phone = $_POST['phone'];
-    $email = $_POST['email'];
+    $name       = $_POST['name'];
+    $major      = $_POST['major'];
+    $phone      = $_POST['phone'];
+    $email      = $_POST['email'];
+    $profile_pic = $_POST['profile_pic'] ?? '';  // ← comes from hidden input
 
-    $stmt = $connection->prepare("UPDATE users SET username=?, major=?, phone=?, email=? WHERE id=?");
-    $stmt->bind_param("ssssi", $name, $major, $phone, $email, $user_id);
+    $stmt = $connection->prepare("UPDATE users SET username=?, major=?, phone=?, email=?, profile_pic=? WHERE id=?");
+    $stmt->bind_param("sssssi", $name, $major, $phone, $email, $profile_pic, $user_id);
     $stmt->execute();
 
     header("Location: index.php?user_id=" . $user_id . "&is_new=" . ($is_new ? 1 : 0));
@@ -103,7 +104,8 @@ $user = $fetch->get_result()->fetch_assoc() ?? [
   <div class="title">Student Information</div>
 
   <div class="grid">
-
+    <input type="hidden" name="profile_pic" id="picInput" 
+         value="<?= htmlspecialchars($user['profile_pic'] ?? 'avatar7.jpeg') ?>">
     <div class="field">
       <label>Name</label>
       <input type="text" name="name" value="<?= $user['username']; ?>">
@@ -147,7 +149,8 @@ $user = $fetch->get_result()->fetch_assoc() ?? [
 </div>
 
     <div class="avatar">
-      <img id="profileImage" src="../../assets/avatar7.jpeg">
+      <?php $pic = !empty($user['profile_pic']) ? '../../assets/' . $user['profile_pic'] : '../../assets/avatar7.jpeg'; ?>
+      <img id="profileImage" src="<?= $pic ?>">
   <div class="edit-icon">
     <img src="../../assets/edit.svg">
 </div>
@@ -198,10 +201,8 @@ $user = $fetch->get_result()->fetch_assoc() ?? [
 
     <!-- Main Avatar -->
     <div class="main-avatar">
-
-        <img id="mainImage" src="avatar7.jpeg">
-
-</div>
+      <img id="mainImage" src="<?= $pic ?>">
+    </div>
 
     </div>
 
