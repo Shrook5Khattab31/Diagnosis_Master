@@ -284,23 +284,6 @@ body {
   font-size: 18px;
   color: #2c3e50;
 }
-
-.profile {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  margin-top: 40px;
-  gap: 8px;
-  width: 50%;
-
-  margin-left: 50px;
-}
-.profile img {
-  width: 61px;
-  height: 61px;
-}
-
 .profile p {
   margin: 0;
   font-size: 32px;
@@ -313,7 +296,7 @@ body {
   flex-direction: column;
   gap: 20px;
   font-size: 24px;
-  margin-left: 80px;
+  align-items: center;
   margin-top: 0px;
   font-family: Inter;
 }
@@ -324,22 +307,39 @@ body {
   margin-bottom: 0;
 }
 .RA {
-  margin-left: -40px;
   color: #7a89aa;
   font-size: 20px;
   flex-shrink: 0;
   margin-bottom: 0%;
 }
-.img-achievements {
-  margin-left: -40px;
-}
 .menu-items {
-  margin-left: -40px;
   font-size: 28px;
+  color:#384C65;
 }
 .menu-items p {
   margin-bottom: 70px;
+  border-radius: 0 70px 70px 0;
+  width: 250px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+
+  font-weight: bold;
+  font-family: sans-serif;
+  transition: 0.3s;
 }
+
+.menu-items p:hover {
+  background: linear-gradient(90deg, #384C65 0%, #A15958 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+
 .menu-items img {
   margin-right: 7px;
 }
@@ -357,6 +357,7 @@ body {
   margin-left: 30px;
   display: flex;
   gap: 10px;
+  cursor: pointer;
 }
 .full-body img {
   width: 25px;
@@ -492,24 +493,53 @@ body {
   pointer-events: none;
   opacity: 0.4;
 }
+/* ── SIDEBAR MENU ITEMS ── */
 .menu-items {
   font-size: 28px;
+  color: #384C65;
 }
+
 .menu-items p {
-  margin-bottom: 70px;
+  margin-bottom: 16px;
   border-radius: 0 70px 70px 0;
   width: 250px;
-  height: 100px;
+  height: 70px;
   display: flex;
-  justify-content: center;
-
+  justify-content: flex-start;   /* align left like Figma */
   align-items: center;
-
+  padding-left: 20px;
+  gap: 10px;
   font-weight: bold;
-  font-family: sans-serif;
+  font-family: Inter, sans-serif;
+  cursor: pointer;
   transition: 0.3s;
+  color: #384C65;
+  position: relative;
 }
 
-.menu-items p:hover {
-  background-color: #ffffff;
+/* ── ACTIVE TAB: white pill + gradient text ── */
+.menu-items p.active-tab {
+  background-image: url('../../assets/Selected_Tab.svg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+/* Gradient text trick */
+.menu-items p.active-tab span.tab-label {
+  background: linear-gradient(90deg, #384C65 0%, #A15958 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+/* ── INACTIVE HOVER: gradient text only, no background ── */
+.menu-items p:not(.active-tab):hover span.tab-label {
+  background: linear-gradient(90deg, #384C65 0%, #A15958 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
