@@ -1,16 +1,41 @@
-document.querySelector(".edit").onclick = function () {
-  alert("Edit mode enabled");
+const editBtn = document.querySelector(".edit");
+const saveBtn = document.querySelector(".save");
+const cancelBtn = document.querySelector(".cancel");
+const infoBox = document.querySelector(".info");
+
+
+// 🔵 فتح الفورم
+editBtn.onclick = function () {
+
+  infoBox.style.display = "block";
+
+  saveBtn.style.display = "inline-block";
+  cancelBtn.style.display = "inline-block";
 };
 
-document.querySelector(".save").onclick = function () {
+
+// 🟢 حفظ
+saveBtn.onclick = function () {
+
   alert("Changes saved");
+
+  infoBox.style.display = "none";
+
+  saveBtn.style.display = "none";
+  cancelBtn.style.display = "none";
 };
 
-document.querySelector(".cancel").onclick = function () {
+
+// 🔴 إلغاء
+cancelBtn.onclick = function () {
+
   alert("Cancelled");
+
+  infoBox.style.display = "none";
+
+  saveBtn.style.display = "none";
+  cancelBtn.style.display = "none";
 };
-
-
 // العناصر مرة واحدة فقط
 const editIcon = document.querySelector(".edit-icon");
 const popup = document.getElementById("popup");
