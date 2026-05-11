@@ -401,7 +401,7 @@
 
       
 const claimBtn = document.getElementById("claim-btn");
-const overlay = document.querySelector(".overlay");
+const overlay = document.querySelector(".daily-overlay");
 const scoreText = document.querySelector(".score h2");
 
 claimBtn.addEventListener("click", function () {

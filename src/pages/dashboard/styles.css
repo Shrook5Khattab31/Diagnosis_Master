@@ -23,7 +23,7 @@ body{background-color:burlywood}
 body{background-color:white;}
 }
 
-.overlay {
+.daily-overlay {
   min-height: 380px;
   background: rgba(0, 0, 0, 0.45);
   display: flex;
@@ -177,7 +177,7 @@ body{background-color:white;}
   cursor: default;
 }
 
-.overlay {
+.daily-overlay {
   position: fixed;
   top: 0;
   left: 0;

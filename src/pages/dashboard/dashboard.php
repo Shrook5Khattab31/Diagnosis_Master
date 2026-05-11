@@ -40,7 +40,7 @@ $username = $u['username'] ?? '';
 
   <body>
     <!--daily-->
-    <div class="overlay">
+    <div class="daily-overlay">
       <div class="modal">
 
         <!-- Header -->
@@ -54,7 +54,6 @@ $username = $u['username'] ?? '';
 
         <!-- Days Grid -->
         <div class="days-grid">
-
           <!-- Day 1 - Unlocked -->
           <div class="day-card unlocked">
             <p class="day-label">Day 1</p>
@@ -67,7 +66,6 @@ $username = $u['username'] ?? '';
             <p class="day-label">Day 2</p>
             <p class="day-points">30 ✦</p>
             <img src="../../assets/stash_circle-light.png" alt="streak" />
-
           </div>
 
           <!-- Day 3 - Locked -->
@@ -75,40 +73,34 @@ $username = $u['username'] ?? '';
             <p class="day-label">Day 3</p>
             <p class="day-points">30 ✦</p>
             <img src="../../assets/stash_circle-light.png" alt="streak" />
-
-        </div>
+          </div>
 
           <!-- Day 4 - Locked -->
           <div class="day-card locked">
             <p class="day-label">Day 4</p>
             <p class="day-points">30 ✦</p>
             <img src="../../assets/stash_circle-light.png" alt="streak" />
-
-        </div>
+          </div>
 
           <!-- Day 5 - Locked -->
           <div class="day-card locked">
             <p class="day-label">Day 5</p>
             <p class="day-points">30 ✦</p>
             <img src="../../assets/stash_circle-light.png" alt="streak" />
-
-        </div>
+          </div>
 
           <!-- Day 6 - Locked -->
           <div class="day-card locked">
             <p class="day-label">Day 6</p>
             <p class="day-points">30 ✦</p>
             <img src="../../assets/stash_circle-light.png" alt="streak" />
-
-        </div>
+          </div>
 
         </div>
 
         <!-- Claim Button -->
         <div class="claim-wrapper">
-          <button id="claim-btn">
-            Claim
-          </button>
+          <button id="claim-btn">Claim</button>
         </div>
 
       </div>
@@ -125,7 +117,7 @@ $username = $u['username'] ?? '';
             class="search-button"
           />
           <div class="score">
-            <h2>Score: 1000 ✦</h2>
+            <h2>Score: 0</h2>
           </div>
           <button class="theme_btn">
             <img src="../../assets/Theme Button.png" />
