@@ -36,7 +36,8 @@
       $add = $connection->prepare("INSERT INTO users (username, email, password, major, level, created_at) VALUES (?, ?, ?, ?, ?, ?)");
       $add->bind_param("ssssss", $username, $email, $hashed, $major, $level, $created_at);
       $add->execute();
-      header("Location: login.php?registered=1");
+      $new_user_id = $connection->insert_id;  // gets the auto-increment id just inserted
+      header("Location: login.php?registered=1&user_id=" . $new_user_id);
       exit;
     }
   }

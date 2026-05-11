@@ -1,46 +1,35 @@
 <?php
-session_start();
+$connection = new mysqli("localhost", "root", "", "diagnosis");
 
-$conn = mysqli_connect("localhost", "root", "", "diagnosis");
+$user_id = isset($_GET['user_id']) ? (int)$_GET['user_id'] : 0;
+$is_new  = isset($_GET['is_new']) && $_GET['is_new'] == 1;
 
-if (!$conn){
-    die("connection failed: " . mysqli_connect_error());
-}
-
-$isLoggedIn = isset($_SESSION['user_id']);
-if(!isset($_SESSION['user_id'])){
-    header("Location: login.php");
-    exit();
-}
-$userId = $_SESSION['user_id'];
-
-/* حفظ البيانات */
-if(isset($_POST['name'])){
-
-    $name = $_POST['name'];
+if (isset($_POST['name'])) {
+    $name  = $_POST['name'];
     $major = $_POST['major'];
     $phone = $_POST['phone'];
     $email = $_POST['email'];
 
-   $stmt = $conn->prepare("UPDATE users SET username=?, major=?, phone=?, email=? WHERE id=?");
-$stmt->bind_param("ssssi", $name, $major, $phone, $email, $userId);
-$stmt->execute();
-    header("Location: ".$_SERVER['PHP_SELF']);
-    exit();
+    $stmt = $connection->prepare("UPDATE users SET username=?, major=?, phone=?, email=? WHERE id=?");
+    $stmt->bind_param("ssssi", $name, $major, $phone, $email, $user_id);
+    $stmt->execute();
+
+    header("Location: index.php?user_id=" . $user_id . "&is_new=" . ($is_new ? 1 : 0));
+    exit;
 }
 
-/* جلب البيانات */
-$sql = "SELECT * FROM users WHERE id='$userId'";
-$result = mysqli_query($conn, $sql);
-$user = mysqli_fetch_assoc($result) ?? [
-    "username"=>"",
-    "major"=>"",
-    "phone"=>"",
-    "email"=>"",
-    "created_at"=>""
+$fetch = $connection->prepare("SELECT * FROM users WHERE id = ?");
+$fetch->bind_param("i", $user_id);
+$fetch->execute();
+$user = $fetch->get_result()->fetch_assoc() ?? [
+    "username"    => "",
+    "major"       => "",
+    "phone"       => "",
+    "email"       => "",
+    "created_at"  => "",
+    "profile_pic" => "",
+    "level"       => ""
 ];
-
-
 ?>
 
 <!DOCTYPE html>
@@ -63,25 +52,11 @@ $user = mysqli_fetch_assoc($result) ?? [
     <div class="title">Recent Achievements</div>
 
    <div class="achievements">
-
-<?php if($isLoggedIn): ?>
-
-  <!-- كارت المكافأة -->
-  <div class="ach">
-    <img src="../../assets/Achievement1.svg">
-  </div>
-
-<?php else: ?>
-
-  <!-- قبل اللوجين -->
-  <div class="ach locked">
-    <img src="../../assets/locked.svg">
-    <p>Login to unlock rewards</p>
-  </div>
-
-<?php endif; ?>
-
-</div>
+      <!-- كارت المكافأة -->
+      <div class="ach">
+        <img src="../../assets/Achievement1.svg">
+      </div>
+    </div>
 
     <div class="score">
       <span>Score</span>
@@ -131,7 +106,7 @@ $user = mysqli_fetch_assoc($result) ?? [
 
     <div class="field">
       <label>Name</label>
-      <input type="text" name="name" value="<?php echo $user['username']; ?>">
+      <input type="text" name="name" value="<?= $user['username']; ?>">
     </div>
 
     <div class="field">
@@ -145,12 +120,12 @@ $user = mysqli_fetch_assoc($result) ?? [
 
     <div class="field">
       <label>Phone</label>
-      <input type="text" name="phone" value="<?php echo $user['phone']; ?>">
+      <input type="text" name="phone" value="<?= $user['phone']; ?>">
     </div>
 
     <div class="field">
       <label>Email</label>
-      <input type="email" name="email" value="<?php echo $user['email']; ?>">
+      <input type="email" name="email" value="<?= $user['email']; ?>">
     </div>
 
   </div>
@@ -177,10 +152,10 @@ $user = mysqli_fetch_assoc($result) ?? [
     <img src="../../assets/edit.svg">
 </div>
 </div>
-    <div class="name"><?php echo $user['username']; ?> </div>
+    <div class="name"><?= $user['username']; ?> </div>
     <div class="small">
   major : <span class="major">
-  <?php echo $user['major']; ?>
+  <?= $user['major']; ?>
 </span>
     </div>
 
@@ -189,21 +164,21 @@ $user = mysqli_fetch_assoc($result) ?? [
   <div class="row">
     <span class="label">E-mail :</span>
     <span class="value">
-  <?php echo $user['email']; ?>
+  <?= $user['email']; ?>
 </span>
   </div>
 
   <div class="row">
     <span class="label">Phone :</span>
    <span class="value">
-  <?php echo $user['phone']; ?>
+  <?= $user['phone']; ?>
 </span>
   </div>
 
   <div class="row">
     <span class="label">Joined since :</span>
     <span class="value">
-  <?php echo $user['created_at']; ?>
+  <?= $user['created_at']; ?>
 </span>
   </div>
 

@@ -15,7 +15,7 @@ if (isset($_POST['username'])) {
 
     if ($user && password_verify($password, $user['password'])) {
         $is_new = isset($_GET['registered']) ? 1 : 0;
-        header("Location: ../dashboard/dashboard.php?is_new=" . $is_new);
+        header("Location: ../dashboard/dashboard.php?user_id=" . $user['id'] . "&is_new=" . $is_new);
         exit;
     } else {
         $error = "Invalid username or password.";

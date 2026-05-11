@@ -524,7 +524,7 @@
       <!-- SIDEBAR -->
       <div class="sidebar">
         <div class="profile">
-          <button onclick="location.href = '../profile_tab/index.php'">
+          <button onclick="location.href = '../profile_tab/index.php?user_id=<?= $_GET['user_id'] ?>&is_new=<?= $_GET['is_new'] ?? 0 ?>'">
             <img src="../../assets/profile.png" alt="Profile" />
             <p><b>Profile Name</b></p>
           </button>
