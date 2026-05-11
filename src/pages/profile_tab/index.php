@@ -69,7 +69,6 @@ $user = mysqli_fetch_assoc($result) ?? [
   <!-- كارت المكافأة -->
   <div class="ach">
     <img src="../../assets/Achievement1.svg">
-    <p>Welcome Reward 🎉</p>
   </div>
 
 <?php else: ?>
@@ -86,7 +85,7 @@ $user = mysqli_fetch_assoc($result) ?? [
 
     <div class="score">
       <span>Score</span>
-      <span>1000 <img src="../../assets/Star.svg">
+      <span>30 <img src="../../assets/Star.svg">
 </span>
     </div>
 
