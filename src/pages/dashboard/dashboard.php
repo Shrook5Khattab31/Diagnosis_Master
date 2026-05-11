@@ -524,7 +524,7 @@
       <!-- SIDEBAR -->
       <div class="sidebar">
         <div class="profile">
-          <button onclick="location.href = '../profile_tab/profile.html'">
+          <button onclick="location.href = '../profile_tab/index.php'">
             <img src="../../assets/profile.png" alt="Profile" />
             <p><b>Profile Name</b></p>
           </button>
