@@ -230,15 +230,14 @@ $username = $u['username'] ?? '';
         <div class="Menu">
           <p class="MM">MAIN MENU</p>
           <div class="menu-items">
-            <!-- Dashboard — ACTIVE (currently on this page) -->
-            <p class="active-tab" onclick="location.href='dashboard.php?user_id=<?= $user_id ?>&is_new=<?= $is_new_user?1:0 ?>'">
-              <img src="../../assets/dashboard icon select.svg" alt="icon" />
+            <p class="dashboard" onclick="location.href='../dashboard/dashboard.php?user_id=<?php echo $user_id; ?>&is_new=<?php echo $is_new_user ? 1 : 0; ?>'">
+              <img src="../../assets/dashboard icon.svg" alt="icon" />
               <span class="tab-label">Dashboard</span>
             </p>
 
-            <!-- Courses — inactive -->
-            <p class="course" onclick="location.href='../Course_Tab/courstap1.php?user_id=<?= $user_id ?>&is_new=<?= $is_new_user?1:0 ?>'">
-              <img src="../../assets/course icon.svg" alt="icon" />
+            <!-- Courses — active -->
+            <p class="active-tab" onclick="location.href='../Course_Tab/courstap1.php?user_id=<?= $user_id ?>&is_new=<?= $is_new_user?1:0 ?>'">
+              <img src="../../assets/course icon select.svg" alt="icon" />
               <span class="tab-label">Courses</span>
             </p>
 

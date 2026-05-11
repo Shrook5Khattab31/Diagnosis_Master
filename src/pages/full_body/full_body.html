@@ -25,11 +25,11 @@
       <button class="icon-btn"><img class="icon-btn-image" src="../../assets/zoom-in.svg" alt="Zoom In" /></button>
       <button class="icon-btn"><img class="icon-btn-image" src="../../assets/zoom-out.svg" alt="Zoom Out" /></button>
 
-      <button class="dashboard-btn" onclick="location.href='../dashboard/dashboard.php'">
+      <button class="dashboard-btn" onclick="location.href='../dashboard/dashboard.php?user_id=<?php echo $user_id; ?>&is_new=<?php echo $is_new_user ? 1 : 0; ?>'">
         <div class="dashboard-btn-label"><img src="../../assets/dash full.svg" alt="" />Dashboard</div>
       </button>
 
-      <button class="back-btn">
+      <button class="back-btn" onclick="location.href='../dashboard/dashboard.php?user_id=<?php echo $user_id; ?>&is_new=<?php echo $is_new_user ? 1 : 0; ?>'">
         <img src="../../assets/blue back.svg" alt="Go Back" />
       </button>
     </div>

@@ -144,7 +144,7 @@ $user = $fetch->get_result()->fetch_assoc() ?? [
 
   <div class="right">
     <div class="divider"></div>
-    <button class="back" onclick="location.href='../dashboard/dashboard.php?user_id=<?= $user_id ?>&is_new=<?= $is_new_user?1:0 ?>'">
+    <button class="back" onclick="location.href='../dashboard/dashboard.php?user_id=<?php echo $user_id; ?>&is_new=<?php echo $is_new_user ? 1 : 0; ?>'">
       <img src="../../assets/back.png">
     </button>
 
