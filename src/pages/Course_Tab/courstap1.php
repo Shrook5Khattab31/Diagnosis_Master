@@ -1,3 +1,17 @@
+<?php
+$conn = mysqli_connect("localhost", "root", "", "diagnosis");
+
+$user_id     = isset($_GET['user_id']) ? (int)$_GET['user_id'] : 0;
+$is_new_user = isset($_GET['is_new']) && $_GET['is_new'] === '1';
+
+$fetch = $conn->prepare("SELECT profile_pic, username FROM users WHERE id = ?");
+$fetch->bind_param("i", $user_id);
+$fetch->execute();
+$u = $fetch->get_result()->fetch_assoc();
+
+$avatar   = !empty($u['profile_pic']) ? '../../assets/' . $u['profile_pic'] : '../../assets/avatar7.jpeg';
+$username = $u['username'] ?? '';
+?>
 <!doctype html>
 <html lang="ar">
 
@@ -25,7 +39,7 @@
                     class="search-button" />
 
                 <div class="score">
-                    <h2>Score : 20 </h2><img src="../../assets/Star.svg">
+                    <h2>Score : 30 </h2><img src="../../assets/Star.svg">
                 </div>
 
                 <button class="theme_btn">
@@ -204,37 +218,70 @@
             </div>
         </div>
 
-        <div class="sidebar">
-            <div class="profile">
-                <button onclick="location.href='../profile_tab/profile.html'">
-                    <img src="../../assets/profile.png" alt="Profile">
-                    <p><b>Profile Name</b></p>
-                </button>
-            </div>
+        <!-- SIDEBAR -->
+      <div class="sidebar">
+        <div class="profile">
+        <button type="button" 
+          onclick="location.href='../profile_tab/index.php?user_id=<?= $user_id ?>&is_new=<?= $is_new_user ? 1 : 0 ?>'">
+          <img src="<?= $avatar ?>" alt="Profile" />
+          <p><b><?= htmlspecialchars($username) ?></b></p>
+        </button>
+      </div>
+        <div class="Menu">
+          <p class="MM">MAIN MENU</p>
+          <div class="menu-items">
+            <!-- Dashboard — ACTIVE (currently on this page) -->
+            <p class="active-tab" onclick="location.href='dashboard.php?user_id=<?= $user_id ?>&is_new=<?= $is_new_user?1:0 ?>'">
+              <img src="../../assets/dashboard icon select.svg" alt="icon" />
+              <span class="tab-label">Dashboard</span>
+            </p>
 
-            <div class="Menu">
-                <p class="MM">MAIN MENU</p>
-                <div class="menu-items">
-                    <p class="course"
-                        onclick="location.href = '../dashboard/dashboard.php'"><img src="../../assets/dashboard icon.png" alt="icon"> Dashboard</p>
-                    <p><img src="../../assets/courses icon.png" alt="icon"> Courses</p>
-                    <p><img src="../../assets/quizes icon.png" alt="icon"> Quizes</p>
-                    <p><img src="../../assets/setting icon.png" alt="icon"> Settings</p>
-                </div>
+            <!-- Courses — inactive -->
+            <p class="course" onclick="location.href='../Course_Tab/courstap1.php?user_id=<?= $user_id ?>&is_new=<?= $is_new_user?1:0 ?>'">
+              <img src="../../assets/course icon.svg" alt="icon" />
+              <span class="tab-label">Courses</span>
+            </p>
 
-                <p class="RA">RECENT ACHIEVEMENTS</p>
-                <div class="img-achievements">
-                    <img src="../../assets/Achievement.png" alt="Achievement 2">
-                    <img src="../../assets/Achievement (1).png" alt="Achievement 1">
-                </div>
-                <p class="discover"> DISCOVER MODE</p>
-                <p class="full-body"><img src="../../assets/full-body-icon.png" alt="icon">Full Body
-                    <img src="../../assets/arrow_drop_down.png" alt="icon">
-                </p>
-                <p class="Account">ACCOUNT </p>
-                <button class="Log-Out" onclick="location.href = '../landing/landing.php'">
-                    <p class="Log-Out"><img src="../../assets/Log Out.png" alt="icon">Log Out</p>
-                </button>
+            <!-- Quizzes — inactive -->
+            <p>
+              <img src="../../assets/quizes icon.png" alt="icon" />
+              <span class="tab-label">Quizzes</span>
+            </p>
+
+            <!-- Settings — inactive -->
+            <p>
+              <img src="../../assets/setting icon.png" alt="icon" />
+              <span class="tab-label">Settings</span>
+            </p>
+          </div>
+<?php if (!$is_new_user): ?>
+          <div class="img-achievements">
+            <img src="../../assets/Achievement.png" alt="Achievement 2" />
+            <img src="../../assets/Achievement (1).png" alt="Achievement 1" />
+          </div>
+          <?php else: ?>
+          <p style="color: #a15958; font-size: 13px; margin-left: 30px">
+            No achievements yet. Start learning!
+          </p>
+          <?php endif; ?>
+
+          <p class="discover">DISCOVER MODE</p>
+          <p
+            class="full-body"
+            onclick="location.href = '../full_body/full_body.html'"
+          >
+            <img src="../../assets/full-body-icon.png" alt="icon" />Full Body
+            <img src="../../assets/arrow_drop_down.png" alt="icon" />
+          </p>
+          <p class="Account">ACCOUNT</p>
+          <button
+            class="Log-Out"
+            onclick="location.href = '../landing/landing.php'"
+          >
+            <p class="Log-Out">
+              <img src="../../assets/Log Out.png" alt="icon" />Log Out
+            </p>
+          </button>
             </div>
         </div>
     </div>

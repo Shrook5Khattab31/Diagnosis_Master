@@ -144,9 +144,9 @@ $user = $fetch->get_result()->fetch_assoc() ?? [
 
   <div class="right">
     <div class="divider"></div>
-    <div class="back"><img src="../../assets/Vector.svg">
-
-</div>
+    <button class="back" onclick="location.href='../dashboard/dashboard.php?user_id=<?= $user_id ?>&is_new=<?= $is_new_user?1:0 ?>'">
+      <img src="../../assets/back.png">
+    </button>
 
     <div class="avatar">
       <?php $pic = !empty($user['profile_pic']) ? '../../assets/' . $user['profile_pic'] : '../../assets/avatar7.jpeg'; ?>

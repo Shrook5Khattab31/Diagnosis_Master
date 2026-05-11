@@ -19,6 +19,7 @@ $username = $u['username'] ?? '';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style_dashboard.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="owl.css" />
     <title>Diagnosis Master</title>
     <link
@@ -112,6 +113,7 @@ $username = $u['username'] ?? '';
 
       </div>
     </div> 
+    
     <div class="dashboard">
       <div class="big_card">
         <nav class="navbar_dash">

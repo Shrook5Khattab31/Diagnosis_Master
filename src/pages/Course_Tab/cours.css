@@ -284,6 +284,38 @@ body {
   font-size: 18px;
   color: #2c3e50;
 }
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  width: 50%;
+  margin-top: 40px;
+  margin-left: 50px;
+}
+.profile img {
+  width: 61px;
+  height: 61px;
+  border-radius: 50%;
+  border: 2px solid #a15958;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  width: 50%;
+  margin-top: 40px;
+  margin-left: 50px;
+}
+.profile img {
+  width: 61px;
+  height: 61px;
+}
+
 .profile p {
   margin: 0;
   font-size: 32px;
@@ -355,6 +387,7 @@ body {
 .full-body {
   font-size: 25px;
   margin-left: 30px;
+  color: #384C65;
   display: flex;
   gap: 10px;
   cursor: pointer;
@@ -374,6 +407,7 @@ body {
   margin-left: 20px;
   display: flex;
   gap: 10px;
+  color: #384C65;
   background-color: transparent;
   border-style: none;
 }
@@ -518,12 +552,7 @@ body {
 }
 
 /* ── ACTIVE TAB: white pill + gradient text ── */
-.menu-items p.active-tab {
-  background-image: url('../../assets/Selected_Tab.svg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-color: transparent;
-}
+
 
 /* Gradient text trick */
 .menu-items p.active-tab span.tab-label {
