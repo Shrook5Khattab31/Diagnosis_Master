@@ -1,9 +1,18 @@
 <?php
-$userId = 1;
-$isLoggedIn = true;
+session_start();
 
 $conn = mysqli_connect("localhost", "root", "", "diagnosis");
 
+if (!$conn){
+    die("connection failed: " . mysqli_connect_error());
+}
+
+$isLoggedIn = isset($_SESSION['user_id']);
+if(!isset($_SESSION['user_id'])){
+    header("Location: login.php");
+    exit();
+}
+$userId = $_SESSION['user_id'];
 
 /* حفظ البيانات */
 if(isset($_POST['name'])){
@@ -13,27 +22,23 @@ if(isset($_POST['name'])){
     $phone = $_POST['phone'];
     $email = $_POST['email'];
 
-    
-   mysqli_query($conn, "
-UPDATE users SET
-username='$name',
-major='$major',
-phone='$phone',
-email='$email'
-WHERE id=66
-");
+   $stmt = $conn->prepare("UPDATE users SET username=?, major=?, phone=?, email=? WHERE id=?");
+$stmt->bind_param("ssssi", $name, $major, $phone, $email, $userId);
+$stmt->execute();
+    header("Location: ".$_SERVER['PHP_SELF']);
+    exit();
 }
 
 /* جلب البيانات */
 $sql = "SELECT * FROM users WHERE id='$userId'";
 $result = mysqli_query($conn, $sql);
 $user = mysqli_fetch_assoc($result) ?? [
-  "username"=>"",
-  "major"=>"",
-  "phone"=>"",
-  "email"=>"",
-  "created_at"=>""
-]; 
+    "username"=>"",
+    "major"=>"",
+    "phone"=>"",
+    "email"=>"",
+    "created_at"=>""
+];
 
 
 ?>
