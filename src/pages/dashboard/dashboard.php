@@ -568,7 +568,6 @@ $username = $u['username'] ?? '';
                 </div>
               </div>
 
-              >
               <div style="position: relative; margin-top: 24px">
                 <button
                   class="todo-toggle-btn"
