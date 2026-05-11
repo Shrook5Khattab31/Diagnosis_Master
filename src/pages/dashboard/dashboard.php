@@ -169,10 +169,32 @@ $username = $u['username'] ?? '';
                   </div>
                 </div>
               </div>
+              <div class="card">
+                <img src="../../assets/dashboard/chapter3.svg" alt="ch3" />
+                <div class="overlay">
+                  <div class="bottom-bar">
+                    <span class="chapter">Chapter 5</span>
+                    <span class="divider"></span>
+                    <span class="section">Upper Limbs</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <img src="../../assets/dashboard/chapter3.svg" alt="ch3" />
+                <div class="overlay">
+                  <div class="bottom-bar">
+                    <span class="chapter">Chapter 6</span>
+                    <span class="divider"></span>
+                    <span class="section">Upper Limbs</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <?php else: ?>
-          <p style="color:#A15958; margin-left:20px; font-size:14px;">No recently visited chapters yet. Start exploring!</p>
+          <p style="color: #a15958; margin-left: 20px; font-size: 14px">
+            No recently visited chapters yet. Start exploring!
+          </p>
           <?php endif; ?>
         </section>
 

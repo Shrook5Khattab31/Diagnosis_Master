@@ -1306,12 +1306,7 @@ body {
 }
 
 /* ── ACTIVE TAB: white pill + gradient text ── */
-.menu-items p.active-tab {
-  background-image: url('../../assets/Selected Tab.svg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-color: transparent;
-}
+
 
 /* Gradient text trick */
 .menu-items p.active-tab span.tab-label {
