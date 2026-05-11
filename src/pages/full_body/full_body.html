@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnosis Master</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page-root">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <img class="header-logo" src="../../assets/LOGO.svg" alt="Logo" />
+      <div class="header-title">
+        <h1>Anatomy</h1>
+        <h2>Chapter 1 : Introduction</h2>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <button class="icon-btn"><img class="icon-btn-image" src="../../assets/pointer.svg" alt="Pointer" /></button>
+      <button class="icon-btn"><img class="icon-btn-image" src="../../assets/zoom-in.svg" alt="Zoom In" /></button>
+      <button class="icon-btn"><img class="icon-btn-image" src="../../assets/zoom-out.svg" alt="Zoom Out" /></button>
+
+      <button class="dashboard-btn" onclick="location.href='../dashboard/dashboard.php'">
+        <div class="dashboard-btn-label"><img src="../../assets/dash full.svg" alt="" />Dashboard</div>
+      </button>
+
+      <button class="back-btn">
+        <img src="../../assets/blue back.svg" alt="Go Back" />
+      </button>
+    </div>
+  </div>
+
+
+  <!-- CHAPTER TABS -->
+  <div class="chapter-tabs">
+    <button class="chapter-tab active"><span>The Arm</span></button>
+    <button class="chapter-tab inactive"><span>The Neck</span></button>
+    <button class="chapter-tab inactive"><span>The Leg</span></button>
+  </div>
+
+
+  <!-- MAIN 3-COLUMN GRID -->
+  <div class="main-grid">
+
+    <!--  LEFT: Lesson content  -->
+    <div class="lesson-panel">
+      <div class="lesson-panel-header">
+        <div class="lesson-panel-part-title">Part 1:&nbsp;<span>The Arm</span></div>
+        <div class="lesson-panel-header-icons">
+          <img src="../../assets/fullscreen.svg" alt="Fullscreen" /><img src="../../assets/sidebar.svg" alt="Sidebar" />
+        </div>
+      </div>
+
+      <div class="lesson-panel-body">
+        <p class="lesson-section-title">1. Functional Biomechanics: The Elbow Flexors</p>
+        <p>Understanding the arm requires looking at how muscles work in "synergy" rather than in isolation. While the Biceps Brachii is the most famous muscle of the arm, it is not the primary flexor in every position.</p>
+        <ul>
+          <li><strong>The Brachialis:</strong> Known as the "workhorse" of the elbow. Because it inserts into the ulna (which does not rotate), it provides consistent power regardless of whether the hand is palm-up or palm-down.</li>
+          <li><strong>The Biceps Brachii:</strong> This is a "three-joint" muscle. It is most powerful when the forearm is supinated (palm up). In clinical practice, if a patient has a rupture of the biceps tendon, they can still bend their elbow using the Brachialis, but they will lose significant strength in forceful supination (like turning a screwdriver).</li>
+          <li><strong>The Brachioradialis:</strong> This muscle acts as a "shunting" muscle, providing stability during rapid movements. It is most active when the forearm is in a neutral (mid-prone) position; often called the "hammer curl" position.</li>
+        </ul>
+
+        <p class="lesson-section-title">2. Clinical Reasoning: Nerve vs. Muscle</p>
+        <p>A critical skill for any physical therapist is differentiating between a local tissue injury and a neurological deficit.</p>
+        <ul>
+          <li><strong>Muscle Strain:</strong> Pain is usually localized to the muscle belly or tendon. It is provoked by "Active Contraction" (the patient moving) or "Passive Stretch" (the therapist moving the patient).</li>
+          <li><strong>Nerve Impingement:</strong> Pain often follows a "dermatome" (a specific track down the arm) and is accompanied by numbness, tingling, or weakness.</li>
+          <li><strong>The Radial Nerve &amp; Wrist Drop:</strong> The Radial Nerve travels along the humerus in the "radial groove." A fracture of the mid-humerus can damage this nerve, leading to Wrist Drop. Always check if the patient can "hitchhike" (extend the thumb); if they can't, suspect a Radial Nerve issue.</li>
+        </ul>
+
+        <p class="lesson-section-title">3. Pathology Focus: Lateral Epicondylitis (Tennis Elbow)</p>
+        <p>Despite the name, this condition is rarely about inflammation (-itis) and more about tissue degeneration (-osis) due to repetitive micro-trauma.</p>
+        <ul>
+          <li><strong>The Cause:</strong> Repetitive extension of the wrist, which puts excessive stress on the Extensor Carpi Radialis Brevis (ECRB) tendon where it attaches to the lateral epicondyle of the humerus.</li>
+          <li><strong>Patient History:</strong> Patients typically report a slow onset of pain on the outer side of the elbow. The pain worsens when gripping objects, shaking hands, or lifting a coffee cup.</li>
+          <li><strong>Clinical Test:</strong> Use Cozen's Test; ask the patient to make a fist, pronate the arm, and resist as you push their extended wrist downward. Sudden pain at the lateral epicondyle is a positive sign.</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!--  CENTER: 3-D Body Model  -->
+    <div class="body-model">
+      <div class="body-model-image-area">
+        <img class="body-image" src="../../assets/body.svg" alt="3D Body Model" />
+        <div class="dots dot1"><img src="../../assets/circle.svg"  alt="" /></div>
+        <div class="dots dot2"><img src="../../assets/circle2.svg" alt="" /></div>
+        <div class="dots dot3"><img src="../../assets/circle2.svg" alt="" /></div>
+      </div>
+
+      <div class="body-model-nav">
+        <button class="nav-arrow">
+          <img src="../../assets/click left.svg" alt="Previous" />
+        </button>
+        <div class="nav-track">
+          <img src="../../assets/scroll bar.svg" alt="" /><img class="nav-track__thumb" src="../../assets/scroll bar btn.svg" alt="" />
+        </div>
+        <button class="nav-arrow" style="transform: scaleX(-1)">
+          <img src="../../assets/click left.svg" alt="Next" />
+        </button>
+      </div>
+    </div>
+
+
+    <!--  RIGHT: Sidebar panels  -->
+    <div class="right-column">
+
+      <!-- Search + Quick Actions -->
+      <div class="panel">
+        <div class="search-bar">
+          <input class="search-bar-input" type="text" placeholder="search here ..." />
+          <button class="search-bar__button"><img src="../../assets/Search.svg" alt="Search" /></button>
+        </div>
+
+        <div class="quick-actions">
+          <button class="quick-action-card">
+            <img src="../../assets/dia bot.svg" alt="Dia Bot" /><span>Dia Bot</span>
+          </button>
+          <button class="quick-action-card-icon-left">
+            <img src="../../assets/notes.svg" alt="Notes" /><span>Notes</span>
+          </button>
+          <button class="quick-action-card-icon-left">
+            <img src="../../assets/save.svg" alt="Saved Cards" /><span>Saved<br>Cards</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Sheet Code -->
+      <div class="sheet-code-panel">
+        <h3>Sheet Code</h3>
+        <div class="sheet-code-panel-inner">
+          <span class="text--label">Origin:</span> Long head (<span class="text--link">supraglenoid tubercle</span>), Short head (<span class="text--link">coracoid process</span>).<br>
+          <span class="text--label">Insertion:</span> Radial tuberosity.<br>
+          <span class="text--label">Action:</span> Elbow flexion, forearm supination.<br>
+          <span class="text--label">Innervation:</span> Musculocutaneous nerve (<span class="text--link">C5, C6</span>).
+          <div class="sheet-divider"></div>
+          <span class="text--label">Clinical Red Flags:</span> Quick list of symptoms that require immediate medical attention (e.g., loss of pulse, severe swelling).
+          <div class="sheet-divider"></div>
+          <span class="text--label">Test Metrics:</span> Normal Range of Motion (ROM) values for the elbow (e.g., <span class="text--link">0 degree to 145 degree</span>).
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="panel">
+        <h3>Tools</h3>
+        <div class="tools-grid">
+          <button class="tool-btn tool-btn--quiz">
+            <img src="../../assets/quiz.svg" alt="" /> Quiz
+          </button>
+          <button class="tool-btn tool-btn--cases">
+            <img src="../../assets/cases.svg" alt="" /> Cases<span class="tool-btn-badge"><img src="../../assets/check.svg" alt="Done" /></span>
+          </button>
+          <button class="tool-btn tool-btn--injuries">
+            <img src="../../assets/injuries.svg" alt="" /> Injuries<span class="tool-btn-badge"><img src="../../assets/check.svg" alt="Done" /></span>
+          </button>
+        </div>
+
+        <div class="tools-grid--two-col">
+          <button class="tool-btn tool-btn--wide tool-btn--pathology"><img src="../../assets/pathology.svg" alt="" /> Pathology</button>
+          <button class="tool-btn tool-btn--wide tool-btn--kinetics"><img src="../../assets/kinetics.svg" alt="" /> Kinetics</button>
+        </div>
+      </div>
+
+      <!-- Layers -->
+      <div class="panel">
+        <h3>Layers</h3>
+        <div class="layers-row">
+          <button class="layer-btn layer-btn--skeletal">Skeletal <img src="../../assets/eye gray.svg" alt="" /></button>
+          <button class="layer-btn layer-btn--muscles">Muscles <img src="../../assets/eye red.svg" alt="" /></button>
+          <button class="layer-btn layer-btn--nervous"> Nervous <img src="../../assets/eye closed blue.svg" alt="" /></button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

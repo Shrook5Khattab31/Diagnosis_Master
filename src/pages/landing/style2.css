@@ -48,10 +48,14 @@ nav {
   font-family: Italiana;
   color: rgba(56, 76, 101, 1);
 }
+.nav-links a:hover {
+  color: rgba(161, 89, 88, 1);
+  transform: scale(1.08);
+}
 
 .nav-btns {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   align-items: center;
   text-decoration: none;
 }
@@ -63,15 +67,31 @@ nav {
   background-color: rgba(236, 209, 211, 1);
   text-decoration: none;
   border: 1px solid #a15958;
+  margin-right: 20px;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
 }
+.btn1:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 20px rgba(161, 89, 88, 0.8);
+}
+
 .btn2 {
-  padding: 12px 25px;
+  padding: 12px 30px;
   color: rgb(255, 255, 255);
   border-radius: 30px;
   background-color: rgba(161, 89, 88, 1);
   text-decoration: none;
   border: 1px solid #a15958;
   margin-right: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn2:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 20px rgba(161, 89, 88, 0.8);
 }
 
 .container {
@@ -150,6 +170,10 @@ nav {
   width: 150px;
   height: 50px;
 }
+.btn-show-more:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 20px rgba(161, 89, 88, 0.8);
+}
 
 /* ================= ABOUT ================= */
 .about {
@@ -201,29 +225,23 @@ nav {
 /* ───── FEATURES ───── */
 .features {
   font-family: "Inter";
-  background: var(--bg-feat);
+  background: rgba(178, 116, 116, 0.75);
   padding: 60px 60px 70px;
+  text-align: center;
+  color: white;
+}
+.features h1 {
+  font-size: 64px;
+  -webkit-text-stroke: 2px rgba(178, 116, 116, 0.75);
 }
 .features h2 {
   font-family: "Inter";
-  font-size: 40px;
+  font-size: 34px;
   font-weight: 700;
   color: white !important;
   text-align: center;
   margin-bottom: 40px;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
-}
-.features {
-  padding: 60px 10%;
-  background: rgba(178, 116, 116, 75);
-  text-align: center;
-  color: white;
-}
-
-.features h2 {
-  font-size: 34px;
-  margin-bottom: 40px;
-  font-weight: 600;
 }
 
 .feat-grid {
@@ -234,16 +252,20 @@ nav {
 
 .feat-card {
   border: 2px dashed rgba(255, 255, 255, 0.55);
-  border-radius: 58px;
-  background: rgba(178, 116, 116, 75);
-  padding: 53px 46px;
-  min-height: 140px;
+  border-radius: 40px;
+  background: rgba(178, 116, 116, 0.75);
+  padding: 40px;
+  min-height: 180px;
+
+  /* أهم تعديل */
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  transition:
-    background 0.2s,
-    transform 0.18s;
+  flex-direction: column; /* يخلي h2 فوق و p تحت */
+  justify-content: center; /* توسيط رأسي */
+  align-items: center; /* توسيط أفقي */
+
+  text-align: center;
+
+  transition: 0.3s;
 }
 
 .feat-card:hover {
@@ -251,54 +273,45 @@ nav {
   transform: translateY(-3px);
 }
 
-.feat-icon-label {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 15px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: px;
-}
-
-.feat-icon-label span.icon {
-  font-size: 17px;
-  color: rgba(255, 25, 255, 0.9);
-}
-
 .feat-card p {
   font-family: "Inter", sans-serief;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.8);
   font-weight: 400;
   margin-top: 18px;
-  max-width: 220px;
-  text-align: left;
+  max-width: 2200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* ───── CONTACT ───── */
 .contact {
-  background: linear-gradient(#ddc1d4, #e0e2f1, #ffffff);
   color: rgba(38, 50, 56, 100);
   padding: 70px 80px;
   display: flex;
   justify-content: space-between;
   gap: 70px;
   align-items: flex-start;
-}
-
-.contact-form {
-  flex: 1;
+  font-family: Inria Serif;
 }
 
 .contact-form h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 26px;
+  font-family: Inria Serif;
+  font-size: 32px;
   font-weight: 700;
-  color: var(--text-dark);
+  color: black;
   margin-bottom: 8px;
+  -webkit-text-stroke: 2px rgba(178, 116, 116, 0.75);
 }
 
+.contact-form p {
+  font-size: 20px;
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin-bottom: 28px;
+  max-width: 800px;
+}
 .contact-form .sub {
   font-size: 18px;
   color: var(--text-light);
@@ -308,26 +321,31 @@ nav {
 }
 
 .form-field {
-  margin-bottom: 18px;
+  margin-bottom: 25px;
+  margin-left: 20px;
 }
 
 .form-field input,
 .form-field textarea {
-  width: 100%;
+  width: 50%;
   background: transparent;
   border: none;
-  border-bottom: 1.5px solid var(--rose-mid);
-  padding: 8px 0;
+  border-bottom: 1.5px solid black;
+  padding: 20px 0;
   font-family: inherit;
   font-size: 14px;
   color: var(--text-dark);
   outline: none;
   transition: border-color 0.2s;
   resize: none;
+  margin-bottom: 20px;
+  overflow: hidden;
 }
 .form-field input::placeholder,
 .form-field textarea::placeholder {
-  color: var(--text-light);
+  color: #263238;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 .form-field input:focus,
 .form-field textarea:focus {
@@ -341,18 +359,34 @@ nav {
   color: #fff;
   border: none;
   border-radius: 26.5px;
-  font-size: 14px;
+  font-size: 24px;
   cursor: pointer;
+  margin-left: 100px;
 }
 .btn-send:hover {
-  background: var(--rose);
+  transform: scale(1.07);
+  box-shadow: 0 0 20px rgba(161, 89, 88, 0.8);
 }
 
 /*Info panel*/
+
+.info-container {
+  background-color: #dda9a9;
+  margin-right: -80px;
+  width: 400px;
+  height: 500px;
+  position: relative;
+}
+
 .info-panel {
-  width: 260px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 700px;
+  height: 300px;
   background: #c39091;
-  border-radius: 28px;
+  border-radius: 28px 0px 0px 28px;
+  margin-top: 25%;
   padding: 30px 24px;
   color: white;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -375,7 +409,7 @@ nav {
   color: white;
 }
 .info-text {
-  font-size: 13px;
+  font-size: 24px;
   color: white;
 }
 .info-row {
@@ -383,7 +417,6 @@ nav {
   align-items: center;
   gap: 12px;
   padding: 10px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 footer {
   background: #c28182;
