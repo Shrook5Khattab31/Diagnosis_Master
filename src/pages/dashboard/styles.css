@@ -1,26 +1,34 @@
 body {
-  background-color:blue
+  background-color: blue;
 }
 
-@media (min-width: 640px){
-  body{background-color: tan;}
+@media (min-width: 640px) {
+  body {
+    background-color: tan;
+  }
 }
 
-@media (min-width: 768px){
-body{background-color:brown}
+@media (min-width: 768px) {
+  body {
+    background-color: brown;
+  }
 }
 
-@media (min-width: 1024px) 
-{
-body {background-color:thistle;}
+@media (min-width: 1024px) {
+  body {
+    background-color: thistle;
+  }
 }
 
-@media (min-width: 1280px)
-{
-body{background-color:burlywood}
+@media (min-width: 1280px) {
+  body {
+    background-color: burlywood;
+  }
 }
 @media (min-width: 1536px) {
-body{background-color:white;}
+  body {
+    background-color: white;
+  }
 }
 
 .daily-overlay {
@@ -93,7 +101,6 @@ body{background-color:white;}
 .day-card.unlocked {
   border: 2px dashed #612221;
   background-color: white;
-
 }
 
 .day-card.locked {
@@ -104,7 +111,7 @@ body{background-color:white;}
   font-size: 10px;
   font-weight: 600;
   margin: 0 0 3px;
-  color:#612221;
+  color: #612221;
 }
 
 .day-card.unlocked .day-label {
@@ -119,7 +126,7 @@ body{background-color:white;}
   font-size: 11px;
   font-weight: 700;
   margin: 0 0 7px;
-  color: #A15958;
+  color: #a15958;
 }
 
 .day-card.unlocked .day-points {
@@ -169,11 +176,11 @@ body{background-color:white;}
 }
 
 .claim-btn:hover {
-  background:#A15958;
+  background: #a15958;
 }
 
 .claim-btn:disabled {
-  background:#A15958;
+  background: #a15958;
   cursor: default;
 }
 
@@ -184,7 +191,7 @@ body{background-color:white;}
   width: 100%;
   height: 100vh;
 
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.45);
 
   display: flex;
   align-items: center;
@@ -200,4 +207,3 @@ body{background-color:white;}
   width: 420px;
   max-width: 95%;
 }
-
