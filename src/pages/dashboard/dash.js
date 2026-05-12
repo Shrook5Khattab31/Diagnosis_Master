@@ -417,11 +417,11 @@ claimBtn.addEventListener("click", function () {
   localStorage.setItem("score", "30");
 });
 
-// window.addEventListener("DOMContentLoaded", function () {
-//   if (localStorage.getItem("dailyClaimed") === "true") {
-//     overlay.style.display = "none";
-//     scoreText.textContent = "Score: " + localStorage.getItem("score");
-//     claimBtn.disabled = true;
-//     claimBtn.textContent = "Claimed";
-//   }
-// });
+window.addEventListener("DOMContentLoaded", function () {
+  if (localStorage.getItem("dailyClaimed") === "true") {
+    overlay.style.display = "none";
+    scoreText.textContent = "Score: " + localStorage.getItem("score");
+    claimBtn.disabled = true;
+    claimBtn.textContent = "Claimed";
+  }
+});
